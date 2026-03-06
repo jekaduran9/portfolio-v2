@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<BaseLayout title="Contact">
+	<section class="max-w-7xl mx-auto px-6 py-24 md:py-48 flex flex-col items-center text-center">
+		<div class="max-w-2xl space-y-12">
+			<div class="space-y-6">
+				<h2 class="text-xs uppercase tracking-[0.2em] text-gray-400 font-bold">{t('contact.subtitle')}</h2>
+				<h1 class="text-5xl md:text-7xl font-medium tracking-tight leading-none">{t('contact.title')}</h1>
+				<p class="text-xl text-gray-500 leading-relaxed pt-4">
+					{t('contact.description')}
+				</p>
+			</div>
+			
+			<div class="pt-8 flex flex-col items-center gap-8">
+				<a href="mailto:hola@jessicaduran.com" class="text-3xl md:text-5xl font-serif italic hover:text-gray-400 transition-colors border-b-2 border-gray-100 pb-2">
+					hola@jessicaduran.com
+				</a>
+				
+				<div class="flex gap-12 items-center">
+					<a href="https://linkedin.com/in/jessicaduran" target="_blank" class="text-sm font-bold uppercase tracking-widest hover:underline underline-offset-8">LinkedIn</a>
+					<a href="https://instagram.com/jessicaduran" target="_blank" class="text-sm font-bold uppercase tracking-widest hover:underline underline-offset-8">Instagram</a>
+					<a href="https://behance.net/jessicaduran" target="_blank" class="text-sm font-bold uppercase tracking-widest hover:underline underline-offset-8">Behance</a>
+				</div>
+
+				<div class="pt-12">
+					<a href="mailto:hola@jessicaduran.com" class="bg-black text-white px-12 py-6 text-sm font-medium uppercase tracking-widest hover:bg-gray-800 transition-all hover:scale-105">
+						{t('contact.cta')}
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+</BaseLayout>

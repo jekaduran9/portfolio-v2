@@ -7,6 +7,7 @@ type: "Web Design"
 image: "https://picsum.photos/800/600"
 pubDate: 2024-01-15
 featured: true
+lang: "es"
 ---
 # Contexto
 Findasense buscaba renovar su presencia digital para reflejar su evolución como consultora estratégica.

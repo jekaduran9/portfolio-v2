@@ -10,6 +10,7 @@ const projects = defineCollection({
     image: z.string(),
     pubDate: z.date(),
     featured: z.boolean().default(false),
+    lang: z.enum(['es', 'en']).default('es'),
   }),
 });
 

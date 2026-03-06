@@ -7,6 +7,7 @@ type: "E-commerce"
 image: "https://picsum.photos/800/601"
 pubDate: 2024-02-10
 featured: true
+lang: "es"
 ---
 # Contexto
 Una panadería artesanal necesitaba una plataforma online que comunicara la pureza de sus ingredientes y facilitara el pedido a domicilio.

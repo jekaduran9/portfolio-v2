@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import { getLangFromUrl, useTranslations, useTranslatedPath } from '../i18n/utils';
 
 interface Props {
 	title: string;
@@ -7,10 +8,14 @@ interface Props {
 }
 
 const { title, description = "Product Designer & UX/UI Designer Portfolio" } = Astro.props;
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang={lang}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -25,15 +30,22 @@ const { title, description = "Product Designer & UX/UI Designer Portfolio" } = A
 	<body class="bg-[#F9F8F3] text-gray-900 font-sans selection:bg-black selection:text-white">
 		<header class="fixed top-0 left-0 w-full z-50 bg-[#F9F8F3]/80 backdrop-blur-md border-b border-black/5">
 			<nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-				<a href="/" class="hover:opacity-70 transition-opacity">
-					<img src="/logo-byjeka.png" alt="Jessica Duran Logo" class="h-12 w-auto object-contain" />
+				<a href={translatePath('/')} class="hover:opacity-70 transition-opacity">
+					<img src="/logo-byjeka.png" alt="Jessica Duran Logo" class="h-10 w-auto object-contain" />
 				</a>
-				<ul class="flex items-center gap-10 text-sm font-medium tracking-wide uppercase">
-					<li><a href="/" class="hover:text-gray-500 transition-colors">Home</a></li>
-					<li><a href="/#projects" class="hover:text-gray-500 transition-colors">Projects</a></li>
-					<li><a href="/about" class="hover:text-gray-500 transition-colors">About</a></li>
-					<li><a href="/contact" class="hover:text-gray-500 transition-colors">Contact</a></li>
-				</ul>
+				<div class="flex items-center gap-10">
+					<ul class="hidden md:flex items-center gap-10 text-sm font-medium tracking-wide uppercase">
+						<li><a href={translatePath('/')} class="hover:text-gray-500 transition-colors">{t('nav.home')}</a></li>
+						<li><a href={translatePath('/#projects')} class="hover:text-gray-500 transition-colors">{t('nav.projects')}</a></li>
+						<li><a href={translatePath('/about')} class="hover:text-gray-500 transition-colors">{t('nav.about')}</a></li>
+						<li><a href={translatePath('/contact')} class="hover:text-gray-500 transition-colors">{t('nav.contact')}</a></li>
+					</ul>
+					<div class="flex gap-2 text-xs font-bold uppercase tracking-widest border-l border-black/10 pl-10">
+						<a href="/" class={lang === 'es' ? 'text-black' : 'text-gray-400 hover:text-black'}>ES</a>
+						<span class="text-gray-300">/</span>
+						<a href="/en/" class={lang === 'en' ? 'text-black' : 'text-gray-400 hover:text-black'}>EN</a>
+					</div>
+				</div>
 			</nav>
 		</header>
 
@@ -45,12 +57,12 @@ const { title, description = "Product Designer & UX/UI Designer Portfolio" } = A
 			<div class="max-w-7xl mx-auto px-6">
 				<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
 					<div>
-						<h2 class="text-2xl font-medium mb-4">¡Hablemos!</h2>
-						<p class="text-gray-500 max-w-sm">Si tienes un proyecto en mente o simplemente quieres saludar, no dudes en escribirme.</p>
+						<h2 class="text-2xl font-medium mb-4">{t('footer.cta')}</h2>
+						<p class="text-gray-500 max-w-sm">{t('footer.description')}</p>
 					</div>
 					<div class="flex gap-8">
-						<a href="mailto:hola@jessicaduran.com" class="text-lg font-medium hover:underline underline-offset-4 tracking-tight">Email</a>
-						<a href="https://linkedin.com/in/jessicaduran" class="text-lg font-medium hover:underline underline-offset-4 tracking-tight">LinkedIn</a>
+						<a href="mailto:hola@jessicaduran.com" class="text-lg font-medium hover:underline underline-offset-4 tracking-tight">{t('footer.email')}</a>
+						<a href="https://linkedin.com/in/jessicaduran" class="text-lg font-medium hover:underline underline-offset-4 tracking-tight">{t('footer.linkedin')}</a>
 					</div>
 				</div>
 				<div class="mt-20 pt-8 border-t border-gray-50 flex justify-between items-center text-xs text-gray-400 uppercase tracking-widest">
