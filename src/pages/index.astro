@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import { getCollection } from 'astro:content';
+
+const projects = await getCollection('projects');
+const sortedProjects = projects.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<BaseLayout title="Product Designer & UX/UI Designer">
+	<!-- Hero Section -->
+	<section class="max-w-7xl mx-auto px-6 py-32 md:py-48">
+		<div class="max-w-3xl">
+			<h1 class="text-4xl md:text-6xl font-medium tracking-tight leading-tight mb-8">
+				Hola, soy Jessica Duran. <br/>
+				<span class="text-gray-400">Diseño experiencias digitales claras, útiles y centradas en las personas.</span>
+			</h1>
+			<p class="text-xl text-gray-500 mb-12 max-w-2xl leading-relaxed">
+				Product Designer & UX/UI Designer con enfoque en simplicidad, elegancia y soluciones orientadas a resultados.
+			</p>
+			<a href="#projects" class="inline-block bg-black text-white px-8 py-4 text-sm font-medium uppercase tracking-widest hover:bg-gray-800 transition-colors">
+				Ver proyectos
+			</a>
+		</div>
+	</section>
+
+	<!-- Projects Section -->
+	<section id="projects" class="max-w-7xl mx-auto px-6 py-20 border-t border-gray-50">
+		<div class="flex justify-between items-end mb-16">
+			<div>
+				<h2 class="text-xs uppercase tracking-[0.2em] text-gray-400 font-bold mb-4">Proyectos Seleccionados</h2>
+				<p class="text-3xl font-medium tracking-tight">Trabajos Destacados</p>
+			</div>
+		</div>
+		
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-20">
+			{sortedProjects.map((project) => (
+				<ProjectCard project={project} />
+			))}
+		</div>
+	</section>
+</BaseLayout>

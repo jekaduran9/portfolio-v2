@@ -1,0 +1,111 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+  return projects.map((project, index) => ({
+    params: { slug: project.slug },
+    props: { 
+      project,
+      prev: index > 0 ? projects[index - 1] : null,
+      next: index < projects.length - 1 ? projects[index + 1] : null
+    },
+  }));
+}
+
+const { project, prev, next } = Astro.props;
+const { Content } = await project.render();
+const { title, description, role, tools, type, image } = project.data;
+---
+
+<BaseLayout title={title} description={description}>
+	<!-- Project Hero -->
+	<header class="bg-gray-50 py-24 md:py-32">
+		<div class="max-w-7xl mx-auto px-6">
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+				<div class="space-y-8">
+					<div class="space-y-4">
+						<span class="text-xs uppercase tracking-widest text-gray-400 font-bold">{type}</span>
+						<h1 class="text-4xl md:text-5xl font-medium tracking-tight leading-tight">{title}</h1>
+						<p class="text-xl text-gray-500 leading-relaxed max-w-lg">{description}</p>
+					</div>
+					
+					<div class="grid grid-cols-2 gap-8 pt-8 border-t border-gray-200">
+						<div>
+							<h3 class="text-[10px] uppercase tracking-widest text-gray-400 font-bold mb-2">Rol</h3>
+							<p class="text-sm font-medium">{role}</p>
+						</div>
+						<div>
+							<h3 class="text-[10px] uppercase tracking-widest text-gray-400 font-bold mb-2">Herramientas</h3>
+							<p class="text-sm font-medium">{tools.join(', ')}</p>
+						</div>
+					</div>
+				</div>
+				<div class="aspect-[4/3] bg-gray-200 overflow-hidden flex items-center justify-center text-gray-400 font-serif italic text-xl">
+					Hero Image Mockup
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Content -->
+	<article class="max-w-4xl mx-auto px-6 py-24">
+		<div class="prose prose-lg prose-gray max-w-none 
+			prose-headings:font-medium prose-headings:tracking-tight
+			prose-h1:text-4xl prose-h2:text-3xl prose-h3:text-2xl
+			prose-p:text-gray-600 prose-p:leading-relaxed
+			prose-li:text-gray-600 prose-img:rounded-none">
+			<Content />
+		</div>
+		
+		<!-- Visual Process (Placeholder sections) -->
+		<div class="mt-24 space-y-32">
+			<section>
+				<h2 class="text-xs uppercase tracking-[0.2em] text-gray-400 font-bold mb-12">Proceso de Diseño</h2>
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+					<div class="aspect-video bg-gray-100 flex items-center justify-center text-gray-400 font-serif italic">Research & Insights</div>
+					<div class="aspect-video bg-gray-100 flex items-center justify-center text-gray-400 font-serif italic">Wireframes</div>
+				</div>
+			</section>
+
+			<section>
+				<h2 class="text-xs uppercase tracking-[0.2em] text-gray-400 font-bold mb-12">Solución Final</h2>
+				<div class="space-y-16">
+					<div class="aspect-[16/9] bg-gray-200 flex items-center justify-center text-gray-400 font-serif italic">Final Mockup Full Width</div>
+					<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+						<div class="aspect-[9/16] bg-gray-100 flex items-center justify-center text-gray-400 font-serif italic">Mobile Screen 1</div>
+						<div class="aspect-[9/16] bg-gray-100 flex items-center justify-center text-gray-400 font-serif italic">Mobile Screen 2</div>
+						<div class="aspect-[9/16] bg-gray-100 flex items-center justify-center text-gray-400 font-serif italic">Mobile Screen 3</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="bg-gray-900 text-white p-12 md:p-24">
+				<h2 class="text-xs uppercase tracking-[0.2em] text-gray-400 font-bold mb-8">Resultados</h2>
+				<p class="text-2xl font-serif italic leading-relaxed">
+					"El rediseño logró un incremento del 40% en la retención de usuarios durante los primeros 3 meses tras el lanzamiento."
+				</p>
+			</section>
+		</div>
+	</article>
+
+	<!-- Project Navigation -->
+	<nav class="border-t border-gray-100">
+		<div class="max-w-7xl mx-auto px-6 grid grid-cols-2 divide-x divide-gray-100">
+			{prev ? (
+				<a href={`/projects/${prev.slug}`} class="py-16 hover:bg-gray-50 transition-colors group flex flex-col items-start px-4">
+					<span class="text-[10px] uppercase tracking-widest text-gray-400 font-bold mb-4">Anterior</span>
+					<span class="text-xl font-medium group-hover:underline underline-offset-4">{prev.data.title}</span>
+				</a>
+			) : <div></div>}
+			
+			{next ? (
+				<a href={`/projects/${next.slug}`} class="py-16 hover:bg-gray-50 transition-colors group flex flex-col items-end px-4 text-right">
+					<span class="text-[10px] uppercase tracking-widest text-gray-400 font-bold mb-4">Siguiente</span>
+					<span class="text-xl font-medium group-hover:underline underline-offset-4">{next.data.title}</span>
+				</a>
+			) : <div></div>}
+		</div>
+	</nav>
+</BaseLayout>

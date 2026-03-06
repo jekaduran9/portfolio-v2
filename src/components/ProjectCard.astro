@@ -1,0 +1,26 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+	project: CollectionEntry<'projects'>;
+}
+
+const { project } = Astro.props;
+const { title, description, type } = project.data;
+---
+
+<a href={`/projects/${project.slug}`} class="group block space-y-4">
+	<div class="aspect-[4/3] bg-gray-100 overflow-hidden relative">
+		<div class="w-full h-full bg-gray-200 group-hover:scale-105 transition-transform duration-700 ease-out flex items-center justify-center text-gray-400 font-serif italic">
+			{title} Mockup
+		</div>
+		<div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-500"></div>
+	</div>
+	<div class="space-y-1">
+		<div class="flex justify-between items-baseline">
+			<h3 class="text-xl font-medium tracking-tight group-hover:underline underline-offset-4 decoration-1">{title}</h3>
+			<span class="text-[10px] uppercase tracking-widest text-gray-400 font-medium">{type}</span>
+		</div>
+		<p class="text-gray-500 text-sm leading-relaxed">{description}</p>
+	</div>
+</a>
