@@ -1,62 +1,61 @@
 # Portfolio: Jessica Duran - Product Designer
 
-Este proyecto es un portfolio profesional diseñado para destacar trabajos de Product Design y UX/UI, con un enfoque minimalista, editorial y muy visual.
+Este proyecto es un portfolio profesional diseñado para destacar trabajos de Product Design y UX/UI, con un enfoque minimalista, editorial y bilingüe.
 
 ## 🚀 Estado Actual del Proyecto
 
-El portfolio ha sido construido utilizando **Astro** y **Tailwind CSS v4**, priorizando el rendimiento y la facilidad de gestión de contenido a través de archivos Markdown.
+El portfolio ha sido construido utilizando **Astro** y **Tailwind CSS v4**, con soporte completo para multi-idioma (Español e Inglés).
 
-### Estructura de Páginas Implementada
-1.  **Home (`/`)**: Hero section con propuesta de valor y grid de 6-8 proyectos destacados.
-2.  **Proyectos (`/projects/[slug]`)**: Plantilla dinámica para casos de estudio (UX Case Studies) que incluye:
-    *   Contexto, Problema y Objetivo.
-    *   Mi Rol y Herramientas (Figma, Research, etc.).
-    *   Secciones visuales de proceso (Research, Wireframes, UI).
-    *   Resultados e Impacto.
-    *   Navegación entre proyectos.
-3.  **About Me (`/about`)**: Perfil profesional, experiencia laboral y servicios ofrecidos.
-4.  **Contacto (`/contact`)**: Sección directa para colaboraciones, email y redes sociales (LinkedIn, Behance, Instagram).
+### Estructura de Páginas e i18n
+El sitio utiliza el sistema nativo de i18n de Astro con las siguientes rutas:
+*   **Español (Default)**: `/`, `/about`, `/contact`, `/projects/[slug]`
+*   **Inglés**: `/en/`, `/en/about`, `/en/contact`, `/en/projects/[slug]`
+
+### Componentes Clave
+1.  **Home**: Hero visual bilingüe y grid de proyectos filtrados por idioma.
+2.  **Selector de Idioma**: Ubicado en el header (ES / EN) para navegación instantánea.
+3.  **Proyectos**: Casos de estudio dinámicos con soporte para metadatos bilingües.
+4.  **Branding**: Uso del logo personalizado `logo-byjeka.png`.
 
 ### 🛠️ Stack Tecnológico
 *   **Framework**: [Astro](https://astro.build/)
-*   **Estilos**: [Tailwind CSS v4](https://tailwindcss.com/) (con plugin `@tailwindcss/typography`)
-*   **Tipografía**: 
-    *   *Inter*: Para cuerpo de texto y UI (moderno y legible).
-    *   *Playfair Display*: Para detalles editoriales y énfasis (elegante y clásico).
-*   **Gestión de Contenido**: Astro Content Collections (Markdown).
+*   **Estilos**: [Tailwind CSS v4](https://tailwindcss.com/)
+*   **Color de Fondo**: `#F9F8F3` (Minimalista/Crema)
+*   **Tipografía**: *Inter* (Sans) y *Playfair Display* (Serif).
+*   **Internacionalización**: Sistema centralizado en `src/i18n/`.
 
 ## 📖 Guía de Gestión de Contenido
 
-### Cómo añadir un nuevo proyecto
-Para añadir un nuevo caso de estudio, crea un archivo `.md` en la carpeta `src/content/projects/` con el siguiente formato:
+### Cómo añadir un nuevo proyecto (Bilingüe)
+Para que un proyecto aparezca en ambos idiomas, debes crear **dos archivos** en `src/content/projects/`:
 
+1.  **Versión Español**: `proyecto-es.md` con `lang: "es"`
+2.  **Versión Inglés**: `proyecto-en.md` con `lang: "en"`
+
+**Ejemplo de Frontmatter:**
 ```markdown
 ---
-title: "Nombre del Proyecto"
-description: "Breve descripción de una línea."
-role: "Tu Rol (ej. Lead Designer)"
-tools: ["Figma", "User Research"]
-type: "Tipo (ej. Mobile App, SaaS)"
-image: "https://url-de-tu-imagen.com"
+title: "Título del Proyecto"
+description: "Descripción corta."
+role: "Tu Rol"
+tools: ["Figma", "Research"]
+type: "Web Design"
+image: "https://url-imagen.com"
 pubDate: 2026-03-06
 featured: true
+lang: "es" # O "en" para la versión en inglés
 ---
-# Contexto
-Escribe aquí el contexto del proyecto...
-
-## Problema
-Describe el problema a resolver...
-
-## Proceso de Diseño
-Detalla tu proceso...
 ```
 
+### Traducciones de Interfaz
+Los textos fijos (botones, menú, labels) se gestionan en `src/i18n/ui.ts`. Si necesitas cambiar un texto de la interfaz, edita ese archivo.
+
 ### Personalización Visual
-*   **Layout Global**: Modifica `src/layouts/BaseLayout.astro` para cambios en el header, footer o estructura base.
-*   **Estilos Globales**: Ubicados en `src/styles/global.css`.
-*   **Colores y Tipografía**: Gestionados a través de clases de Tailwind en los componentes y páginas.
+*   **Logo**: El archivo se encuentra en `public/logo-byjeka.png`. Su tamaño se ajusta en `src/layouts/BaseLayout.astro`.
+*   **Layout**: Estructura base en `src/layouts/BaseLayout.astro`.
+*   **Proyectos**: Diseño de caso de estudio en `src/pages/projects/[slug].astro`.
 
 ## 📌 Próximos Pasos Sugeridos
-*   Reemplazar imágenes de placeholder por mockups reales en `src/content/projects/`.
-*   Actualizar la experiencia laboral real en `src/pages/about.astro`.
-*   Configurar un dominio propio para el despliegue (Vercel o Netlify recomendados).
+*   Sustituir los mockups de ejemplo por imágenes reales en los archivos Markdown.
+*   Personalizar el texto de la experiencia laboral en `src/pages/about.astro` y `src/pages/en/about.astro`.
+*   Desplegar en Vercel o Netlify para compartir el portfolio.
