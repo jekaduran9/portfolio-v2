@@ -30,20 +30,22 @@ const sortedProjects = projects.sort((a, b) => b.data.pubDate.valueOf() - a.data
 			<div class="flex whitespace-nowrap animate-marquee">
 				{[...Array(6)].map((_) => (
 					<h1 class="text-7xl md:text-[15rem] font-bold tracking-tighter text-white/80 px-8 flex items-center mix-blend-overlay blur-[2px]">
-						{t('hero.title')}<span class="text-[#FF007F] ml-4 mix-blend-normal blur-none">.</span>
+						{t('hero.title')}<span class="text-[#E0A4B0] ml-4 mix-blend-normal blur-none">.</span>
 					</h1>
 				))}
 			</div>
 		</div>
 
-		<div class="relative z-10 max-w-7xl mx-auto px-6 w-full pb-20">
-			<div class="max-w-xl">
-				<p class="text-2xl md:text-3xl text-white font-medium mb-8 leading-tight drop-shadow-lg">
-					{t('hero.subtitle')}
-				</p>
-				<a href="#projects" class="inline-block bg-white text-black px-10 py-5 text-sm font-bold uppercase tracking-[0.2em] hover:bg-pink-500 hover:text-white transition-all duration-500">
+		<div class="relative z-10 max-w-7xl mx-auto px-6 w-full pb-20 flex flex-col md:flex-row justify-between items-end gap-12">
+			<div class="order-2 md:order-1">
+				<a href="#projects" class="inline-block border-2 border-white text-white px-10 py-5 text-sm font-bold uppercase tracking-[0.2em] rounded-full hover:bg-[#E0A4B0] hover:border-[#E0A4B0] transition-all duration-500">
 					{t('hero.cta')}
 				</a>
+			</div>
+			<div class="max-w-xl text-right order-1 md:order-2">
+				<p class="text-2xl md:text-3xl text-white font-medium mb-4 leading-tight drop-shadow-lg">
+					{t('hero.subtitle')}
+				</p>
 			</div>
 		</div>
 	</section>
