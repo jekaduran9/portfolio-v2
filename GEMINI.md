@@ -20,7 +20,7 @@ El sitio utiliza el sistema nativo de i18n de Astro con las siguientes rutas:
 ### 🛠️ Stack Tecnológico
 *   **Framework**: [Astro](https://astro.build/)
 *   **Estilos**: [Tailwind CSS v4](https://tailwindcss.com/)
-*   **Color de Fondo**: `#F9F8F3` (Minimalista/Crema)
+*   **Color de Fondo**: `#F1EDE4` (Minimalista/Crema)
 *   **Tipografía**: *Inter* (Sans) y *Playfair Display* (Serif).
 *   **Internacionalización**: Sistema centralizado en `src/i18n/`.
 
