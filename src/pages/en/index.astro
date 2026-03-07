@@ -18,7 +18,7 @@ const sortedProjects = projects.sort((a, b) => b.data.pubDate.valueOf() - a.data
 	<section class="relative w-full h-screen flex flex-col justify-end overflow-hidden">
 		<div class="absolute inset-0 z-0">
 			<img 
-				src="/hero-background.jpeg" 
+				src={`${import.meta.env.BASE_URL}/hero-background.jpeg`} 
 				alt="Jessica Duran - Product Designer" 
 				class="w-full h-full object-cover grayscale brightness-90"
 			/>

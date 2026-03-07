@@ -42,9 +42,9 @@ const translatePath = useTranslatedPath(lang);
 						<li><a href={translatePath('/contact')} class="hover:text-gray-500 transition-colors">{t('nav.contact')}</a></li>
 					</ul>
 					<div class="flex gap-2 text-xs font-bold uppercase tracking-widest border-l border-black/10 pl-10">
-						<a href="/" class={lang === 'es' ? 'text-black' : 'text-gray-400 hover:text-black'}>ES</a>
+						<a href={translatePath('/', 'es')} class={lang === 'es' ? 'text-black' : 'text-gray-400 hover:text-black'}>ES</a>
 						<span class="text-gray-300">/</span>
-						<a href="/en/" class={lang === 'en' ? 'text-black' : 'text-gray-400 hover:text-black'}>EN</a>
+						<a href={translatePath('/', 'en')} class={lang === 'en' ? 'text-black' : 'text-gray-400 hover:text-black'}>EN</a>
 					</div>
 				</div>
 			</nav>
@@ -74,7 +74,6 @@ const translatePath = useTranslatedPath(lang);
 		</footer>
 		<CustomCursor />
 	</body>
-</html>
 </html>
 
 <style is:global>

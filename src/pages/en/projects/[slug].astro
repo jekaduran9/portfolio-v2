@@ -1,11 +1,11 @@
 ---
 import { getCollection } from 'astro:content';
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getLangFromUrl, useTranslations, useTranslatedPath } from '../../i18n/utils';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getLangFromUrl, useTranslations, useTranslatedPath } from '../../../i18n/utils';
 
 export async function getStaticPaths() {
   const projects = await getCollection('projects', ({ data }) => {
-    return data.lang === 'es';
+    return data.lang === 'en';
   });
   
   return projects.map((project, index) => {
