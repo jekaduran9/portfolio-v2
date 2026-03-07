@@ -1,0 +1,49 @@
+---
+---
+<div id="custom-cursor" class="fixed top-0 left-0 w-8 h-8 pointer-events-none z-[9999] mix-blend-difference hidden md:block">
+  <!-- Círculo exterior -->
+  <div class="absolute inset-0 border border-white/50 rounded-full scale-100 transition-transform duration-300 ease-out" id="cursor-circle"></div>
+  <!-- Estrella central (4 puntas / Sparkle) -->
+  <div class="absolute inset-0 flex items-center justify-center">
+    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="white" class="lucide lucide-sparkle">
+      <path d="M12 2s.67 5.33 4 8c2.67 2.67 8 4 8 4s-5.33.67-8 4c-2.67 2.67-4 8-4 8s-.67-5.33-4-8c-2.67-2.67-8-4-8-4s5.33-.67 8-4c2.67-2.67 4-8 4-8z"/>
+    </svg>
+  </div>
+</div>
+
+<script>
+  const cursor = document.getElementById('custom-cursor');
+  const circle = document.getElementById('cursor-circle');
+  
+  window.addEventListener('mousemove', (e) => {
+    if (cursor) {
+      // Movimiento instantáneo 1:1 con el ratón
+      cursor.style.transform = `translate3d(${e.clientX - 16}px, ${e.clientY - 16}px, 0)`;
+    }
+  });
+
+  // Efecto al pasar sobre enlaces o botones
+  const interactiveElements = document.querySelectorAll('a, button, [role="button"]');
+  
+  interactiveElements.forEach((el) => {
+    el.addEventListener('mouseenter', () => {
+      if (circle) circle.classList.add('scale-150', 'border-white');
+    });
+    el.addEventListener('mouseleave', () => {
+      if (circle) circle.classList.remove('scale-150', 'border-white');
+    });
+  });
+
+  // Ocultar cursor nativo
+  document.body.style.cursor = 'none';
+  interactiveElements.forEach(el => {
+    (el as HTMLElement).style.cursor = 'none';
+  });
+</script>
+
+<style>
+  /* Aseguramos que el cursor nativo desaparezca */
+  :global(body), :global(a), :global(button) {
+    cursor: none !important;
+  }
+</style>
