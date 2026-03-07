@@ -62,15 +62,8 @@ const sortedProjects = projects.sort((a, b) => b.data.pubDate.valueOf() - a.data
 	</style>
 
 	<!-- Projects Section -->
-	<section id="projects" class="max-w-7xl mx-auto px-6 py-20 border-t border-gray-50">
-		<div class="flex justify-between items-end mb-16">
-			<div>
-				<h2 class="text-xs uppercase tracking-[0.2em] text-gray-400 font-bold mb-4">{t('projects.title')}</h2>
-				<p class="text-3xl font-medium tracking-tight">{t('projects.subtitle')}</p>
-			</div>
-		</div>
-		
-		<div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-20">
+	<section id="projects" class="max-w-7xl mx-auto px-6 py-32 border-t border-black/5">
+		<div class="columns-1 md:columns-3 gap-12">
 			{sortedProjects.map((project) => (
 				<ProjectCard project={project} />
 			))}

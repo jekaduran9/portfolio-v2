@@ -11,6 +11,7 @@ const projects = defineCollection({
     pubDate: z.date(),
     featured: z.boolean().default(false),
     lang: z.enum(['es', 'en']).default('es'),
+    aspectRatio: z.string().default('aspect-square'),
   }),
 });
 
