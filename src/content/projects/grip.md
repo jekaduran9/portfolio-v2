@@ -8,7 +8,7 @@ image: "https://picsum.photos/800/600"
 pubDate: 2024-03-03
 featured: true
 lang: "es"
-aspectRatio: "aspect-video"
+aspectRatio: "aspect-[4/3]"
 ---
 # Contexto
 Grip es una startup holandesa que ofrece pruebas de sangre en casa para obtener información sobre salud hormonal y fertilidad.

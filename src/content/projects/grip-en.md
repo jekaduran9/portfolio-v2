@@ -8,7 +8,7 @@ image: "https://picsum.photos/800/600"
 pubDate: 2024-03-03
 featured: true
 lang: "en"
-aspectRatio: "aspect-video"
+aspectRatio: "aspect-[4/3]"
 ---
 # Context
 Grip is a Dutch startup that offers at-home blood tests to provide information on hormonal health and fertility.

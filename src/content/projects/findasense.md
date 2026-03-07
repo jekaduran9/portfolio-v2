@@ -8,7 +8,7 @@ image: "/pj-findasense-cover.png"
 pubDate: 2024-03-07
 featured: true
 lang: "es"
-aspectRatio: "aspect-video"
+aspectRatio: "aspect-square"
 ---
 # Contexto
 Findasense buscaba renovar su presencia digital para reflejar su evolución como consultora estratégica.

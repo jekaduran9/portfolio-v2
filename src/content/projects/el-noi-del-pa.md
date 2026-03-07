@@ -8,7 +8,7 @@ image: "/pj-elnoiheader-cover.png"
 pubDate: 2024-03-05
 featured: true
 lang: "es"
-aspectRatio: "aspect-video"
+aspectRatio: "aspect-[3/4]"
 ---
 # Contexto
 El Noi del Pa es una panadería artesanal 100% sin gluten en Barcelona que buscaba trasladar su esencia de calidez y cercanía al entorno digital.

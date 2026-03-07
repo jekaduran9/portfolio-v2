@@ -8,7 +8,7 @@ image: "/pj-findasense-cover.png"
 pubDate: 2024-03-07
 featured: true
 lang: "en"
-aspectRatio: "aspect-video"
+aspectRatio: "aspect-square"
 ---
 # Context
 Findasense sought to renew its digital presence to reflect its evolution as a strategic consultancy.

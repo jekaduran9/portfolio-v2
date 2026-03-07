@@ -8,7 +8,7 @@ image: "/pj-tropiyummi - cover.png"
 pubDate: 2024-03-06
 featured: true
 lang: "en"
-aspectRatio: "aspect-square"
+aspectRatio: "aspect-video"
 ---
 # Context
 Tropi Yummy arrived in Barcelona with authentic products (mango biche, fruit salads, obleas), but completely lacked a brand identity. There was no logo, color palette, or defined visual style. The challenge was to build a brand from scratch that conveyed tropical freshness and joy.

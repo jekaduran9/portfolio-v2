@@ -8,7 +8,7 @@ image: "https://picsum.photos/800/600"
 pubDate: 2024-03-02
 featured: true
 lang: "en"
-aspectRatio: "aspect-square"
+aspectRatio: "aspect-video"
 ---
 # Context
 Salonomi is a B2B booking and management platform for small businesses in the health and beauty sector in Latin America.

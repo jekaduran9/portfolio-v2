@@ -8,7 +8,7 @@ image: "/pj-tropiyummi - cover.png"
 pubDate: 2024-03-06
 featured: true
 lang: "es"
-aspectRatio: "aspect-square"
+aspectRatio: "aspect-video"
 ---
 # Contexto
 Tropi Yummy llegó a Barcelona con productos auténticos (mango biche, ensaladas de frutas, obleas), pero carecía totalmente de una identidad de marca. No existía un logo, paleta de colores ni un estilo visual definido. El reto era construir desde cero una marca que transmitiera frescura y alegría tropical.

@@ -7,7 +7,7 @@ interface Props {
 }
 
 const { project } = Astro.props;
-const { title, type, aspectRatio } = project.data;
+const { title, type, aspectRatio, image } = project.data;
 
 const lang = getLangFromUrl(Astro.url);
 const translatePath = useTranslatedPath(lang);
@@ -15,13 +15,21 @@ const translatePath = useTranslatedPath(lang);
 
 <a href={translatePath(`/projects/${project.slug}`)} class="group block break-inside-avoid mb-12">
 	<div class={`${aspectRatio} bg-gray-100 overflow-hidden relative mb-4`}>
-		<div class="w-full h-full bg-gray-200 group-hover:scale-105 transition-transform duration-700 ease-out flex items-center justify-center text-gray-400 font-serif italic">
-			{title} Mockup
-		</div>
+		{image ? (
+			<img 
+				src={image} 
+				alt={title}
+				class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+			/>
+		) : (
+			<div class="w-full h-full bg-gray-200 flex items-center justify-center text-gray-400 font-serif italic text-xs">
+				{title}
+			</div>
+		)}
 		<div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-500"></div>
 	</div>
-	<div class="space-y-1">
-		<h3 class="text-sm font-bold uppercase tracking-widest">{title}</h3>
+	<div class="space-y-1 text-center md:text-left">
+		<h3 class="text-sm font-bold uppercase tracking-widest leading-tight">{title}</h3>
 		<p class="text-xs text-gray-400 italic font-serif">{type}</p>
 	</div>
 </a>

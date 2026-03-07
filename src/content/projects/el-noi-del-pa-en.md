@@ -8,7 +8,7 @@ image: "/pj-elnoiheader-cover.png"
 pubDate: 2024-03-05
 featured: true
 lang: "en"
-aspectRatio: "aspect-video"
+aspectRatio: "aspect-[3/4]"
 ---
 # Context
 El Noi del Pa is a 100% gluten-free artisanal bakery in Barcelona that sought to transfer its essence of warmth and closeness to the digital environment.
