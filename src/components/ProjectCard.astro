@@ -11,13 +11,16 @@ const { title, type, aspectRatio, image } = project.data;
 
 const lang = getLangFromUrl(Astro.url);
 const translatePath = useTranslatedPath(lang);
+
+// Prepend BASE_URL if image path is absolute (starts with /)
+const imagePath = image?.startsWith('/') ? `${import.meta.env.BASE_URL}${image}` : image;
 ---
 
 <a href={translatePath(`/projects/${project.slug}`)} class="group block break-inside-avoid mb-12">
 	<div class={`${aspectRatio} bg-gray-100 overflow-hidden relative mb-4`}>
-		{image ? (
+		{imagePath ? (
 			<img 
-				src={image} 
+				src={imagePath} 
 				alt={title}
 				class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
 			/>
