@@ -27,25 +27,28 @@ El sitio utiliza el sistema nativo de i18n de Astro con las siguientes rutas:
 ## 📖 Guía de Gestión de Contenido
 
 ### Cómo añadir un nuevo proyecto (Bilingüe)
-Para que un proyecto aparezca en ambos idiomas, debes crear **dos archivos** en `src/content/projects/`:
+Para que un proyecto aparezca en ambos idiomas, debes crear **dos archivos** en `src/content/projects/` (ej: `mi-proyecto.md` y `mi-proyecto-en.md`):
 
-1.  **Versión Español**: `proyecto-es.md` con `lang: "es"`
-2.  **Versión Inglés**: `proyecto-en.md` con `lang: "en"`
-
-**Ejemplo de Frontmatter:**
+**Ejemplo de Frontmatter completo:**
 ```markdown
 ---
 title: "Título del Proyecto"
-description: "Descripción corta."
-role: "Tu Rol"
-tools: ["Figma", "Research"]
-type: "Web Design"
-image: "https://url-imagen.com"
-pubDate: 2026-03-06
-featured: true
+description: "Descripción corta para la card."
+role: "Tu Rol (ej: Lead Designer)"
+tools: ["Figma", "Research", "Prototyping"]
+type: "App Móvil"
+image: "/pj-nombre-cover.png" # Imagen guardada en la carpeta public/
+pubDate: 2026-03-07
+featured: true # true para mostrar en la Home
 lang: "es" # O "en" para la versión en inglés
+aspectRatio: "aspect-square" # O "aspect-video" para tarjetas horizontales
 ---
 ```
+
+**Pasos adicionales:**
+1.  **Imágenes**: Guarda las portadas en `public/` y referéncialas con `/nombre-archivo.png`.
+2.  **Contenido**: Escribe el cuerpo del caso de estudio usando Markdown debajo del bloque de metadatos.
+3.  **Orden**: Los proyectos se ordenan automáticamente por `pubDate` (más reciente primero).
 
 ### Traducciones de Interfaz
 Los textos fijos (botones, menú, labels) se gestionan en `src/i18n/ui.ts`. Si necesitas cambiar un texto de la interfaz, edita ese archivo.
