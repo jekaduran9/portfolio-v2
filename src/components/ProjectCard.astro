@@ -16,8 +16,8 @@ const translatePath = useTranslatedPath(lang);
 const imagePath = image?.startsWith('/') ? `${import.meta.env.BASE_URL}${image}` : image;
 ---
 
-<a href={translatePath(`/projects/${project.slug}`)} class="group block break-inside-avoid mb-12">
-	<div class={`${aspectRatio} bg-gray-100 overflow-hidden relative mb-4`}>
+<a href={translatePath(`/projects/${project.slug}`)} class="group block break-inside-avoid mb-12 bg-white rounded-[12px] p-4 transition-all duration-300">
+	<div class={`${aspectRatio} bg-gray-100 overflow-hidden relative mb-4 rounded-[8px]`}>
 		{imagePath ? (
 			<img 
 				src={imagePath} 
@@ -31,7 +31,7 @@ const imagePath = image?.startsWith('/') ? `${import.meta.env.BASE_URL}${image}`
 		)}
 		<div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-500"></div>
 	</div>
-	<div class="space-y-1 text-center md:text-left pt-2">
+	<div class="space-y-1 text-center md:text-left pt-2 px-1 pb-2">
 		<h3 class="text-sm font-bold uppercase tracking-widest leading-tight group-hover:scale-[1.02] group-hover:text-black transition-all duration-300 origin-center md:origin-left inline-block w-full">{title}</h3>
 		<p class="italic font-serif font-light text-neutral-600 text-[18px] leading-[1.4] tracking-normal">{type}</p>
 	</div>

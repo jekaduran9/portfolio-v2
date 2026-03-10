@@ -30,17 +30,28 @@ const translatePath = useTranslatedPath(lang);
 	</head>
 	<body class="bg-[#F9F8F3] text-gray-900 font-sans selection:bg-black selection:text-white">
 		<header class="fixed top-0 left-0 w-full z-50 bg-[#F9F8F3]/80 backdrop-blur-md border-b border-black/5">
-			<nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-				<a href={translatePath('/')} class="hover:opacity-70 transition-opacity">
-					<img src={`${import.meta.env.BASE_URL}/logo-byjeka.png`} alt="Jessica Duran Logo" class="h-10 w-auto object-contain" />
-				</a>
-				<div class="flex items-center gap-10">
-					<ul class="hidden md:flex items-center gap-10 text-sm font-medium tracking-wide uppercase">
-						<li><a href={translatePath('/')} class="hover:text-gray-500 transition-colors">{t('nav.home')}</a></li>
-						<li><a href={translatePath('/#projects')} class="hover:text-gray-500 transition-colors">{t('nav.projects')}</a></li>
-						<li><a href={translatePath('/about')} class="hover:text-gray-500 transition-colors">{t('nav.about')}</a></li>
-						<li><a href={translatePath('/contact')} class="hover:text-gray-500 transition-colors">{t('nav.contact')}</a></li>
-					</ul>
+			<nav class="max-w-7xl mx-auto px-6 h-20 flex items-center">
+				<div class="flex-1">
+					<a href={translatePath('/')} class="hover:opacity-70 transition-opacity inline-block">
+						<img src={`${import.meta.env.BASE_URL}/logo-byjeka.png`} alt="Jessica Duran Logo" class="h-10 w-auto object-contain" />
+					</a>
+				</div>
+
+				<ul class="hidden md:flex items-center gap-10 text-xs font-bold tracking-[0.15em] uppercase">
+					<li><a href={translatePath('/')} class="hover:text-gray-500 transition-colors">{t('nav.home')}</a></li>
+					<li><a href={translatePath('/#projects')} class="hover:text-gray-500 transition-colors">{t('nav.projects')}</a></li>
+					<li><a href={translatePath('/about')} class="hover:text-gray-500 transition-colors">{t('nav.about')}</a></li>
+					<li><a href={translatePath('/contact')} class="hover:text-gray-500 transition-colors">{t('nav.contact')}</a></li>
+				</ul>
+
+				<div class="flex-1 flex items-center justify-end gap-10">
+					<div class="hidden lg:flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400">
+						<span class="relative flex h-2 w-2">
+							<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+							<span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+						</span>
+						{t('nav.status')}
+					</div>
 					<div class="flex gap-2 text-xs font-bold uppercase tracking-widest border-l border-black/10 pl-10">
 						<a href={translatePath('/', 'es')} class={lang === 'es' ? 'text-black' : 'text-gray-400 hover:text-black'}>ES</a>
 						<span class="text-gray-300">/</span>
