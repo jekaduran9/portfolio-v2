@@ -4,19 +4,7 @@
 @theme {
   --font-inter: "Inter", sans-serif;
   --font-playfair: "Playfair Display", serif;
-
-  --animate-text-slide: text-slide 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-
-  @keyframes text-slide {
-    0% { transform: translateY(0); opacity: 1; }
-    45% { transform: translateY(-110%); opacity: 0; }
-    50% { transform: translateY(110%); opacity: 0; }
-    100% { transform: translateY(0); opacity: 1; }
-  }
-}
-
-@utility animate-text-slide {
-  animation: text-slide 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --font-cormorant: "Cormorant Garamond", serif;
 }
 
 body {
@@ -25,5 +13,9 @@ body {
 }
 
 .font-serif {
+  font-family: var(--font-cormorant);
+}
+
+.font-playfair {
   font-family: var(--font-playfair);
 }
