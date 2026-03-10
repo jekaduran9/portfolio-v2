@@ -31,10 +31,8 @@ const imagePath = image?.startsWith('/') ? `${import.meta.env.BASE_URL}${image}`
 		)}
 		<div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-500"></div>
 	</div>
-	<div class="space-y-1 text-center md:text-left">
-		<div class="overflow-hidden">
-			<h3 class="text-sm font-bold uppercase tracking-widest leading-tight group-hover:animate-text-blink">{title}</h3>
-		</div>
+	<div class="space-y-1 text-center md:text-left pt-2">
+		<h3 class="text-sm font-bold uppercase tracking-widest leading-tight group-hover:scale-[1.02] group-hover:text-black transition-all duration-300 origin-center md:origin-left inline-block w-full">{title}</h3>
 		<p class="text-xs text-gray-400 italic font-serif">{type}</p>
 	</div>
 </a>
