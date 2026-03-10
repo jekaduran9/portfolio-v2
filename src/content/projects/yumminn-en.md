@@ -1,33 +1,50 @@
 ---
-title: "Yumminn: Restaurant SaaS"
-description: "Redesigning the digital payment experience to optimize hospitality efficiency."
+title: "Yumminn: Redesigning the Restaurant Payment Experience"
+description: "From a confusing MVP to a leading SaaS solution: optimizing digital payment to increase tips and Google reviews."
 role: "UX/UI Designer"
-tools: ["Figma", "Google Analytics", "Illustrator", "Notion"]
-type: "SaaS Product"
+tools: ["Figma", "Google Analytics", "Adobe Illustrator", "Notion", "User Testing"]
+type: "SaaS Product & Web-app"
 image: "/pj-yumminn-cover.png"
 pubDate: 2024-03-04
 featured: true
 lang: "en"
 aspectRatio: "aspect-square"
 ---
-# Context
-Yumminn is a digital solution designed to optimize the ordering and payment experience in restaurants, improving profitability and operational efficiency.
 
-## The Problem
-The average waiting time to pay in a restaurant is 13 minutes, causing frustration. The challenge was to redesign the MVP to improve conversion, tips, and create a seamless experience.
+Yumminn is the fastest and simplest solution to order and pay in restaurants, designed to improve Google reviews and build customer loyalty. Our platform optimizes profitability and operational efficiency, smoothing the interaction between front-of-house staff and diners.
 
-## Design Process
-### Insights
-After conducting interviews, we identified a lack of visual hierarchy in the MVP and confusion over how to pay as the major friction points.
+## 🔴 The Challenge
+The main pain point in hospitality is waiting: a customer takes, on average, 13 minutes to pay. My goal as a UX/UI designer was to analyze the current MVP to:
 
-### Customization
-An extreme customization system was introduced that allows each restaurant to reflect its own visual identity within the web-app, increasing user trust.
+*   Redesign the payment experience and improve the conversion rate.
+*   Increase the volume of tips for waiters.
+*   Balance the real needs of three actors: the restaurant, the diner, and the staff.
 
-## Final Solution
-An intuitive interface that allows viewing the order in real-time and paying quickly.
+## 🔍 MVP Diagnosis (Usability Analysis)
+After an exhaustive analysis and user testing, I identified what worked and what hindered the experience:
 
-**Results and Impact:**
-*   Growth from 6 to more than **200 restaurants**.
-*   Increase of more than **55% in tips**.
-*   **19% increase** in average ticket.
-*   Significant improvement in the Google positive review rate.
+### ✅ What worked well
+*   Accessible language selector.
+*   Operational "split the bill" function.
+*   Good technical foundation as a payment solution.
+
+### ⚠️ Opportunities for improvement
+*   **Lack of visual hierarchy:** Too many buttons with the same weight.
+*   **Confusing payment flow:** Barriers for the first-time user.
+*   **Data disconnection:** Lack of visual synchronization between what was ordered from the waiter and what was shown on the web.
+*   **Post-payment uncertainty:** Little visibility of the table status after making the transaction.
+*   **Excessive noise:** Unnecessary information (user profile) and lack of a clear CTA.
+
+## 🛠 Process and Iteration
+For the second iteration, I worked closely with the operations team and did field work interviewing diners in real-time.
+
+**The big finding:** Once the technical functionality was resolved, the challenge was differentiation. Restaurants didn't want a generic tool; they wanted the WebApp to be an extension of their own brand. We transformed the interface into a personalized experience that breathes each local's identity, ensuring that payment is not just a procedure, but the perfect close to the dinner.
+
+## 🚀 Results and Impact
+The redesign not only improved the aesthetics but transformed the business model:
+
+*   **Exponential growth:** We grew from 6 to over 200 restaurants.
+*   **Financial impact:** 19% increase in average ticket and a 55% increase in tips.
+*   **Loyalty:** Implementation of loyalty features that increased user retention.
+*   **Reputation:** Significant increase in positive Google reviews.
+*   **Optimized UX:** An intuitive, personalized interface with a clear visual hierarchy.
