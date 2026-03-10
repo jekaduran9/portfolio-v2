@@ -1,30 +1,54 @@
 ---
-title: "El Noi del Pa: E-commerce Artesanal"
-description: "Web de panadería 100% sin gluten con alma artesana en Barcelona."
-role: "Web Designer (UX/UI, Branding)"
-tools: ["Figma", "Photoshop", "Wix", "Procreate"]
-type: "E-commerce Website"
+title: "El Noi del Pa Sense Gluten: Tradición artesanal en la era digital"
+description: "Redefiniendo la experiencia sin gluten en Barcelona: una plataforma digital 360º que traslada la calidez del obrador al e-commerce."
+role: "Product Designer & E-commerce Strategist"
+tools: ["Figma", "Wix", "Notion", "Adobe Photoshop", "Glovo Integration"]
+type: "E-commerce & Digital Identity"
 image: "/pj-elnoiheader-cover.png"
 pubDate: 2024-03-05
 featured: true
 lang: "es"
 aspectRatio: "aspect-[3/4]"
 ---
-# Contexto
-El Noi del Pa es una panadería artesanal 100% sin gluten en Barcelona que buscaba trasladar su esencia de calidez y cercanía al entorno digital.
 
-## El Problema
-Necesitaban una presencia online profesional que permitiera a los usuarios explorar sus productos y realizar pedidos de forma sencilla, con una plataforma gestionable por el propio cliente.
+El Noi del Pa Sense Gluten es una panadería artesanal en el corazón de Barcelona que redefine la experiencia sin gluten. Su propuesta combina técnicas tradicionales con ingredientes naturales para ofrecer productos donde el sabor y la textura son los protagonistas.
 
-## Proceso de Diseño
-### Investigación
-Auditoría de competidores y organización de contenidos y catálogo en Notion para asegurar una estructura clara desde el inicio.
+Mi objetivo fue trasladar esa calidez y honestidad del obrador al entorno digital, creando una plataforma que no solo vende, sino que comunica los valores de proximidad y calidad de la marca.
 
-### Diseño e Implementación
-Creación de una interfaz en Figma enfocada en la accesibilidad. La implementación final se realizó en Wix, configurando un sistema de e-commerce completo y fácil de actualizar.
+## 🔴 El Reto (Problema)
+El cliente contaba con un producto excelente pero carecía de una presencia online a la altura. Necesitaba:
 
-## Solución Final
-Una web visualmente cálida que incluye:
-*   **Storytelling:** Sección "Nuestra Historia" para conectar emocionalmente con la comunidad celíaca.
-*   **Catálogo Organizado:** División clara por categorías (panadería, bollería, pastelería).
-*   **E-commerce & Logística:** Integración de pasarela de pago y sistema de pedidos directos vía Glovo para ampliar el alcance local.
+*   Una identidad digital que reflejara su autenticidad y valores.
+*   Un catálogo visualmente atractivo que facilitara la navegación.
+*   Un canal de venta online (e-commerce) robusto y autogestionable.
+*   Centralizar la demanda digital sin complicaciones técnicas para el equipo.
+
+## 🛠 El Proceso Estratégico
+1.  **Inmersión y Estrategia:** Reuniones de marca para definir la narrativa y auditoría del sector gluten-free.
+2.  **Arquitectura de Información:** Organización de contenidos y stock mediante Notion.
+3.  **Dirección de Arte y Fotografía:** Realicé la edición integral y corrección de color de todas las fotografías de producto, buscando una estética natural y apetecible que transmitiera frescura.
+4.  **Diseño UI/UX:** Prototipado en Figma enfocado en la accesibilidad y una estética cálida.
+5.  **Desarrollo:** Implementación en Wix con configuración avanzada de e-commerce y optimización responsive.
+
+## ✨ La Solución
+Una plataforma digital 360º diseñada para convertir visitantes en clientes recurrentes:
+
+*   **Narrativa Visual:** Una "Home" y sección de "Historia" que conectan emocionalmente a través de imágenes cuidadas y copies cercanos.
+*   **Catálogo Inteligente:** Clasificación intuitiva (panadería, bollería y pastelería) para una compra rápida.
+*   **E-commerce Optimizado:** Pasarela de pago segura y gestión de pedidos simplificada.
+*   **Autonomía Total:** Estructura final entregada para que el cliente actualice stock y textos sin depender de terceros.
+
+## 🛵 Omnicanalidad: Integración con Glovo
+Para potenciar el alcance del negocio, escalé el proyecto más allá de la web mediante la integración con Glovo:
+
+*   **Ampliación de mercado:** Apertura de un nuevo canal de venta para usuarios habituados al delivery.
+*   **Gestión de Catálogo:** Adaptación de descripciones y precios a las especificaciones de la plataforma.
+*   **Conversión Directa:** Inclusión de CTAs estratégicos en la web para redirigir tráfico al canal de envío rápido.
+
+**Resultado:** Un ecosistema digital que multiplica los puntos de contacto con el cliente y profesionaliza la logística de ventas.
+
+## 🎓 Lecciones Aprendidas
+*   **Co-creación:** Involucrar al cliente en la fase de contenido desde el inicio reduce fricciones y acelera el lanzamiento.
+*   **Diseño Realista:** Adaptar el diseño a las capacidades técnicas de la plataforma (Wix) garantiza un producto final pulido y funcional.
+*   **Eficacia sobre Complejidad:** En negocios de proximidad, la simplicidad y la claridad en la navegación superan a cualquier artificio visual.
+*   **Empoderamiento:** La formación post-entrega es fundamental para que el cliente sienta el control real sobre su negocio online.
