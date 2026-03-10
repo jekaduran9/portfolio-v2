@@ -4,7 +4,7 @@ description: "Optimización mobile-first para una startup de salud hormonal y fe
 role: "UX/UI Designer Intern"
 tools: ["Figma", "Wix", "Google Analytics", "Hotjar"]
 type: "E-commerce & Health Tech"
-image: "https://picsum.photos/800/600"
+image: "pj-grip-cover.png"
 pubDate: 2024-03-03
 featured: true
 lang: "es"
