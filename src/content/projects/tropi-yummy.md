@@ -1,8 +1,8 @@
 ---
-title: "Tropi Yummy: Branding & Identity"
-description: "Identidad visual vibrante y auténtica para una marca de productos tropicales."
-role: "Product Designer / UX UI Designer"
-tools: ["Figma", "AI Image Generation", "Photo Editing", "Art Direction"]
+title: "🌴 Tropi Yummy: Identidad Tropical en el Corazón de Barcelona"
+description: "De un producto delicioso a una marca vibrante: construyendo una identidad visual que transmite frescura, alegría y latinidad moderna."
+role: "Product Designer & Art Director"
+tools: ["Figma", "AI Image Generation", "Adobe Lightroom", "Photoshop"]
 type: "Branding & Visual Identity"
 image: "/pj-tropiyummi - cover.png"
 pubDate: 2024-03-06
@@ -10,21 +10,34 @@ featured: true
 lang: "es"
 aspectRatio: "aspect-video"
 ---
-# Contexto
-Tropi Yummy llegó a Barcelona con productos auténticos (mango biche, ensaladas de frutas, obleas), pero carecía totalmente de una identidad de marca. No existía un logo, paleta de colores ni un estilo visual definido. El reto era construir desde cero una marca que transmitiera frescura y alegría tropical.
 
-## El Problema
-La falta de identidad impedía conectar con una audiencia diversa en un entorno urbano tan competitivo como Barcelona. El negocio necesitaba una imagen profesional que comunicara la calidad de sus productos naturales.
+## 🚀 El Desafío: De un producto delicioso a una marca vibrante
+Tropi Yummy aterrizó en Barcelona con un sueño claro: traer el sabor auténtico del trópico a una ciudad cosmopolita. El cliente contaba con productos estrella —como el mango biche y las obleas—, pero carecía de una identidad visual.
 
-## Proceso de Diseño
-### Research
-Inmersión en el universo tropical y análisis de la estética caribeña moderna para definir un mood refrescante que evitara los clichés habituales.
+Mi reto fue construir una marca desde cero que transmitiera frescura, alegría y "latinidad" moderna, evitando clichés y asegurando una comunicación coherente en el entorno digital y físico.
 
-### Identidad Visual
-Desarrollo de un logotipo con tipografía redondeada que evoca cercanía. La paleta vibrante se inspiró directamente en frutas: mango, lima, papaya y guayaba.
+## 🧠 Estrategia y Concepto: Más que fruta, un Mood
+Antes de trazar la primera línea, definí el ecosistema visual de la marca basado en:
 
-### Dirección de Arte
-Creación del menú utilizando una estrategia híbrida: generación de imágenes de alta calidad mediante IA para productos iniciales y edición profesional de fotografías reales tras la apertura.
+*   **Investigación de mercado:** Análisis de la competencia local en Barcelona y tendencias de street food.
+*   **Target:** Jóvenes, familias y turistas que buscan una alternativa saludable y exótica.
+*   **El ADN:** Tropi Yummy no solo vende snacks, vende un "mini viaje al trópico".
 
-## Solución Final
-Se logró una identidad visual coherente y llena de energía aplicada con éxito a la carta física y redes sociales, facilitando el lanzamiento exitoso de la marca en el mercado local.
+## 🎨 Identidad Visual: El Sabor de la Gráfica
+El logotipo fue diseñado para ser el embajador de esa energía tropical, priorizando la legibilidad y la frescura.
+
+*   **Tipografía:** Usé fuentes redondeadas y amables que transmiten cercanía y suavidad.
+*   **Dinamismo:** El diseño integra un sutil movimiento orgánico que evoca la fluidez de los jugos naturales y la vitalidad del Caribe.
+*   **Cromatismo:** Una paleta vibrante (mango, lima, papaya y guayaba) que despierta el apetito y diferencia a la marca en el saturado entorno urbano.
+
+## 📸 Dirección de Arte y Producción: La Carta Digital e Híbrida
+Para el menú, desarrollé una dirección de arte donde el producto es el protagonista absoluto.
+
+### 🤖 Innovación con IA
+Ante la ausencia inicial de material fotográfico, utilicé Inteligencia Artificial para generar visuales de alta fidelidad. Manteniendo la paleta de la marca y texturas realistas, logramos lanzar una carta completa y profesional antes incluso de la apertura física.
+
+### 📸 Optimización Real
+Tras la apertura, integré fotografía real del local. Realicé un proceso exhaustivo de post-producción (corrección de color, iluminación y limpieza de fondos) para que las fotos reales convivieran en armonía con las generadas por IA.
+
+## ✨ Resultado
+Una estética híbrida, coherente y profesional que permite a Tropi Yummy competir visualmente desde el primer día, logrando una comunicación impactante tanto en el punto de venta como en plataformas digitales.
