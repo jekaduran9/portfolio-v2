@@ -19,6 +19,37 @@ Findasense, as a global digital transformation consultancy, needed a website tha
 
 My challenge was to rebuild this digital identity under one premise: *The user doesn't want to know who you are until they understand how you can help them.*
 
+### Design process
+My methodology focused on transforming technical complexity into a seamless and consistent user experience on a global scale.
+
+<div class="not-prose grid grid-cols-1 md:grid-cols-5 border border-black/5 rounded-2xl overflow-hidden my-12 bg-white">
+<div class="p-6 border-b md:border-b-0 md:border-r border-black/5 flex flex-col items-center text-center group hover:bg-gray-50 transition-colors">
+<span class="text-4xl font-bold text-gray-100 mb-4 group-hover:text-red-500/10 transition-colors">01</span>
+<h4 class="text-[10px] font-bold uppercase tracking-widest mb-3">Research</h4>
+<p class="text-[11px] text-gray-500 leading-relaxed">Interviews, benchmarking, and heuristic analysis of the previous site.</p>
+</div>
+<div class="p-6 border-b md:border-b-0 md:border-r border-black/5 flex flex-col items-center text-center group hover:bg-gray-50 transition-colors">
+<span class="text-4xl font-bold text-gray-100 mb-4 group-hover:text-red-500/10 transition-colors">02</span>
+<h4 class="text-[10px] font-bold uppercase tracking-widest mb-3">Define</h4>
+<p class="text-[11px] text-gray-500 leading-relaxed">Synthesis of insights and strategic definition of the problem to solve.</p>
+</div>
+<div class="p-6 border-b md:border-b-0 md:border-r border-black/5 flex flex-col items-center text-center group hover:bg-gray-50 transition-colors">
+<span class="text-4xl font-bold text-gray-100 mb-4 group-hover:text-red-500/10 transition-colors">03</span>
+<h4 class="text-[10px] font-bold uppercase tracking-widest mb-3">Ideation</h4>
+<p class="text-[11px] text-gray-500 leading-relaxed">Workshops and exploration of modular and scalable solutions.</p>
+</div>
+<div class="p-6 border-b md:border-b-0 md:border-r border-black/5 flex flex-col items-center text-center group hover:bg-gray-50 transition-colors">
+<span class="text-4xl font-bold text-gray-100 mb-4 group-hover:text-red-500/10 transition-colors">04</span>
+<h4 class="text-[10px] font-bold uppercase tracking-widest mb-3">Prototype</h4>
+<p class="text-[11px] text-gray-500 leading-relaxed">High-fidelity wireframes and prototypes in Figma (UI Kit).</p>
+</div>
+<div class="p-6 flex flex-col items-center text-center group hover:bg-gray-50 transition-colors">
+<span class="text-4xl font-bold text-gray-100 mb-4 group-hover:text-red-500/10 transition-colors">05</span>
+<h4 class="text-[10px] font-bold uppercase tracking-widest mb-3">Test</h4>
+<p class="text-[11px] text-gray-500 leading-relaxed">User validation and technical iteration for WordPress.</p>
+</div>
+</div>
+
 ---
 
 ### 01 — Discovery: UX Audit and Benchmark
@@ -157,5 +188,3 @@ Explore the experience designed for Findasense's global ecosystem.
     </a>
     <p class="text-[10px] text-gray-400 uppercase tracking-widest text-center mt-4 font-bold">Click on the image to explore the real website ↑</p>
 </div>
-
-

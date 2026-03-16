@@ -19,6 +19,37 @@ Findasense, como consultora global de transformación digital, necesitaba una we
 
 Mi reto fue reconstruir esta identidad digital bajo una premisa: *El usuario no quiere saber quién eres hasta que entiende cómo puedes ayudarle.*
 
+### Proceso de diseño
+Mi metodología se centró en transformar la complejidad técnica en una experiencia de usuario fluida y coherente a nivel global.
+
+<div class="not-prose grid grid-cols-1 md:grid-cols-5 border border-black/5 rounded-2xl overflow-hidden my-12 bg-white">
+<div class="p-6 border-b md:border-b-0 md:border-r border-black/5 flex flex-col items-center text-center group hover:bg-gray-50 transition-colors">
+<span class="text-4xl font-bold text-gray-100 mb-4 group-hover:text-red-500/10 transition-colors">01</span>
+<h4 class="text-[10px] font-bold uppercase tracking-widest mb-3">Research</h4>
+<p class="text-[11px] text-gray-500 leading-relaxed">Entrevistas, benchmarking y análisis heurístico del sitio anterior.</p>
+</div>
+<div class="p-6 border-b md:border-b-0 md:border-r border-black/5 flex flex-col items-center text-center group hover:bg-gray-50 transition-colors">
+<span class="text-4xl font-bold text-gray-100 mb-4 group-hover:text-red-500/10 transition-colors">02</span>
+<h4 class="text-[10px] font-bold uppercase tracking-widest mb-3">Define</h4>
+<p class="text-[11px] text-gray-500 leading-relaxed">Síntesis de insights y definición estratégica del problema a resolver.</p>
+</div>
+<div class="p-6 border-b md:border-b-0 md:border-r border-black/5 flex flex-col items-center text-center group hover:bg-gray-50 transition-colors">
+<span class="text-4xl font-bold text-gray-100 mb-4 group-hover:text-red-500/10 transition-colors">03</span>
+<h4 class="text-[10px] font-bold uppercase tracking-widest mb-3">Ideación</h4>
+<p class="text-[11px] text-gray-500 leading-relaxed">Workshops y exploración de soluciones modulares y escalables.</p>
+</div>
+<div class="p-6 border-b md:border-b-0 md:border-r border-black/5 flex flex-col items-center text-center group hover:bg-gray-50 transition-colors">
+<span class="text-4xl font-bold text-gray-100 mb-4 group-hover:text-red-500/10 transition-colors">04</span>
+<h4 class="text-[10px] font-bold uppercase tracking-widest mb-3">Prototype</h4>
+<p class="text-[11px] text-gray-500 leading-relaxed">Wireframes y prototipos de alta fidelidad en Figma (UI Kit).</p>
+</div>
+<div class="p-6 flex flex-col items-center text-center group hover:bg-gray-50 transition-colors">
+<span class="text-4xl font-bold text-gray-100 mb-4 group-hover:text-red-500/10 transition-colors">05</span>
+<h4 class="text-[10px] font-bold uppercase tracking-widest mb-3">Test</h4>
+<p class="text-[11px] text-gray-500 leading-relaxed">Validación con usuarios e iteración técnica para WordPress.</p>
+</div>
+</div>
+
 ---
 
 ### 01 — Descubrimiento: Auditoría de UX y Benchmark
