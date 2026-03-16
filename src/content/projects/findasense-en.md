@@ -22,31 +22,31 @@ My challenge was to rebuild this digital identity under one premise: *The user d
 ### Design process
 My methodology focused on transforming technical complexity into a seamless and consistent user experience on a global scale.
 
-<div class="not-prose grid grid-cols-1 md:grid-cols-5 border border-black/5 rounded-2xl overflow-hidden my-12 bg-white">
-<div class="p-6 border-b md:border-b-0 md:border-r border-black/5 flex flex-col items-center text-center group hover:bg-gray-50 transition-colors">
-<span class="text-4xl font-bold text-gray-100 mb-4 group-hover:text-red-500/10 transition-colors">01</span>
-<h4 class="text-[10px] font-bold uppercase tracking-widest mb-3">Research</h4>
-<p class="text-[11px] text-gray-500 leading-relaxed">Interviews, benchmarking, and heuristic analysis of the previous site.</p>
+<div class="not-prose grid grid-cols-1 md:grid-cols-5 gap-4 my-12">
+<div class="bg-white border border-black/5 p-6 rounded-2xl hover:border-red-500/20 transition-all duration-300 group flex flex-col h-full">
+<div class="text-3xl font-black text-gray-100 group-hover:text-red-500/10 transition-colors mb-4 italic">01</div>
+<h4 class="text-[10px] font-bold uppercase tracking-[0.2em] mb-3 text-black">Research</h4>
+<p class="text-[11px] text-gray-500 leading-relaxed flex-1">Interviews, benchmarking, and heuristic analysis of the previous site.</p>
 </div>
-<div class="p-6 border-b md:border-b-0 md:border-r border-black/5 flex flex-col items-center text-center group hover:bg-gray-50 transition-colors">
-<span class="text-4xl font-bold text-gray-100 mb-4 group-hover:text-red-500/10 transition-colors">02</span>
-<h4 class="text-[10px] font-bold uppercase tracking-widest mb-3">Define</h4>
-<p class="text-[11px] text-gray-500 leading-relaxed">Synthesis of insights and strategic definition of the problem to solve.</p>
+<div class="bg-white border border-black/5 p-6 rounded-2xl hover:border-red-500/20 transition-all duration-300 group flex flex-col h-full">
+<div class="text-3xl font-black text-gray-100 group-hover:text-red-500/10 transition-colors mb-4 italic">02</div>
+<h4 class="text-[10px] font-bold uppercase tracking-[0.2em] mb-3 text-black">Define</h4>
+<p class="text-[11px] text-gray-500 leading-relaxed flex-1">Synthesis of insights and strategic definition of the problem to solve.</p>
 </div>
-<div class="p-6 border-b md:border-b-0 md:border-r border-black/5 flex flex-col items-center text-center group hover:bg-gray-50 transition-colors">
-<span class="text-4xl font-bold text-gray-100 mb-4 group-hover:text-red-500/10 transition-colors">03</span>
-<h4 class="text-[10px] font-bold uppercase tracking-widest mb-3">Ideation</h4>
-<p class="text-[11px] text-gray-500 leading-relaxed">Workshops and exploration of modular and scalable solutions.</p>
+<div class="bg-white border border-black/5 p-6 rounded-2xl hover:border-red-500/20 transition-all duration-300 group flex flex-col h-full">
+<div class="text-3xl font-black text-gray-100 group-hover:text-red-500/10 transition-colors mb-4 italic">03</div>
+<h4 class="text-[10px] font-bold uppercase tracking-[0.2em] mb-3 text-black">Ideation</h4>
+<p class="text-[11px] text-gray-500 leading-relaxed flex-1">Workshops and exploration of modular and scalable solutions.</p>
 </div>
-<div class="p-6 border-b md:border-b-0 md:border-r border-black/5 flex flex-col items-center text-center group hover:bg-gray-50 transition-colors">
-<span class="text-4xl font-bold text-gray-100 mb-4 group-hover:text-red-500/10 transition-colors">04</span>
-<h4 class="text-[10px] font-bold uppercase tracking-widest mb-3">Prototype</h4>
-<p class="text-[11px] text-gray-500 leading-relaxed">High-fidelity wireframes and prototypes in Figma (UI Kit).</p>
+<div class="bg-white border border-black/5 p-6 rounded-2xl hover:border-red-500/20 transition-all duration-300 group flex flex-col h-full">
+<div class="text-3xl font-black text-gray-100 group-hover:text-red-500/10 transition-colors mb-4 italic">04</div>
+<h4 class="text-[10px] font-bold uppercase tracking-[0.2em] mb-3 text-black">Prototype</h4>
+<p class="text-[11px] text-gray-500 leading-relaxed flex-1">High-fidelity wireframes and prototypes in Figma (UI Kit).</p>
 </div>
-<div class="p-6 flex flex-col items-center text-center group hover:bg-gray-50 transition-colors">
-<span class="text-4xl font-bold text-gray-100 mb-4 group-hover:text-red-500/10 transition-colors">05</span>
-<h4 class="text-[10px] font-bold uppercase tracking-widest mb-3">Test</h4>
-<p class="text-[11px] text-gray-500 leading-relaxed">User validation and technical iteration for WordPress.</p>
+<div class="bg-white border border-black/5 p-6 rounded-2xl hover:border-red-500/20 transition-all duration-300 group flex flex-col h-full">
+<div class="text-3xl font-black text-gray-100 group-hover:text-red-500/10 transition-colors mb-4 italic">05</div>
+<h4 class="text-[10px] font-bold uppercase tracking-[0.2em] mb-3 text-black">Test</h4>
+<p class="text-[11px] text-gray-500 leading-relaxed flex-1">User validation and technical iteration for WordPress.</p>
 </div>
 </div>
 
