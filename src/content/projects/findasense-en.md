@@ -96,29 +96,39 @@ The result is a minimalist, powerful, and results-oriented website:
 
 ---
 
-### 🌐 Final Result: Interactive Prototype
-Explore the live experience designed for Findasense's global ecosystem.
+### 🌐 Final Result: Digital Ecosystem
+Explore the experience designed for Findasense's global ecosystem.
 
 <div class="not-prose my-12 group">
-    <div class="bg-white border border-black/5 rounded-t-xl p-3 flex items-center gap-2 shadow-sm">
-        <div class="flex gap-1.5">
-            <div class="w-2.5 h-2.5 rounded-full bg-red-400/20"></div>
-            <div class="w-2.5 h-2.5 rounded-full bg-yellow-400/20"></div>
-            <div class="w-2.5 h-2.5 rounded-full bg-green-400/20"></div>
+    <a href="https://findasense.com/" target="_blank" rel="noopener noreferrer" class="block group">
+        <div class="bg-white border border-black/5 rounded-t-xl p-3 flex items-center gap-2 shadow-sm group-hover:bg-gray-50 transition-colors">
+            <div class="flex gap-1.5">
+                <div class="w-2.5 h-2.5 rounded-full bg-red-400/40"></div>
+                <div class="w-2.5 h-2.5 rounded-full bg-yellow-400/40"></div>
+                <div class="w-2.5 h-2.5 rounded-full bg-green-400/40"></div>
+            </div>
+            <div class="flex-1 bg-gray-50 rounded-md py-1 px-3 text-[10px] text-gray-400 font-mono text-center flex items-center justify-center gap-2 group-hover:bg-white transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lock"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                findasense.com
+            </div>
+            <div class="text-[10px] text-gray-400 uppercase tracking-widest font-bold px-2 flex items-center gap-2">
+                Visit <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+            </div>
         </div>
-        <div class="flex-1 bg-gray-50 rounded-md py-1 px-3 text-[10px] text-gray-400 font-mono text-center flex items-center justify-center gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lock"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            findasense.com
+        <div class="aspect-video w-full bg-gray-100 border-x border-b border-black/5 rounded-b-xl overflow-hidden shadow-xl group-hover:shadow-2xl transition-all duration-500 relative">
+            <img 
+                src="/portfolio-v2/pj-findasense-prototype.png" 
+                alt="Findasense Website Preview" 
+                class="w-full h-full object-cover object-top group-hover:scale-[1.02] transition-transform duration-700"
+            />
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors flex items-center justify-center">
+                <div class="bg-black text-white text-[10px] font-bold uppercase tracking-[0.2em] px-6 py-3 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                    View live website
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="aspect-video w-full bg-gray-100 border-x border-b border-black/5 rounded-b-xl overflow-hidden shadow-xl group-hover:shadow-2xl transition-shadow duration-500">
-        <iframe 
-            src="https://findasense.com/" 
-            class="w-full h-full border-none"
-            title="Findasense Live Website"
-            loading="lazy"
-        ></iframe>
-    </div>
-    <p class="text-[10px] text-gray-400 uppercase tracking-widest text-center mt-4 font-bold">Interact with the live website above ↑</p>
+    </a>
+    <p class="text-[10px] text-gray-400 uppercase tracking-widest text-center mt-4 font-bold">Click on the image to explore the real website ↑</p>
 </div>
+
 

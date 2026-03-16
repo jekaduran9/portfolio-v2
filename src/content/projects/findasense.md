@@ -117,7 +117,7 @@ Explora la experiencia diseñada para el ecosistema global de Findasense.
         </div>
         <div class="aspect-video w-full bg-gray-100 border-x border-b border-black/5 rounded-b-xl overflow-hidden shadow-xl group-hover:shadow-2xl transition-all duration-500 relative">
             <img 
-                src="/pj-findasense-cover.png" 
+                src="/portfolio-v2/pj-findasense-prototype.png" 
                 alt="Findasense Website Preview" 
                 class="w-full h-full object-cover object-top group-hover:scale-[1.02] transition-transform duration-700"
             />
