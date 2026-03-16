@@ -67,15 +67,58 @@ const sortedProjects = projects.sort((a, b) => b.data.pubDate.valueOf() - a.data
 			<span class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold block mb-4">
 				{t('projects.tag')}
 			</span>
-			<h2 class="text-3xl md:text-5xl font-bold tracking-tight leading-none uppercase">
+			<h2 class="text-3xl md:text-5xl font-bold tracking-tight leading-none uppercase mb-12">
 				{t('projects.title_1')}
 			</h2>
+
+			<!-- Filters -->
+			<div class="flex flex-wrap gap-8 text-[11px] font-bold uppercase tracking-[0.2em] border-b border-black/5 pb-8 mb-16">
+				<button class="filter-btn active text-black hover:text-black transition-colors" data-filter="all">Todos</button>
+				<button class="filter-btn text-gray-400 hover:text-black transition-colors" data-filter="UX/UI">UX/UI</button>
+				<button class="filter-btn text-gray-400 hover:text-black transition-colors" data-filter="Tatuaje">Tatuaje</button>
+				<button class="filter-btn text-gray-400 hover:text-black transition-colors" data-filter="Branding">Branding</button>
+				<button class="filter-btn text-gray-400 hover:text-black transition-colors" data-filter="Illustraciones">Illustraciones</button>
+			</div>
 		</div>
 		
-		<div class="columns-1 md:columns-3 gap-12">
+		<div id="projects-grid" class="columns-1 md:columns-3 gap-12 transition-all duration-500">
 			{sortedProjects.map((project) => (
 				<ProjectCard project={project} />
 			))}
 		</div>
 	</section>
+
+	<script>
+		const filterButtons = document.querySelectorAll('.filter-btn');
+		const projectCards = document.querySelectorAll('.project-card');
+
+		filterButtons.forEach(btn => {
+			btn.addEventListener('click', () => {
+				// Update active state
+				filterButtons.forEach(b => b.classList.remove('active', 'text-black'));
+				filterButtons.forEach(b => b.classList.add('text-gray-400'));
+				btn.classList.add('active', 'text-black');
+				btn.classList.remove('text-gray-400');
+
+				const filter = btn.getAttribute('data-filter');
+
+				projectCards.forEach(card => {
+					const category = card.getAttribute('data-category');
+					if (filter === 'all' || category === filter) {
+						(card as HTMLElement).style.display = 'block';
+						setTimeout(() => {
+							(card as HTMLElement).style.opacity = '1';
+							(card as HTMLElement).style.transform = 'scale(1)';
+						}, 10);
+					} else {
+						(card as HTMLElement).style.opacity = '0';
+						(card as HTMLElement).style.transform = 'scale(0.95)';
+						setTimeout(() => {
+							(card as HTMLElement).style.display = 'none';
+						}, 300);
+					}
+				});
+			});
+		});
+	</script>
 </BaseLayout>

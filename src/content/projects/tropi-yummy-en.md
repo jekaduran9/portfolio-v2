@@ -8,6 +8,7 @@ image: "/pj-tropiyummi - cover.png"
 pubDate: 2024-03-06
 featured: true
 lang: "en"
+category: "Branding"
 aspectRatio: "aspect-video"
 ---
 

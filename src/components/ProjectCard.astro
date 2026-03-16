@@ -7,7 +7,7 @@ interface Props {
 }
 
 const { project } = Astro.props;
-const { title, type, aspectRatio, image } = project.data;
+const { title, type, aspectRatio, image, category } = project.data;
 
 const lang = getLangFromUrl(Astro.url);
 const translatePath = useTranslatedPath(lang);
@@ -16,7 +16,7 @@ const translatePath = useTranslatedPath(lang);
 const imagePath = image?.startsWith('/') ? `${import.meta.env.BASE_URL}${image}` : image;
 ---
 
-<a href={translatePath(`/projects/${project.slug}`)} class="group block break-inside-avoid mb-12 bg-white rounded-[12px] p-4 transition-all duration-300">
+<a href={translatePath(`/projects/${project.slug}`)} data-category={category} class="group block break-inside-avoid mb-12 bg-white rounded-[12px] p-4 transition-all duration-300 project-card">
 	<div class={`${aspectRatio} bg-gray-100 overflow-hidden relative mb-4 rounded-[8px]`}>
 		{imagePath ? (
 			<img 
