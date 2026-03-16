@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 import CustomCursor from '../components/CustomCursor.astro';
-import { getLangFromUrl, useTranslations, useTranslatedPath } from '../i18n/utils';
+import { getLangFromUrl, useTranslations, useTranslatedPath, getCleanPathname } from '../i18n/utils';
 
 interface Props {
 	title: string;
@@ -13,6 +13,7 @@ const { title, description = "Product Designer & UX/UI Designer Portfolio" } = A
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
+const cleanPathname = getCleanPathname(Astro.url);
 ---
 
 <!doctype html>
@@ -52,9 +53,9 @@ const translatePath = useTranslatedPath(lang);
 						{t('nav.status')}
 					</div>
 					<div class="flex gap-2 text-xs font-bold uppercase tracking-widest border-l border-black/10 pl-10">
-						<a href={translatePath('/', 'es')} class={lang === 'es' ? 'text-black' : 'text-gray-400 hover:text-black'}>ES</a>
+						<a href={translatePath(cleanPathname, 'es')} class={lang === 'es' ? 'text-black' : 'text-gray-400 hover:text-black'}>ES</a>
 						<span class="text-gray-300">/</span>
-						<a href={translatePath('/', 'en')} class={lang === 'en' ? 'text-black' : 'text-gray-400 hover:text-black'}>EN</a>
+						<a href={translatePath(cleanPathname, 'en')} class={lang === 'en' ? 'text-black' : 'text-gray-400 hover:text-black'}>EN</a>
 					</div>
 				</div>
 			</nav>
