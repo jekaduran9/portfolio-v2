@@ -1,9 +1,9 @@
 ---
-title: "Tattoo Artist: Identidad Visual & Experiencia Digital"
-description: "Rediseño de la marca y plataforma digital para un estudio de tatuaje, enfocada en la curaduría artística y la gestión de citas."
-role: "UX/UI Designer & Brand Designer"
-tools: ["Figma", "Procreate", "Adobe Photoshop", "Wix Studio"]
-type: "Branding & Web Design"
+title: "Tattoo Artist: Arte con Intención"
+description: "Proyecto de tatuaje fine-line enfocado en diseños personalizados que cuentan historias únicas a través del trazo fino y el detalle."
+role: "Tattoo Artist"
+tools: ["Fine line", "Procreate", "Illustration", "Custom Design"]
+type: "Illustration, Fine line, Tattoo"
 image: "/pj-tattoo-cover.png"
 pubDate: 2024-03-08
 featured: true
@@ -12,31 +12,14 @@ category: "Tatuaje"
 aspectRatio: "aspect-square"
 ---
 
-## ✒️ Tattoo Artist: El Arte en la Piel, la Marca en la Red
-El proyecto para Tattoo Artist nació de la necesidad de elevar la presencia digital de un artista independiente, transformando un simple catálogo de fotos en una experiencia de marca que refleja la precisión, el estilo y la mística del arte del tatuaje.
+## ✒️ TATTOO ARTIST
+By Jeka es un proyecto de tatuaje de línea fina (fine-line) enfocado en crear diseños personalizados que cuentan historias únicas. Cada tatuaje se elabora con intención, cuidado y atención al detalle, priorizando siempre una experiencia segura, cómoda y personal. El proceso se centra en la escucha, la orientación y la conexión, para que la pieza final no sea solo estética sino también significativa.
 
-## 🔴 El Reto
-El artista contaba con un gran volumen de trabajo en redes sociales, pero carecía de una plataforma centralizada donde los clientes pudieran:
-1.  **Entender su estilo único** (curaduría).
-2.  **Ver el proceso de curación y cuidado.**
-3.  **Gestionar citas y depósitos** de forma profesional.
+### 🛠 TIPO DE PROYECTO
+Ilustración, Fine line, Diseño personalizado, Tatuaje.
 
-## 🛠 Proceso Creativo
-### Identidad Visual (Branding)
-*   **Logotipo:** Creamos una identidad minimalista inspirada en el trazo fino (fine-line), utilizando una tipografía elegante pero con carácter.
-*   **Paleta de Colores:** Basada en negros profundos, grises carbón y un tono hueso para el fondo, evocando la pureza del papel y la tinta.
+### 📍 UBICACIÓN
+Barcelona, en cualquier lugar.
 
-### Experiencia Digital (UX/UI)
-*   **Galería Dinámica:** Diseñé un sistema de filtrado por estilos (Realismo, Blackwork, Fine-line) para que el usuario encuentre inspiración rápidamente.
-*   **Formulario de Consulta:** Simplifiqué la toma de requerimientos iniciales (tamaño, zona del cuerpo, referencia), reduciendo el tiempo de gestión manual del artista en un 40%.
-
-## ✨ La Solución
-Una web desarrollada en Wix Studio que actúa como un portafolio vivo. La interfaz prioriza las imágenes a gran formato, permitiendo que los detalles de cada tatuaje sean los protagonistas. 
-
-**Resultados:**
-*   Aumento en la calidad de los leads (clientes que ya conocen el proceso y precios).
-*   Identidad visual consistente en redes sociales y sitio web.
-*   Gestión de agenda automatizada.
-
-## 🎓 Lecciones Aprendidas
-En el mundo del tatuaje, la confianza es la moneda de cambio. Aprendí que mostrar el proceso de higiene y los materiales utilizados es tan importante como mostrar el resultado final para convertir a un visitante en un cliente.
+### 👤 ROL
+Tattoo Artist
