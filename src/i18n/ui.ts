@@ -32,6 +32,11 @@ export const ui = {
     'project.tools': 'Herramientas',
     'project.prev': 'Anterior',
     'project.next': 'Siguiente',
+    'categories.all': 'Todos',
+    'categories.uxui': 'UX/UI',
+    'categories.tattoo': 'Tatuaje',
+    'categories.branding': 'Branding',
+    'categories.illustrations': 'Illustraciones',
   },
   en: {
     'nav.home': 'Home',
@@ -59,5 +64,10 @@ export const ui = {
     'project.tools': 'Tools',
     'project.prev': 'Previous',
     'project.next': 'Next',
+    'categories.all': 'All',
+    'categories.uxui': 'UX/UI',
+    'categories.tattoo': 'Tattoo',
+    'categories.branding': 'Branding',
+    'categories.illustrations': 'Illustrations',
   },
 } as const;

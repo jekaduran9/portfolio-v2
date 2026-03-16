@@ -73,11 +73,11 @@ const sortedProjects = projects.sort((a, b) => b.data.pubDate.valueOf() - a.data
 
 			<!-- Filters -->
 			<div class="flex flex-wrap gap-8 text-[11px] font-bold uppercase tracking-[0.2em] border-b border-black/5 pb-8 mb-16">
-				<button class="filter-btn active text-black hover:text-black transition-colors" data-filter="all">Todos</button>
-				<button class="filter-btn text-gray-400 hover:text-black transition-colors" data-filter="UX/UI">UX/UI</button>
-				<button class="filter-btn text-gray-400 hover:text-black transition-colors" data-filter="Tatuaje">Tatuaje</button>
-				<button class="filter-btn text-gray-400 hover:text-black transition-colors" data-filter="Branding">Branding</button>
-				<button class="filter-btn text-gray-400 hover:text-black transition-colors" data-filter="Illustraciones">Illustraciones</button>
+				<button class="filter-btn active text-black hover:text-black transition-colors" data-filter="all">{t('categories.all')}</button>
+				<button class="filter-btn text-gray-400 hover:text-black transition-colors" data-filter="UX/UI">{t('categories.uxui')}</button>
+				<button class="filter-btn text-gray-400 hover:text-black transition-colors" data-filter="Tatuaje">{t('categories.tattoo')}</button>
+				<button class="filter-btn text-gray-400 hover:text-black transition-colors" data-filter="Branding">{t('categories.branding')}</button>
+				<button class="filter-btn text-gray-400 hover:text-black transition-colors" data-filter="Illustraciones">{t('categories.illustrations')}</button>
 			</div>
 		</div>
 		
