@@ -14,8 +14,18 @@
     100% { transform: translateY(0); opacity: 1; }
   }
   
-  .animate-text-slide {
-    animation: text-slide 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  @keyframes slide-right {
+    from { transform: translateX(-20px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+  
+  .animate-slide-right {
+    animation: slide-right 0.8s ease-out forwards;
+  }
+
+  .animate-slide-right-delayed {
+    animation: slide-right 0.8s ease-out 0.2s forwards;
+    opacity: 0;
   }
 }
 

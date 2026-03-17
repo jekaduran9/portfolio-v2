@@ -69,6 +69,23 @@ El diseño se construyó en Figma utilizando un Sistema de Diseño (UI Kit) pens
 
 **Wireframing Low-Fi:** Definimos el flujo de usuario asegurando que nunca hubiera un "callejón sin salida" (especialmente en las páginas de noticias y prensa).
 
+<div class="not-prose grid grid-cols-1 md:grid-cols-3 gap-8 my-16">
+    <div class="md:col-span-2 overflow-hidden rounded-2xl border border-black/5 shadow-md animate-slide-right">
+        <img 
+            src="/portfolio-v2/pj-lowfi-prototype-desktop-findasense.png" 
+            alt="Wireframe Low-Fi Desktop" 
+            class="w-full h-auto object-contain hover:scale-[1.02] transition-transform duration-500"
+        />
+    </div>
+    <div class="overflow-hidden rounded-2xl border border-black/5 shadow-md animate-slide-right-delayed">
+        <img 
+            src="/portfolio-v2/pj-lowfi-prototype-mobile-findasense.png" 
+            alt="Wireframe Low-Fi Mobile" 
+            class="w-full h-auto object-contain hover:scale-[1.02] transition-transform duration-500"
+        />
+    </div>
+</div>
+
 **Diseño High-Fidelity:**
 *   **Modulación:** Secciones divididas por bloques de color para separar visualmente los servicios de los casos de éxito.
 *   **Identidad Visual:** Implementación del "Rojo Findasense" como color de acento en palabras clave y botones consistentes.
