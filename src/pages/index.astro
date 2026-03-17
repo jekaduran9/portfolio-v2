@@ -73,11 +73,11 @@ const sortedProjects = projects.sort((a, b) => b.data.pubDate.valueOf() - a.data
 
 			<!-- Filters -->
 			<div class="flex flex-wrap gap-8 text-[11px] font-bold uppercase tracking-[0.2em] border-b border-black/5 pb-8 mb-16">
-				<button class="filter-btn active text-black hover:text-black transition-colors" data-filter="all">{t('categories.all')}</button>
-				<button class="filter-btn text-gray-400 hover:text-black transition-colors" data-filter="UX/UI">{t('categories.uxui')}</button>
-				<button class="filter-btn text-gray-400 hover:text-black transition-colors" data-filter="Tatuaje">{t('categories.tattoo')}</button>
-				<button class="filter-btn text-gray-400 hover:text-black transition-colors" data-filter="Branding">{t('categories.branding')}</button>
-				<button class="filter-btn text-gray-400 hover:text-black transition-colors" data-filter="Illustraciones">{t('categories.illustrations')}</button>
+				<button class="filter-btn active text-[#E0A4B0] border-b-2 border-[#E0A4B0] pb-8 -mb-[34px] transition-all duration-300" data-filter="all">{t('categories.all')}</button>
+				<button class="filter-btn text-gray-400 hover:text-black transition-all duration-300 pb-8 -mb-[34px] border-b-2 border-transparent" data-filter="UX/UI">{t('categories.uxui')}</button>
+				<button class="filter-btn text-gray-400 hover:text-black transition-all duration-300 pb-8 -mb-[34px] border-b-2 border-transparent" data-filter="Tatuaje">{t('categories.tattoo')}</button>
+				<button class="filter-btn text-gray-400 hover:text-black transition-all duration-300 pb-8 -mb-[34px] border-b-2 border-transparent" data-filter="Branding">{t('categories.branding')}</button>
+				<button class="filter-btn text-gray-400 hover:text-black transition-all duration-300 pb-8 -mb-[34px] border-b-2 border-transparent" data-filter="Illustraciones">{t('categories.illustrations')}</button>
 			</div>
 		</div>
 		
@@ -95,10 +95,12 @@ const sortedProjects = projects.sort((a, b) => b.data.pubDate.valueOf() - a.data
 		filterButtons.forEach(btn => {
 			btn.addEventListener('click', () => {
 				// Update active state
-				filterButtons.forEach(b => b.classList.remove('active', 'text-black'));
-				filterButtons.forEach(b => b.classList.add('text-gray-400'));
-				btn.classList.add('active', 'text-black');
-				btn.classList.remove('text-gray-400');
+				filterButtons.forEach(b => {
+					b.classList.remove('active', 'text-[#E0A4B0]', 'border-[#E0A4B0]');
+					b.classList.add('text-gray-400', 'border-transparent');
+				});
+				btn.classList.add('active', 'text-[#E0A4B0]', 'border-[#E0A4B0]');
+				btn.classList.remove('text-gray-400', 'border-transparent');
 
 				const filter = btn.getAttribute('data-filter');
 
