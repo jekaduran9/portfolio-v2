@@ -22,33 +22,6 @@ My challenge was to rebuild this digital identity under one premise: *The user d
 ### Design process
 My methodology focused on transforming technical complexity into a seamless and consistent user experience on a global scale.
 
-<div class="not-prose grid grid-cols-1 md:grid-cols-5 gap-4 my-12">
-<div class="bg-white border border-black/5 p-6 rounded-2xl hover:border-red-500/20 transition-all duration-300 group flex flex-col h-full">
-<div class="text-3xl font-black text-gray-100 group-hover:text-red-500/10 transition-colors mb-4 italic">01</div>
-<h4 class="text-[10px] font-bold uppercase tracking-[0.2em] mb-3 text-black">Research</h4>
-<p class="text-[11px] text-gray-500 leading-relaxed flex-1">Interviews, benchmarking, and heuristic analysis of the previous site.</p>
-</div>
-<div class="bg-white border border-black/5 p-6 rounded-2xl hover:border-red-500/20 transition-all duration-300 group flex flex-col h-full">
-<div class="text-3xl font-black text-gray-100 group-hover:text-red-500/10 transition-colors mb-4 italic">02</div>
-<h4 class="text-[10px] font-bold uppercase tracking-[0.2em] mb-3 text-black">Define</h4>
-<p class="text-[11px] text-gray-500 leading-relaxed flex-1">Synthesis of insights and strategic definition of the problem to solve.</p>
-</div>
-<div class="bg-white border border-black/5 p-6 rounded-2xl hover:border-red-500/20 transition-all duration-300 group flex flex-col h-full">
-<div class="text-3xl font-black text-gray-100 group-hover:text-red-500/10 transition-colors mb-4 italic">03</div>
-<h4 class="text-[10px] font-bold uppercase tracking-[0.2em] mb-3 text-black">Ideation</h4>
-<p class="text-[11px] text-gray-500 leading-relaxed flex-1">Workshops and exploration of modular and scalable solutions.</p>
-</div>
-<div class="bg-white border border-black/5 p-6 rounded-2xl hover:border-red-500/20 transition-all duration-300 group flex flex-col h-full">
-<div class="text-3xl font-black text-gray-100 group-hover:text-red-500/10 transition-colors mb-4 italic">04</div>
-<h4 class="text-[10px] font-bold uppercase tracking-[0.2em] mb-3 text-black">Prototype</h4>
-<p class="text-[11px] text-gray-500 leading-relaxed flex-1">High-fidelity wireframes and prototypes in Figma (UI Kit).</p>
-</div>
-<div class="bg-white border border-black/5 p-6 rounded-2xl hover:border-red-500/20 transition-all duration-300 group flex flex-col h-full">
-<div class="text-3xl font-black text-gray-100 group-hover:text-red-500/10 transition-colors mb-4 italic">05</div>
-<h4 class="text-[10px] font-bold uppercase tracking-[0.2em] mb-3 text-black">Test</h4>
-<p class="text-[11px] text-gray-500 leading-relaxed flex-1">User validation and technical iteration for WordPress.</p>
-</div>
-</div>
 
 ---
 
@@ -78,123 +51,12 @@ Based on the findings, we defined three pillars of action to guide the redesign:
 ### 03 — Architecture and Content Strategy
 I proposed a total restructuring of the Sitemap, inverting the traditional order to prioritize conversion and expertise. Here is the new global ecosystem organized by functional nodes:
 
-<div class="not-prose my-16 overflow-x-auto pb-12">
-<div class="min-w-[1000px] flex flex-col items-center scale-90 origin-top">
-    <!-- LEVEL 1: HOME & CONTACT ALIGNED TO GRID -->
-    <div class="grid grid-cols-5 gap-4 w-full relative">
-        <!-- Col 3: Home (Center) -->
-        <div class="col-start-3 flex justify-center relative">
-            <div class="w-44 bg-white border border-black/10 rounded-xl shadow-sm overflow-hidden ring-1 ring-black/5 z-10">
-                <div class="bg-[#E5E5E1] text-black text-[9px] font-bold uppercase p-2 flex items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> Home
-                </div>
-                <div class="p-1.5 space-y-1 text-[8px] font-bold text-black">
-                    <div class="border border-black/5 p-1 rounded bg-gray-50/50">Navigation Bar</div>
-                    <div class="border border-black/5 p-1 rounded">Hero</div>
-                    <div class="border border-black/5 p-1 rounded text-[7px] text-gray-400">Our clients</div>
-                    <div class="border border-black/5 p-1 rounded text-[7px] text-gray-400">Success Stories</div>
-                    <div class="bg-[#D1F2E1] border border-[#82D1A1]/30 p-1 rounded text-[#2D5A41]">CTA Section</div>
-                    <div class="border border-black/5 p-1 rounded text-[7px] text-gray-400">Services</div>
-                    <div class="border border-black/5 p-1 rounded bg-gray-50/50">Footer</div>
-                </div>
-            </div>
-            <!-- Connector to Contact -->
-            <div class="absolute top-1/2 left-1/2 w-[200px] h-px bg-gray-300 -z-10"></div>
-        </div>
-        
-        <!-- Col 4: Contact -->
-        <div class="col-start-4 flex justify-center">
-            <div class="w-44 bg-[#82D1A1] border border-black/10 rounded-xl shadow-sm overflow-hidden ring-1 ring-black/5 z-20 h-fit mt-4">
-                <div class="bg-white/20 text-black text-[9px] font-bold uppercase p-2 flex items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.79 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Contact
-                </div>
-                <div class="p-1.5 space-y-1 text-[8px] font-bold text-black/80">
-                    <div class="bg-white/30 p-1 rounded">Navigation</div>
-                    <div class="bg-white/30 p-1 rounded">Form</div>
-                    <div class="bg-white/30 p-1 rounded">Footer</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- CENTERED VERTICAL CONNECTOR -->
-    <div class="flex flex-col items-center w-full">
-        <div class="w-px h-12 bg-gray-300 relative">
-            <div class="absolute bottom-0 -left-1 w-2 h-2 rounded-full bg-gray-300"></div>
-        </div>
-        <!-- HORIZONTAL BRANCH -->
-        <div class="w-[80%] h-px bg-gray-300"></div>
-    </div>
-
-    <!-- LEVEL 2: MAIN PAGES -->
-    <div class="grid grid-cols-5 gap-4 w-full mt-0 items-start">
-        <!-- Success Stories -->
-        <div class="flex flex-col items-center">
-            <div class="w-px h-8 bg-gray-300"></div>
-            <div class="w-44 bg-white border border-black/10 rounded-xl shadow-sm overflow-hidden ring-1 ring-black/5">
-                <div class="bg-[#E5E5E1] text-black text-[8px] font-bold uppercase p-2">Cases</div>
-                <div class="p-1.5 space-y-1 text-[7px] text-gray-400 font-bold">
-                    <div class="p-1 border border-black/5 rounded">Client Logos</div>
-                    <div class="p-1 border border-black/5 rounded">Project Grid</div>
-                    <div class="p-1 border border-black/5 rounded">Studies</div>
-                    <div class="bg-[#D1F2E1] border border-[#82D1A1]/20 p-1 rounded text-[#2D5A41]">CTA</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Services -->
-        <div class="flex flex-col items-center">
-            <div class="w-px h-8 bg-gray-300"></div>
-            <div class="w-44 bg-white border border-black/10 rounded-xl shadow-sm overflow-hidden ring-1 ring-black/5">
-                <div class="bg-[#E5E5E1] text-black text-[8px] font-bold uppercase p-2">Services</div>
-                <div class="p-1.5 space-y-1 text-[7px] text-gray-400 font-bold">
-                    <div class="p-1 border border-black/5 rounded">Specialized Areas</div>
-                    <div class="p-1 border border-black/5 rounded">Dropdown</div>
-                    <div class="bg-[#D1F2E1] border border-[#82D1A1]/20 p-1 rounded text-[#2D5A41]">CTA</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Who We Are (Aligned with Home) -->
-        <div class="flex flex-col items-center">
-            <div class="w-px h-8 bg-gray-300"></div>
-            <div class="w-44 bg-white border border-black/10 rounded-xl shadow-sm overflow-hidden ring-1 ring-black/5">
-                <div class="bg-[#E5E5E1] text-black text-[8px] font-bold uppercase p-2">Who we are</div>
-                <div class="p-1.5 space-y-1 text-[7px] text-gray-400 font-bold">
-                    <div class="p-1 border border-black/5 rounded">History</div>
-                    <div class="p-1 border border-black/5 rounded">Leadership</div>
-                    <div class="p-1 border border-black/5 rounded">Offices</div>
-                    <div class="bg-[#F9F1D8] border border-[#EBD1A0]/20 p-1 rounded text-[#7A5C2B]">CTA</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Careers -->
-        <div class="flex flex-col items-center">
-            <div class="w-px h-8 bg-gray-300"></div>
-            <div class="w-44 bg-white border border-black/10 rounded-xl shadow-sm overflow-hidden ring-1 ring-black/5">
-                <div class="bg-[#EBD1A0] text-black text-[8px] font-bold uppercase p-2">Join us</div>
-                <div class="p-1.5 space-y-1 text-[7px] text-gray-400 font-bold">
-                    <div class="p-1 border border-black/5 rounded">Benefits</div>
-                    <div class="p-1 border border-black/5 rounded">Conduct</div>
-                    <div class="bg-gray-50 p-1 rounded text-gray-400">Workable CTA</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- News -->
-        <div class="flex flex-col items-center">
-            <div class="w-px h-8 bg-gray-300"></div>
-            <div class="w-44 bg-white border border-black/10 rounded-xl shadow-sm overflow-hidden ring-1 ring-black/5">
-                <div class="bg-[#E5E5E1] text-black text-[8px] font-bold uppercase p-2">News</div>
-                <div class="p-1.5 space-y-1 text-[7px] text-gray-400 font-bold">
-                    <div class="p-1 border border-black/5 rounded">Articles</div>
-                    <div class="bg-[#D1F2E1] border border-[#82D1A1]/20 p-1 rounded text-[#2D5A41]">CTA</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<div class="not-prose my-16 overflow-hidden rounded-2xl">
+    <img 
+        src="/portfolio-v2/Sitemap.svg" 
+        alt="Findasense Sitemap" 
+        class="w-full h-auto object-contain"
+    />
 </div>
 
 *   **UX Writer Decisions:** We eliminated redundant language and unified methodology and culture sections under "Who we are."
