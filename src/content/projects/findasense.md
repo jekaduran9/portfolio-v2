@@ -75,10 +75,218 @@ Basándome en los hallazgos, definimos tres ejes de acción para guiar el redise
 2.  **Confianza:** Priorización visual de Casos de Éxito y Clientes (Coca-Cola, Lenovo, Bimbo) desde el primer scroll.
 3.  **Conversión:** Rediseño del formulario de contacto a un modelo de campo único simplificado de 5 pasos, reduciendo el abandono.
 
----
-
 ### 03 — Arquitectura y Estrategia de Contenidos
-Propuse una reestructuración total del Sitemap. La decisión más audaz fue invertir el orden tradicional: movimos "Servicios" y "Casos de Éxito" al inicio del menú y del Home.
+Propuse una reestructuración total del Sitemap invirtiendo el orden tradicional para priorizar la conversión y el expertise. Aquí se muestra el ecosistema global organizado por nodos funcionales:
+
+<div class="not-prose my-16 overflow-x-auto pb-12">
+<div class="min-w-[1000px] flex flex-col items-center scale-90 origin-top">
+<!-- NIVEL 1: HOME & CONTACTO ALINEADOS AL GRID -->
+<div class="grid grid-cols-5 gap-4 w-full relative mb-0">
+    <div class="col-start-3 flex justify-center relative">
+        <!-- Home Node -->
+        <div class="w-56 bg-white border border-black/10 rounded-xl shadow-sm overflow-hidden ring-1 ring-black/5 z-10">
+            <div class="bg-[#E5E5E1] text-black text-[9px] font-bold uppercase p-2 flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> Home
+            </div>
+            <div class="p-3 space-y-1.5 text-[8px] font-bold text-black">
+                <div class="border border-black/10 p-1.5 rounded bg-gray-50/50">Barra de Navegación</div>
+                <div class="border border-black/10 p-1.5 rounded">Hero</div>
+                <div class="border border-black/10 p-1.5 rounded text-[7px]">Nuestros clientes</div>
+                <div class="border border-black/10 p-1.5 rounded text-[7px]">Casos de éxito</div>
+                <div class="bg-[#D1F2E1] border border-[#82D1A1]/30 p-1.5 rounded text-[#2D5A41]">Sección de CTA</div>
+                <div class="border border-black/10 p-1.5 rounded text-[7px]">Sección de servicios</div>
+                <div class="border border-black/10 p-1.5 rounded bg-gray-50/50">Pie de Página</div>
+            </div>
+        </div>
+        <!-- Linea a Contacto -->
+        <div class="absolute top-10 left-[calc(100%-1px)] w-12 h-px bg-gray-300"></div>
+    </div>
+    
+    <div class="col-start-4 flex justify-start pl-8">
+        <!-- Contacto Node -->
+        <div class="w-56 bg-white border border-black/10 rounded-xl shadow-sm overflow-hidden mt-6 ring-1 ring-black/5 z-10 h-fit">
+            <div class="bg-[#82D1A1] text-black text-[9px] font-bold uppercase p-2 flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.79 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Contacto
+            </div>
+            <div class="p-3 space-y-1.5 text-[8px] font-bold text-black">
+                <div class="border border-black/10 p-1.5 rounded bg-gray-50/50">Barra de Navegación</div>
+                <div class="border border-black/10 p-1.5 rounded">Formulario de Contacto</div>
+                <div class="border border-black/10 p-1.5 rounded bg-gray-50/50">Pie de Página</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CONECTOR VERTICAL CENTRADO -->
+<div class="flex flex-col items-center w-full">
+    <div class="w-px h-16 bg-gray-300 relative">
+        <div class="absolute bottom-0 -left-1 w-2 h-2 rounded-full bg-gray-300"></div>
+    </div>
+    <!-- RAMA HORIZONTAL -->
+    <div class="w-[80%] h-px bg-gray-300"></div>
+</div>
+
+<!-- NIVEL 2: PÁGINAS PRINCIPALES -->
+<div class="grid grid-cols-5 gap-4 w-full mt-0 items-start">
+<!-- Casos de Éxito -->
+<div class="flex flex-col items-center">
+<div class="w-px h-8 bg-gray-300"></div>
+<div class="w-full bg-white border border-black/10 rounded-xl shadow-sm overflow-hidden ring-1 ring-black/5">
+<div class="bg-[#E5E5E1] text-black text-[8px] font-bold uppercase p-2 flex items-center gap-2">
+<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M8 7h6"/><path d="M8 11h8"/></svg> Casos
+</div>
+<div class="p-2 space-y-1 text-[7px] font-bold text-black">
+<div class="p-1 border border-black/10 rounded">Logo clientes</div>
+<div class="p-1 border border-black/10 rounded">Grid proyectos</div>
+<div class="p-1 border border-black/10 rounded">Estudios</div>
+<div class="bg-[#D1F2E1] border border-[#82D1A1]/30 p-1 rounded text-[#2D5A41]">CTA</div>
+</div>
+</div>
+</div>
+
+<!-- Servicios -->
+<div class="flex flex-col items-center">
+<div class="w-px h-8 bg-gray-300"></div>
+<div class="w-full bg-white border border-black/10 rounded-xl shadow-sm overflow-hidden ring-1 ring-black/5">
+<div class="bg-[#E5E5E1] text-black text-[8px] font-bold uppercase p-2 flex items-center gap-2">
+<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21 16-4 4-4-4"/><path d="M17 20V4"/><path d="m3 8 4-4 4 4"/><path d="M7 4v16"/></svg> Servicios
+</div>
+<div class="p-2 space-y-1 text-[7px] font-bold text-black">
+<div class="p-1 border border-black/10 rounded">Sección Servicios</div>
+<div class="p-1 border border-black/10 rounded text-[6px]">Desplegable detalle</div>
+<div class="bg-[#D1F2E1] border border-[#82D1A1]/30 p-1 rounded text-[#2D5A41]">CTA</div>
+</div>
+</div>
+</div>
+
+<!-- Quiénes Somos (CENTRADO CON HOME) -->
+<div class="flex flex-col items-center">
+<div class="w-px h-8 bg-gray-300"></div>
+<div class="w-full bg-white border border-black/10 rounded-xl shadow-sm overflow-hidden ring-1 ring-black/5">
+<div class="bg-[#E5E5E1] text-black text-[8px] font-bold uppercase p-2 flex items-center gap-2">
+<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> Quiénes
+</div>
+<div class="p-2 space-y-1 text-[7px] font-bold text-black">
+<div class="p-1 border border-black/10 rounded text-[6px]">Historia / Timeline</div>
+<div class="p-1 border border-black/10 rounded">Leadership</div>
+<div class="p-1 border border-black/10 rounded">Oficinas</div>
+<div class="bg-[#F9F1D8] border border-[#EBD1A0]/30 p-1 rounded text-[#7A5C2B]">CTA</div>
+</div>
+</div>
+</div>
+
+<!-- Unirte -->
+<div class="flex flex-col items-center">
+<div class="w-px h-8 bg-gray-300"></div>
+<div class="w-full bg-white border border-black/10 rounded-xl shadow-sm overflow-hidden ring-1 ring-black/5">
+<div class="bg-[#EBD1A0] text-black text-[8px] font-bold uppercase p-2 flex items-center gap-2">
+<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> Únete
+</div>
+<div class="p-2 space-y-1 text-[7px] font-bold text-black">
+<div class="p-1 border border-black/10 rounded">Beneficios</div>
+<div class="p-1 border border-black/10 rounded">Conducta</div>
+<div class="bg-gray-100 p-1 rounded text-gray-600">CTA Workable</div>
+</div>
+</div>
+</div>
+
+<!-- News -->
+<div class="flex flex-col items-center">
+<div class="w-px h-8 bg-gray-300"></div>
+<div class="w-full bg-white border border-black/10 rounded-xl shadow-sm overflow-hidden ring-1 ring-black/5">
+<div class="bg-[#E5E5E1] text-black text-[8px] font-bold uppercase p-2 flex items-center gap-2">
+<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/></svg> News
+</div>
+<div class="p-2 space-y-1 text-[7px] font-bold text-black">
+<div class="p-1 border border-black/10 rounded">Artículos</div>
+<div class="bg-[#D1F2E1] border border-[#82D1A1]/30 p-1 rounded text-[#2D5A41]">CTA</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- NIVEL 2: PÁGINAS PRINCIPALES -->
+<div class="grid grid-cols-5 gap-4 w-full mt-0 items-start">
+<!-- Casos de Éxito -->
+<div class="flex flex-col items-center">
+<div class="w-px h-8 bg-gray-300"></div>
+<div class="w-full bg-white border border-black/10 rounded-xl shadow-sm overflow-hidden ring-1 ring-black/5">
+<div class="bg-[#E5E5E1] text-black text-[8px] font-bold uppercase p-2 flex items-center gap-2">
+<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M8 7h6"/><path d="M8 11h8"/></svg> Casos
+</div>
+<div class="p-2 space-y-1 text-[7px] font-bold text-black">
+<div class="p-1 border border-black/10 rounded">Logo clientes</div>
+<div class="p-1 border border-black/10 rounded">Grid proyectos</div>
+<div class="p-1 border border-black/10 rounded">Estudios</div>
+<div class="bg-[#D1F2E1] border border-[#82D1A1]/30 p-1 rounded text-[#2D5A41]">CTA</div>
+</div>
+</div>
+</div>
+
+<!-- Servicios -->
+<div class="flex flex-col items-center">
+<div class="w-px h-8 bg-gray-300"></div>
+<div class="w-full bg-white border border-black/10 rounded-xl shadow-sm overflow-hidden ring-1 ring-black/5">
+<div class="bg-[#E5E5E1] text-black text-[8px] font-bold uppercase p-2 flex items-center gap-2">
+<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21 16-4 4-4-4"/><path d="M17 20V4"/><path d="m3 8 4-4 4 4"/><path d="M7 4v16"/></svg> Servicios
+</div>
+<div class="p-2 space-y-1 text-[7px] font-bold text-black">
+<div class="p-1 border border-black/10 rounded">Sección Servicios</div>
+<div class="p-1 border border-black/10 rounded text-[6px]">Desplegable detalle</div>
+<div class="bg-[#D1F2E1] border border-[#82D1A1]/30 p-1 rounded text-[#2D5A41]">CTA</div>
+</div>
+</div>
+</div>
+
+<!-- Quiénes Somos -->
+<div class="flex flex-col items-center">
+<div class="w-px h-8 bg-gray-300"></div>
+<div class="w-full bg-white border border-black/10 rounded-xl shadow-sm overflow-hidden ring-1 ring-black/5">
+<div class="bg-[#E5E5E1] text-black text-[8px] font-bold uppercase p-2 flex items-center gap-2">
+<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> Quiénes
+</div>
+<div class="p-2 space-y-1 text-[7px] font-bold text-black">
+<div class="p-1 border border-black/10 rounded text-[6px]">Historia / Timeline</div>
+<div class="p-1 border border-black/10 rounded">Leadership</div>
+<div class="p-1 border border-black/10 rounded">Oficinas</div>
+<div class="bg-[#F9F1D8] border border-[#EBD1A0]/30 p-1 rounded text-[#7A5C2B]">CTA</div>
+</div>
+</div>
+</div>
+
+<!-- Unirte -->
+<div class="flex flex-col items-center">
+<div class="w-px h-8 bg-gray-300"></div>
+<div class="w-full bg-white border border-black/10 rounded-xl shadow-sm overflow-hidden ring-1 ring-black/5">
+<div class="bg-[#EBD1A0] text-black text-[8px] font-bold uppercase p-2 flex items-center gap-2">
+<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> Únete
+</div>
+<div class="p-2 space-y-1 text-[7px] font-bold text-black">
+<div class="p-1 border border-black/10 rounded">Beneficios</div>
+<div class="p-1 border border-black/10 rounded">Conducta</div>
+<div class="bg-gray-100 p-1 rounded text-gray-600">CTA Workable</div>
+</div>
+</div>
+</div>
+
+<!-- News -->
+<div class="flex flex-col items-center">
+<div class="w-px h-8 bg-gray-300"></div>
+<div class="w-full bg-white border border-black/10 rounded-xl shadow-sm overflow-hidden ring-1 ring-black/5">
+<div class="bg-[#E5E5E1] text-black text-[8px] font-bold uppercase p-2 flex items-center gap-2">
+<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/></svg> News
+</div>
+<div class="p-2 space-y-1 text-[7px] font-bold text-black">
+<div class="p-1 border border-black/10 rounded">Artículos</div>
+<div class="bg-[#D1F2E1] border border-[#82D1A1]/30 p-1 rounded text-[#2D5A41]">CTA</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
 *   **Decisiones de UX Writer:** Eliminamos el lenguaje redundante y unificamos secciones de metodología y cultura bajo "Quiénes somos".
 *   **Navegación Persistente:** Rediseñamos el Header para incluir un CTA de contacto siempre visible y un selector de idioma (ES/EN/PT) accesible desde cualquier nivel.
