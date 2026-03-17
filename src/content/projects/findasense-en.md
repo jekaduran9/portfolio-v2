@@ -53,7 +53,7 @@ I proposed a total restructuring of the Sitemap, inverting the traditional order
 
 <div class="not-prose my-16 overflow-hidden rounded-2xl">
     <img 
-        src="/portfolio-v2/Sitemap.svg" 
+        src="/portfolio-v2/pj-findasense-sitemap.svg" 
         alt="Findasense Sitemap" 
         class="w-full h-auto object-contain"
     />
