@@ -37,6 +37,7 @@ export const ui = {
     'categories.tattoo': 'Tatuaje',
     'categories.branding': 'Branding',
     'categories.illustrations': 'Illustraciones',
+    'categories.social': 'Social Media',
   },
   en: {
     'nav.home': 'Home',
@@ -69,5 +70,6 @@ export const ui = {
     'categories.tattoo': 'Tattoo',
     'categories.branding': 'Branding',
     'categories.illustrations': 'Illustrations',
+    'categories.social': 'Social Media',
   },
 } as const;
