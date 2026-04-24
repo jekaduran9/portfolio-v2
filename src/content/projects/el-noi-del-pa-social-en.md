@@ -4,7 +4,7 @@ description: "Creative direction and content production for social media: produc
 role: "Content Creator & Social Media Designer"
 tools: ["Instagram", "Reels", "Photography", "Canva", "CapCut", "Adobe Lightroom"]
 type: "Social Media & Content Creation"
-image: "/noi-social/cover.jpg"
+image: "/noi-social/post-05-croissant.jpg"
 pubDate: 2026-04-24
 featured: true
 lang: "en"
