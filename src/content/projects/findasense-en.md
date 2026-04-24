@@ -19,6 +19,10 @@ Findasense, as a global digital transformation consultancy, needed a website tha
 
 My challenge was to rebuild this digital identity under one premise: *The user doesn't want to know who you are until they understand how you can help them.*
 
+### Design process
+My methodology focused on transforming technical complexity into a seamless and consistent user experience on a global scale.
+
+
 ---
 
 ### 01 — Discovery: UX Audit and Benchmark
@@ -44,10 +48,16 @@ Based on the findings, we defined three pillars of action to guide the redesign:
 2.  **Trust:** Visual prioritization of Success Stories and Clients (Coca-Cola, Lenovo, Bimbo) from the first scroll.
 3.  **Conversion:** Redesign of the contact form to a simplified 5-step single-field model, reducing abandonment.
 
----
-
 ### 03 — Architecture and Content Strategy
-I proposed a total restructuring of the Sitemap. The boldest decision was to invert the traditional order: we moved "Services" and "Success Stories" to the beginning of the menu and the Home.
+I proposed a total restructuring of the Sitemap, inverting the traditional order to prioritize conversion and expertise. Here is the new global ecosystem organized by functional nodes:
+
+<div class="not-prose my-16 overflow-hidden rounded-2xl">
+    <img 
+        src="/portfolio-v2/pj-findasense-sitemap.svg" 
+        alt="Findasense Sitemap" 
+        class="w-full h-auto object-contain"
+    />
+</div>
 
 *   **UX Writer Decisions:** We eliminated redundant language and unified methodology and culture sections under "Who we are."
 *   **Persistent Navigation:** We redesigned the Header to include a consistently visible contact CTA and a language selector (ES/EN/PT) accessible from any level.
@@ -58,6 +68,23 @@ I proposed a total restructuring of the Sitemap. The boldest decision was to inv
 The design was built in Figma using a Design System (UI Kit) designed for technical implementation in WordPress 6.4.
 
 **Low-Fi Wireframing:** We defined the user flow ensuring there was never a "dead end" (especially on news and press pages).
+
+<div class="not-prose grid grid-cols-1 md:grid-cols-3 gap-8 my-16">
+    <div class="md:col-span-2 overflow-hidden rounded-2xl border border-black/5 shadow-md animate-slide-right">
+        <img 
+            src="/portfolio-v2/pj-lowfi-prototype-desktop-findasense.png" 
+            alt="Low-Fi Wireframe Desktop" 
+            class="w-full h-auto object-contain hover:scale-[1.02] transition-transform duration-500"
+        />
+    </div>
+    <div class="overflow-hidden rounded-2xl border border-black/5 shadow-md animate-slide-right-delayed">
+        <img 
+            src="/portfolio-v2/pj-lowfi-prototype-mobile-findasense.png" 
+            alt="Low-Fi Wireframe Mobile" 
+            class="w-full h-auto object-contain hover:scale-[1.02] transition-transform duration-500"
+        />
+    </div>
+</div>
 
 **High-Fidelity Design:**
 *   **Modulation:** Sections divided by color blocks to visually separate services from success stories.
@@ -157,5 +184,3 @@ Explore the experience designed for Findasense's global ecosystem.
     </a>
     <p class="text-[10px] text-gray-400 uppercase tracking-widest text-center mt-4 font-bold">Click on the image to explore the real website ↑</p>
 </div>
-
-

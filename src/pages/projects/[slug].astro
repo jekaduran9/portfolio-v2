@@ -22,7 +22,9 @@ export async function getStaticPaths() {
 
 const { project, prev, next } = Astro.props;
 const { Content } = await project.render();
-const { title, description, role, tools, type } = project.data;
+const { title, description, role, tools, type, heroVideo, heroImage, heroAspect } = project.data;
+const heroVideoPath = heroVideo?.startsWith('/') ? `${import.meta.env.BASE_URL}${heroVideo}` : heroVideo;
+const heroImagePath = heroImage?.startsWith('/') ? `${import.meta.env.BASE_URL}${heroImage}` : heroImage;
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -52,8 +54,14 @@ const translatePath = useTranslatedPath(lang);
 						</div>
 					</div>
 				</div>
-				<div class="aspect-[4/3] bg-gray-200 overflow-hidden flex items-center justify-center text-gray-400 font-serif italic text-xl">
-					Hero Image Mockup
+				<div class={`${heroAspect} bg-gray-200 overflow-hidden flex items-center justify-center text-gray-400 font-serif italic text-xl`}>
+					{heroVideoPath ? (
+						<video src={heroVideoPath} class="w-full h-full object-cover" autoplay loop muted playsinline></video>
+					) : heroImagePath ? (
+						<img src={heroImagePath} alt={title} class="w-full h-full object-cover" />
+					) : (
+						<span>Hero Image Mockup</span>
+					)}
 				</div>
 			</div>
 		</div>

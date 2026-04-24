@@ -19,6 +19,10 @@ Findasense, como consultora global de transformación digital, necesitaba una we
 
 Mi reto fue reconstruir esta identidad digital bajo una premisa: *El usuario no quiere saber quién eres hasta que entiende cómo puedes ayudarle.*
 
+### Proceso de diseño
+Mi metodología se centraba en transformar la complejidad técnica en una experiencia de usuario fluida y coherente a nivel global.
+
+
 ---
 
 ### 01 — Descubrimiento: Auditoría de UX y Benchmark
@@ -44,10 +48,16 @@ Basándome en los hallazgos, definimos tres ejes de acción para guiar el redise
 2.  **Confianza:** Priorización visual de Casos de Éxito y Clientes (Coca-Cola, Lenovo, Bimbo) desde el primer scroll.
 3.  **Conversión:** Rediseño del formulario de contacto a un modelo de campo único simplificado de 5 pasos, reduciendo el abandono.
 
----
-
 ### 03 — Arquitectura y Estrategia de Contenidos
-Propuse una reestructuración total del Sitemap. La decisión más audaz fue invertir el orden tradicional: movimos "Servicios" y "Casos de Éxito" al inicio del menú y del Home.
+Propuse una reestructuración total del Sitemap invirtiendo el orden tradicional para priorizar la conversión y el expertise. Aquí se muestra el ecosistema global organizado por nodos funcionales:
+
+<div class="not-prose my-16 overflow-hidden rounded-2xl">
+    <img 
+        src="/portfolio-v2/pj-findasense-sitemap.svg" 
+        alt="Sitemap Findasense" 
+        class="w-full h-auto object-contain"
+    />
+</div>
 
 *   **Decisiones de UX Writer:** Eliminamos el lenguaje redundante y unificamos secciones de metodología y cultura bajo "Quiénes somos".
 *   **Navegación Persistente:** Rediseñamos el Header para incluir un CTA de contacto siempre visible y un selector de idioma (ES/EN/PT) accesible desde cualquier nivel.
@@ -58,6 +68,23 @@ Propuse una reestructuración total del Sitemap. La decisión más audaz fue inv
 El diseño se construyó en Figma utilizando un Sistema de Diseño (UI Kit) pensado para la implementación técnica en WordPress 6.4.
 
 **Wireframing Low-Fi:** Definimos el flujo de usuario asegurando que nunca hubiera un "callejón sin salida" (especialmente en las páginas de noticias y prensa).
+
+<div class="not-prose grid grid-cols-1 md:grid-cols-3 gap-8 my-16">
+    <div class="md:col-span-2 overflow-hidden rounded-2xl border border-black/5 shadow-md animate-slide-right">
+        <img 
+            src="/portfolio-v2/pj-lowfi-prototype-desktop-findasense.png" 
+            alt="Wireframe Low-Fi Desktop" 
+            class="w-full h-auto object-contain hover:scale-[1.02] transition-transform duration-500"
+        />
+    </div>
+    <div class="overflow-hidden rounded-2xl border border-black/5 shadow-md animate-slide-right-delayed">
+        <img 
+            src="/portfolio-v2/pj-lowfi-prototype-mobile-findasense.png" 
+            alt="Wireframe Low-Fi Mobile" 
+            class="w-full h-auto object-contain hover:scale-[1.02] transition-transform duration-500"
+        />
+    </div>
+</div>
 
 **Diseño High-Fidelity:**
 *   **Modulación:** Secciones divididas por bloques de color para separar visualmente los servicios de los casos de éxito.
