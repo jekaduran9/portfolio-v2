@@ -1,16 +1,23 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import ProjectCard from '../../components/ProjectCard.astro';
 import { getCollection } from 'astro:content';
-import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import { getLangFromUrl, useTranslations, useTranslatedPath } from '../../i18n/utils';
+import SalonomiCover from '../../components/covers/SalonomiCover.astro';
+import SalonTattooCover from '../../components/covers/SalonTattooCover.astro';
+import ElNoiCover from '../../components/covers/ElNoiCover.astro';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
 
 const projects = await getCollection('projects', ({ data }) => {
   return data.lang === lang;
 });
 const sortedProjects = projects.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const customCovers: Record<string, any> = {
+  'salonomi': SalonomiCover,
+};
 ---
 
 <BaseLayout title={lang === 'es' ? 'Product Designer & UX/UI Designer' : 'Product Designer & UX/UI Designer'}>
@@ -36,13 +43,13 @@ const sortedProjects = projects.sort((a, b) => b.data.pubDate.valueOf() - a.data
 			</div>
 		</div>
 
-		<div class="relative z-10 max-w-7xl mx-auto px-6 w-full pb-20 flex flex-col md:flex-row justify-between items-end gap-12">
+		<div class="relative z-10 max-w-7xl mx-auto px-6 w-full pb-20 flex flex-col md:flex-row justify-between items-center md:items-end gap-12">
 			<div class="order-2 md:order-1">
 				<a href="#projects" class="inline-block border-2 border-white text-white px-10 py-5 text-sm font-bold uppercase tracking-[0.2em] rounded-full hover:bg-[#E0A4B0] hover:border-[#E0A4B0] transition-all duration-500">
 					{t('hero.cta')}
 				</a>
 			</div>
-			<div class="max-w-xl text-right order-1 md:order-2">
+			<div class="max-w-xl text-center md:text-right order-1 md:order-2">
 				<p class="text-2xl md:text-3xl text-white font-medium mb-4 leading-tight drop-shadow-lg">
 					{t('hero.subtitle')}
 				</p>
@@ -82,20 +89,86 @@ const sortedProjects = projects.sort((a, b) => b.data.pubDate.valueOf() - a.data
 			</div>
 		</div>
 		
-		<div id="projects-grid" class="columns-1 md:columns-3 gap-12 transition-all duration-500">
-			{sortedProjects.map((project) => (
-				<ProjectCard project={project} />
-			))}
+		{sortedProjects.length > 0 && (() => {
+			const featured = sortedProjects[0];
+			const featuredImagePath = featured.data.image?.startsWith('/') ? `${import.meta.env.BASE_URL}${featured.data.image}` : featured.data.image;
+			const featuredYear = featured.data.pubDate.getFullYear();
+			return (
+				<a
+					id="featured-hero"
+					href={translatePath(`/projects/${featured.slug}`)}
+					data-category={featured.data.category}
+					class="featured-hero group block mb-24 md:mb-32"
+				>
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
+						<div class="aspect-[4/3] overflow-hidden bg-gray-100 rounded-sm transition-transform duration-700 ease-out group-hover:scale-[1.02]">
+							{(() => {
+								const FeaturedCover = customCovers[featured.slug];
+								if (FeaturedCover) return <FeaturedCover size="lg" />;
+								if (featuredImagePath) return <img src={featuredImagePath} alt={featured.data.title} class="w-full h-full object-cover" />;
+								return <div class="w-full h-full flex items-center justify-center text-gray-400 font-serif italic">{featured.data.title}</div>;
+							})()}
+						</div>
+						<div class="space-y-5">
+							<div class="flex items-center gap-3 text-[11px] font-mono uppercase tracking-[0.25em] text-[#E0A4B0]">
+								<span>Featured project</span>
+								<span class="h-px flex-1 bg-gray-300 max-w-[3rem]"></span>
+								<span class="text-gray-400">{featuredYear}</span>
+							</div>
+							<h3 class="text-3xl md:text-5xl italic font-serif font-medium text-gray-900 leading-[1.1] transition-colors duration-500 group-hover:text-[#E0A4B0]">{featured.data.title}</h3>
+							<p class="text-[11px] uppercase tracking-[0.25em] text-gray-500 font-medium">{featured.data.type}</p>
+							<p class="text-base text-gray-600 leading-relaxed pt-2">{featured.data.description}</p>
+							<span class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] font-bold text-gray-900 group-hover:text-[#E0A4B0] transition-colors duration-300 pt-3">
+								<span class="border-b border-current pb-1">View full case</span>
+								<span class="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
+							</span>
+						</div>
+					</div>
+				</a>
+			);
+		})()}
+
+		<div id="more-projects-divider" class="flex items-center gap-6 mb-10 md:mb-14">
+			<h3 class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold whitespace-nowrap">More projects</h3>
+			<span class="h-px flex-1 bg-gray-200"></span>
+		</div>
+
+		<div id="projects-grid" class="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-10">
+			{sortedProjects.map((project, i) => {
+				const imagePath = project.data.image?.startsWith('/') ? `${import.meta.env.BASE_URL}${project.data.image}` : project.data.image;
+				const isFeatured = i === 0;
+				return (
+					<a
+						href={translatePath(`/projects/${project.slug}`)}
+						data-category={project.data.category}
+						class={`project-card group block ${isFeatured ? 'is-featured' : ''}`}
+					>
+						<div class="aspect-[4/5] overflow-hidden bg-gray-100 rounded-sm transition-transform duration-700 ease-out group-hover:scale-[1.03]">
+							{(() => {
+								const Cover = customCovers[project.slug];
+								if (Cover) return <Cover />;
+								if (imagePath) return <img src={imagePath} alt={project.data.title} class="w-full h-full object-cover" />;
+								return <div class="w-full h-full flex items-center justify-center text-gray-400 font-serif italic">{project.data.title}</div>;
+							})()}
+						</div>
+						<div class="pt-4 space-y-1.5">
+							<h4 class="text-base md:text-lg italic font-serif font-medium text-gray-900 leading-tight transition-colors duration-300 group-hover:text-[#E0A4B0]">{project.data.title}</h4>
+							<p class="text-[10px] uppercase tracking-[0.25em] text-gray-500 font-medium">{project.data.type}</p>
+						</div>
+					</a>
+				);
+			})}
 		</div>
 	</section>
 
 	<script>
 		const filterButtons = document.querySelectorAll('.filter-btn');
-		const projectCards = document.querySelectorAll('.project-card');
+		const projectCards = document.querySelectorAll<HTMLElement>('.project-card');
+		const featuredHero = document.getElementById('featured-hero');
+		const moreDivider = document.getElementById('more-projects-divider');
 
 		filterButtons.forEach(btn => {
 			btn.addEventListener('click', () => {
-				// Update active state
 				filterButtons.forEach(b => {
 					b.classList.remove('active', 'text-[#E0A4B0]', 'border-[#E0A4B0]');
 					b.classList.add('text-gray-400', 'border-transparent');
@@ -104,24 +177,26 @@ const sortedProjects = projects.sort((a, b) => b.data.pubDate.valueOf() - a.data
 				btn.classList.remove('text-gray-400', 'border-transparent');
 
 				const filter = btn.getAttribute('data-filter');
+				const isAll = filter === 'all';
+
+				if (featuredHero) featuredHero.style.display = isAll ? '' : 'none';
+				if (moreDivider) moreDivider.style.display = isAll ? '' : 'none';
 
 				projectCards.forEach(card => {
 					const category = card.getAttribute('data-category');
-					if (filter === 'all' || category === filter) {
-						(card as HTMLElement).style.display = 'block';
-						setTimeout(() => {
-							(card as HTMLElement).style.opacity = '1';
-							(card as HTMLElement).style.transform = 'scale(1)';
-						}, 10);
-					} else {
-						(card as HTMLElement).style.opacity = '0';
-						(card as HTMLElement).style.transform = 'scale(0.95)';
-						setTimeout(() => {
-							(card as HTMLElement).style.display = 'none';
-						}, 300);
-					}
+					const isFeatured = card.classList.contains('is-featured');
+					const matches = isAll || category === filter;
+					const hideAsFeatured = isAll && isFeatured;
+					card.style.display = (matches && !hideAsFeatured) ? '' : 'none';
 				});
 			});
+		});
+
+		// Initial state: hide featured from grid (it's in hero)
+		projectCards.forEach(card => {
+			if (card.classList.contains('is-featured')) {
+				card.style.display = 'none';
+			}
 		});
 	</script>
 </BaseLayout>

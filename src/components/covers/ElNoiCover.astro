@@ -1,0 +1,19 @@
+---
+interface Props {
+  title?: string;
+  subtitle?: string;
+  size?: 'sm' | 'lg';
+}
+const { title = 'El Noi del Pa', subtitle = 'Branding · Social Media', size = 'sm' } = Astro.props;
+const titleSize = size === 'lg' ? 'text-5xl md:text-8xl' : 'text-3xl md:text-6xl';
+---
+
+<div class="relative w-full h-full overflow-hidden flex flex-col items-center justify-center text-[#F1EDE4]" style="background: linear-gradient(160deg, #9C6F4F 0%, #7A4F35 60%, #5A3823 100%);">
+	<div class="absolute top-5 left-5 text-[9px] md:text-[10px] uppercase tracking-[0.3em] opacity-70 font-bold">2025</div>
+	<h2 class={`${titleSize} italic font-serif font-medium leading-[1.05] px-6 text-center`}>{title}</h2>
+	<p class="text-[9px] md:text-[11px] uppercase tracking-[0.4em] mt-5 opacity-70 font-bold">{subtitle}</p>
+	<div class="absolute bottom-5 right-5 text-[9px] md:text-[10px] uppercase tracking-[0.3em] opacity-70 font-bold italic font-serif">Barcelona</div>
+	<svg class="absolute top-6 right-6 w-5 h-5 md:w-7 md:h-7 opacity-50" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+		<path d="M16 1.5 C16.6 11.2 20.8 15.4 30.5 16 C20.8 16.6 16.6 20.8 16 30.5 C15.4 20.8 11.2 16.6 1.5 16 C11.2 15.4 15.4 11.2 16 1.5 Z"/>
+	</svg>
+</div>
