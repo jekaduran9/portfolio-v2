@@ -4,7 +4,7 @@ description: "Fine line tattoo project focused on custom designs that tell uniqu
 role: "Tattoo Artist"
 tools: ["Fine line", "Procreate", "Illustration", "Custom Design"]
 type: "Illustration, Fine line, Tattoo"
-image: "/pj-tattoo-cover.png"
+image: "/Tattoo/flor-poblenou.JPG"
 pubDate: 2024-03-08
 featured: true
 lang: "en"
