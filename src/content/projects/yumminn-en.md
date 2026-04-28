@@ -13,34 +13,34 @@ aspectRatio: "aspect-square"
 
 Yumminn is the fastest and simplest solution to order and pay in restaurants, designed to improve Google reviews and build customer loyalty. Our platform optimizes profitability and operational efficiency, smoothing the interaction between front-of-house staff and diners.
 
-## 🔴 The Challenge
+## The Challenge
 The main pain point in hospitality is waiting: a customer takes, on average, 13 minutes to pay. My goal as a UX/UI designer was to analyze the current MVP to:
 
 *   Redesign the payment experience and improve the conversion rate.
 *   Increase the volume of tips for waiters.
 *   Balance the real needs of three actors: the restaurant, the diner, and the staff.
 
-## 🔍 MVP Diagnosis (Usability Analysis)
+## MVP Diagnosis (Usability Analysis)
 After an exhaustive analysis and user testing, I identified what worked and what hindered the experience:
 
-### ✅ What worked well
+### What worked well
 *   Accessible language selector.
 *   Operational "split the bill" function.
 *   Good technical foundation as a payment solution.
 
-### ⚠️ Opportunities for improvement
+### Opportunities for improvement
 *   **Lack of visual hierarchy:** Too many buttons with the same weight.
 *   **Confusing payment flow:** Barriers for the first-time user.
 *   **Data disconnection:** Lack of visual synchronization between what was ordered from the waiter and what was shown on the web.
 *   **Post-payment uncertainty:** Little visibility of the table status after making the transaction.
 *   **Excessive noise:** Unnecessary information (user profile) and lack of a clear CTA.
 
-## 🛠 Process and Iteration
+## Process and Iteration
 For the second iteration, I worked closely with the operations team and did field work interviewing diners in real-time.
 
 **The big finding:** Once the technical functionality was resolved, the challenge was differentiation. Restaurants didn't want a generic tool; they wanted the WebApp to be an extension of their own brand. We transformed the interface into a personalized experience that breathes each local's identity, ensuring that payment is not just a procedure, but the perfect close to the dinner.
 
-## 🚀 Results and Impact
+## Results and Impact
 The redesign not only improved the aesthetics but transformed the business model:
 
 *   **Exponential growth:** We grew from 6 to over 200 restaurants.

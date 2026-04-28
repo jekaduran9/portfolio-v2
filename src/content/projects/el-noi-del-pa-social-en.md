@@ -14,22 +14,22 @@ heroVideo: "/noi-social/reel-02-tienda.mp4"
 heroAspect: "aspect-[4/5]"
 ---
 
-## 🍞 EL NOI DEL PA · SOCIAL MEDIA
+## EL NOI DEL PA · SOCIAL MEDIA
 
 After the redesign of the digital ecosystem, I took over the creative direction and content production for the bakery's social media. The challenge: to communicate the authenticity of the workshop and turn "gluten-free" into an aspirational value, not a limitation. The result is a coherent feed where product, process, and community share the same visual language.
 
-### 👤 ROLE
+### ROLE
 Content Creator & Social Media Designer
 
-### 📍 CLIENT
+### CLIENT
 El Noi del Pa Sense Gluten · Barcelona
 
-### 🎯 GOAL
+### GOAL
 To increase local visibility, humanize the brand, showcase the artisanal process, and connect with Barcelona's celiac and foodie community through Instagram.
 
 ---
 
-## 🎨 CREATIVE DIRECTION
+## CREATIVE DIRECTION
 Natural light, toasted and ocher tones, close compositions and textural detail. Warm typography that reinforces the artisanal character without falling into rustic clichés. Every piece of content —photo, video, copy— comes from the same visual guideline built to be recognizable from the first scroll.
 
 **Content pillars**
@@ -40,7 +40,7 @@ Natural light, toasted and ocher tones, close compositions and textural detail. 
 
 ---
 
-## 📱 INSTAGRAM PROFILE
+## INSTAGRAM PROFILE
 
 <div class="not-prose max-w-5xl mx-auto bg-white border border-black/5 p-8 md:p-14 my-12">
     <div class="flex flex-col md:flex-row items-center justify-center gap-5 mb-14">
@@ -146,7 +146,7 @@ Natural light, toasted and ocher tones, close compositions and textural detail. 
 
 ---
 
-## 🎬 REELS
+## REELS
 Content in motion: process, product in action and small stories from the bakery.
 
 <div class="not-prose grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6 my-16 max-w-5xl mx-auto items-start">
@@ -172,7 +172,7 @@ Content in motion: process, product in action and small stories from the bakery.
 
 ---
 
-## 📈 RESULTS
+## RESULTS
 - **Recognizable feed:** consistent visual language that communicates the artisanal essence in every post.
 - **Active community:** organic interaction with local customers and Barcelona's celiac community.
 - **Seasonal content:** campaigns tied to local festivities (Sant Jordi, Easter, Croissandfest) that position the brand within the Catalan cultural calendar.
@@ -180,7 +180,7 @@ Content in motion: process, product in action and small stories from the bakery.
 
 ---
 
-## 🎓 KEY LEARNINGS
+## KEY LEARNINGS
 - **Visual consistency first:** a feed with its own language builds instant recognition.
 - **The process sells more than the product:** showing hands, flour and oven connects better than a perfect still life.
 - **Craft needs rhythm:** alternating product, people and process avoids saturation.

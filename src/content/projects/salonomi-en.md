@@ -13,17 +13,17 @@ aspectRatio: "aspect-video"
 
 Context: Salonomi is a cloud-based management and booking platform designed for small health and beauty businesses in Latin America.
 
-## 🟢 Project Overview
+## Project Overview
 I led the visual and functional evolution of Salonomi, transforming a technical tool into a user-centric experience. My work spanned from rebranding and content strategy to the critical redesign of the Web App and POS, ensuring the platform was accessible and efficient for salon owners who operate primarily from mobile devices.
 
-## 🛠️ Key Responsibilities
+## Key Responsibilities
 *   **UI/UX Design:** Creation of high-fidelity wireframes and prototypes for the Web App and main site.
 *   **Mobile-First Strategy:** Total interface redesign after identifying that 80% of users accessed from smartphones.
 *   **Design Systems:** Creation and expansion of a component library (cards, navbars, footers) to ensure consistency.
 *   **Branding & Growth:** Responsible for visual identity on social media (Instagram/Facebook), digital ads, and custom illustrations.
 *   **Technical Collaboration:** Direct work with Growth and Development teams to guarantee an implementation faithful to the design using Bootstrap 3 and Wix.
 
-## 📱 Project 1: Web App & POS Redesign
+## Project 1: Web App & POS Redesign
 
 ### The Problem
 Originally, Salonomi was not optimized for mobile. Google Analytics data revealed that the vast majority of clients managed their business from their phones, facing serious usability problems in critical tasks such as invoicing and sales registration.
@@ -45,7 +45,7 @@ The Point of Sale (POS) system was dense and difficult to operate on small scree
 *   Invoicing flow optimization, reducing data entry time for the administrator.
 *   Total visual consistency between the management platform and the brand's identity.
 
-## 🌐 Project 2: Landing Page & Digital Strategy
+## Project 2: Landing Page & Digital Strategy
 
 ### Goal
 Transform the corporate site into an efficient conversion tool where users could understand Salonomi's value at a glance.
@@ -57,7 +57,7 @@ Transform the corporate site into an efficient conversion tool where users could
 ### Results
 We achieved a professional aesthetic that built trust in Latam's small businesses, aligning social media communication with the website experience.
 
-## 📊 Success Metrics & Impact
+## Success Metrics & Impact
 To measure the success of the redesign and branding strategies, I focused on key performance indicators (KPIs) that reflected tool adoption:
 
 *   **Mobile Adoption:** After the mobile-first redesign, session time on mobile devices increased by [X]%, confirming that salon owners could now comfortably manage their business from their phones.
@@ -65,7 +65,7 @@ To measure the success of the redesign and branding strategies, I focused on key
 *   **Brand Consistency:** We achieved a unified visual language across 3 platforms (Web App, Landing Page, and Social Media), which increased brand recognition and trust from new leads.
 *   **Error Reduction:** Thanks to the visual grouping of data on invoices, support queries related to "data reading errors" decreased significantly.
 
-## 💡 Lessons Learned
+## Lessons Learned
 As a designer in a fast-paced Growth environment, this project provided fundamental lessons:
 
 1.  **Data Rules (Data-Driven Design):** Before analytics, we assumed desktop was the focus. Google Analytics revealed that 80% of users were mobile, drastically changing our design priority and saving the product from irrelevance.

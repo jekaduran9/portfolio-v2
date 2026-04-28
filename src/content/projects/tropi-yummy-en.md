@@ -31,7 +31,7 @@ The client was clear about the product —mango biche, fruit salads, obleas and 
 
 ---
 
-## 🥭 Mango
+## Mango
 
 Before designing, I immersed myself in the tropical universe to understand where to build the brand from:
 
@@ -49,7 +49,7 @@ Before designing, I immersed myself in the tropical universe to understand where
 
 ---
 
-## 🎨 Logo design
+## Logo design
 
 The Tropi Yummy logo had to convey freshness and diversity at first glance, prioritizing legibility and an unmistakably tropical character.
 
@@ -83,7 +83,7 @@ The Tropi Yummy logo had to convey freshness and diversity at first glance, prio
 
 ---
 
-## 🍽️ Menu and visual production
+## Menu and visual production
 
 For the creation of the Tropi Yummy menu, I developed a fresh art direction where the product is the absolute protagonist. Faced with an initial lack of photographic material, I used **Artificial Intelligence** to generate high-fidelity visuals —keeping palette and realistic textures— so we could launch a complete menu even before the physical opening.
 
@@ -114,7 +114,7 @@ After the opening, I integrated real photography of the shop with an exhaustive 
 
 ---
 
-## 📱 Visual identity applied to Social Media
+## Visual identity applied to Social Media
 
 The identity was translated into the digital ecosystem with a coherent feed, where each post reinforces the tropical universe and maintains visual consistency between the physical shop and the screen.
 
@@ -147,6 +147,6 @@ The identity was translated into the digital ecosystem with a coherent feed, whe
 
 ---
 
-## ✨ Result
+## Result
 
 A hybrid, coherent, and professional aesthetic that allows Tropi Yummy to compete visually from day one, achieving impactful communication both at the point of sale and on digital platforms.
