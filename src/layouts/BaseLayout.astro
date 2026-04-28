@@ -6,9 +6,10 @@ import { getLangFromUrl, useTranslations, useTranslatedPath, getCleanPathname } 
 interface Props {
 	title: string;
 	description?: string;
+	hideFooterCta?: boolean;
 }
 
-const { title, description = "Product Designer & UX/UI Designer Portfolio" } = Astro.props;
+const { title, description = "Product Designer & UX/UI Designer Portfolio", hideFooterCta = false } = Astro.props;
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -67,17 +68,19 @@ const cleanPathname = getCleanPathname(Astro.url);
 
 		<footer class="bg-[#F9F8F3] py-20 border-t border-black/5">
 			<div class="max-w-7xl mx-auto px-6">
-				<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
-					<div>
-						<h2 class="text-2xl font-medium mb-4">{t('footer.cta')}</h2>
-						<p class="text-gray-500 max-w-sm">{t('footer.description')}</p>
+				{!hideFooterCta && (
+					<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+						<div>
+							<h2 class="text-2xl font-medium mb-4">{t('footer.cta')}</h2>
+							<p class="text-gray-500 max-w-sm">{t('footer.description')}</p>
+						</div>
+						<div class="flex gap-8">
+							<a href="mailto:hola@jessicaduran.com" class="text-lg font-medium hover:underline underline-offset-4 tracking-tight">{t('footer.email')}</a>
+							<a href="https://linkedin.com/in/jessicaduran" class="text-lg font-medium hover:underline underline-offset-4 tracking-tight">{t('footer.linkedin')}</a>
+						</div>
 					</div>
-					<div class="flex gap-8">
-						<a href="mailto:hola@jessicaduran.com" class="text-lg font-medium hover:underline underline-offset-4 tracking-tight">{t('footer.email')}</a>
-						<a href="https://linkedin.com/in/jessicaduran" class="text-lg font-medium hover:underline underline-offset-4 tracking-tight">{t('footer.linkedin')}</a>
-					</div>
-				</div>
-				<div class="mt-20 pt-8 border-t border-gray-50 flex justify-between items-center text-xs text-gray-400 uppercase tracking-widest">
+				)}
+				<div class:list={["pt-8 border-t border-gray-50 flex justify-between items-center text-xs text-gray-400 uppercase tracking-widest", hideFooterCta ? "" : "mt-20"]}>
 					<p>© 2026 Jessica Duran</p>
 					<p>Product Designer & UX/UI</p>
 				</div>

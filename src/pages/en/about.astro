@@ -5,12 +5,6 @@ import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-const experience = [
-  { company: "Company A", role: "Senior Product Designer", period: "2022 — Present" },
-  { company: "Digital Studio B", role: "UX/UI Designer", period: "2020 — 2022" },
-  { company: "Startup C", role: "Junior Designer", period: "2018 — 2020" },
-];
-
 const services = [
   "UX/UI Design",
   "Product Design",
@@ -62,20 +56,19 @@ const services = [
 						Let's create something meaningful together.
 						<svg class="inline-block w-5 h-5 ml-1.5 align-middle text-gray-800" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 1.5 C16.6 11.2 20.8 15.4 30.5 16 C20.8 16.6 16.6 20.8 16 30.5 C15.4 20.8 11.2 16.6 1.5 16 C11.2 15.4 15.4 11.2 16 1.5 Z"/></svg>
 					</p>
-				</div>
-
-				<div class="space-y-8">
-					<h2 class="text-xs uppercase tracking-[0.2em] text-gray-400 font-bold">Experience</h2>
-					<div class="space-y-6">
-						{experience.map(item => (
-							<div class="flex justify-between items-baseline border-b border-gray-100 pb-4">
-								<div>
-									<h3 class="font-medium">{item.company}</h3>
-									<p class="text-sm text-gray-400">{item.role}</p>
-								</div>
-								<span class="text-xs font-medium text-gray-400 uppercase">{item.period}</span>
-							</div>
-						))}
+					<div class="pt-4">
+						<a
+							href={`${import.meta.env.BASE_URL}/cv-jessica-duran.pdf`}
+							download
+							class="inline-flex items-center gap-2 border-2 border-gray-900 text-gray-900 px-6 py-3 text-[11px] font-bold uppercase tracking-[0.2em] rounded-full hover:bg-[#E0A4B0] hover:border-[#E0A4B0] hover:text-white transition-all duration-500"
+						>
+							<svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+								<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+								<polyline points="7 10 12 15 17 10"></polyline>
+								<line x1="12" y1="15" x2="12" y2="3"></line>
+							</svg>
+							Download CV
+						</a>
 					</div>
 				</div>
 
