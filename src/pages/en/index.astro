@@ -22,18 +22,18 @@ const customCovers: Record<string, any> = {
 
 <BaseLayout title={lang === 'es' ? 'Product Designer & UX/UI Designer' : 'Product Designer & UX/UI Designer'}>
 	<!-- Hero Section -->
-	<section class="relative w-full h-screen flex flex-col justify-end overflow-hidden">
+	<section class="relative w-full h-screen flex flex-col justify-between overflow-hidden">
 		<div class="absolute inset-0 z-0">
-			<img 
-				src={`${import.meta.env.BASE_URL}/hero-background.jpeg`} 
-				alt="Jessica Duran - Product Designer" 
+			<img
+				src={`${import.meta.env.BASE_URL}/hero-background.jpeg`}
+				alt="Jessica Duran - Product Designer"
 				class="w-full h-full object-cover grayscale brightness-90"
 			/>
 			<div class="absolute inset-0 bg-black/10"></div>
 		</div>
-		
+
 		<!-- Marquee Section -->
-		<div class="relative z-10 w-full py-12 mb-24 overflow-hidden select-none pointer-events-none">
+		<div class="relative z-10 w-full pt-36 md:pt-44 pb-6 overflow-hidden select-none pointer-events-none">
 			<div class="flex whitespace-nowrap animate-marquee">
 				{[...Array(6)].map((_) => (
 					<h1 class="text-7xl md:text-[15rem] font-bold tracking-tighter text-white/80 px-8 flex items-center mix-blend-overlay blur-[2px]">
@@ -79,13 +79,13 @@ const customCovers: Record<string, any> = {
 			</h2>
 
 			<!-- Filters -->
-			<div class="flex flex-wrap gap-8 text-[11px] font-bold uppercase tracking-[0.2em] border-b border-black/5 pb-8 mb-16">
-				<button class="filter-btn active text-[#E0A4B0] border-b-2 border-[#E0A4B0] pb-8 -mb-[34px] transition-all duration-300" data-filter="all">{t('categories.all')}</button>
-				<button class="filter-btn text-gray-400 hover:text-black transition-all duration-300 pb-8 -mb-[34px] border-b-2 border-transparent" data-filter="UX/UI">{t('categories.uxui')}</button>
-				<button class="filter-btn text-gray-400 hover:text-black transition-all duration-300 pb-8 -mb-[34px] border-b-2 border-transparent" data-filter="Tatuaje">{t('categories.tattoo')}</button>
-				<button class="filter-btn text-gray-400 hover:text-black transition-all duration-300 pb-8 -mb-[34px] border-b-2 border-transparent" data-filter="Branding">{t('categories.branding')}</button>
-				<button class="filter-btn text-gray-400 hover:text-black transition-all duration-300 pb-8 -mb-[34px] border-b-2 border-transparent" data-filter="Illustraciones">{t('categories.illustrations')}</button>
-					<button class="filter-btn text-gray-400 hover:text-black transition-all duration-300 pb-8 -mb-[34px] border-b-2 border-transparent" data-filter="Social Media">{t('categories.social')}</button>
+			<div class="flex flex-wrap gap-x-5 gap-y-3 md:gap-8 text-[11px] font-bold uppercase tracking-[0.2em] md:border-b md:border-black/5 pb-2 md:pb-8 mb-10 md:mb-16">
+				<button class="filter-btn active text-[#E0A4B0] border-b-2 border-[#E0A4B0] pb-1 md:pb-8 md:-mb-[34px] transition-all duration-300" data-filter="all">{t('categories.all')}</button>
+				<button class="filter-btn text-gray-400 hover:text-black transition-all duration-300 pb-1 md:pb-8 md:-mb-[34px] border-b-2 border-transparent" data-filter="UX/UI">{t('categories.uxui')}</button>
+				<button class="filter-btn text-gray-400 hover:text-black transition-all duration-300 pb-1 md:pb-8 md:-mb-[34px] border-b-2 border-transparent" data-filter="Tatuaje">{t('categories.tattoo')}</button>
+				<button class="filter-btn text-gray-400 hover:text-black transition-all duration-300 pb-1 md:pb-8 md:-mb-[34px] border-b-2 border-transparent" data-filter="Branding">{t('categories.branding')}</button>
+				<button class="filter-btn text-gray-400 hover:text-black transition-all duration-300 pb-1 md:pb-8 md:-mb-[34px] border-b-2 border-transparent" data-filter="Illustraciones">{t('categories.illustrations')}</button>
+				<button class="filter-btn text-gray-400 hover:text-black transition-all duration-300 pb-1 md:pb-8 md:-mb-[34px] border-b-2 border-transparent" data-filter="Social Media">{t('categories.social')}</button>
 			</div>
 		</div>
 		
