@@ -1,0 +1,957 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SalonomiCover from '../components/covers/SalonomiCover.astro';
+import ElNoiCover from '../components/covers/ElNoiCover.astro';
+import SalonTattooCover from '../components/covers/SalonTattooCover.astro';
+
+const lastUpdated = '28 de abril, 2026';
+
+const colorTokens = {
+  base: [
+    { name: 'Fondo principal', hex: '#F9F8F3', tw: 'bg-[#F9F8F3]', use: 'Body, header (con blur), footer' },
+    { name: 'Acento primario', hex: '#E0A4B0', tw: 'bg-[#E0A4B0]', use: 'Estrella, hovers, links activos, filtro activo' },
+    { name: 'Tinta principal', hex: '#111827', tw: 'bg-gray-900', use: 'Texto principal, títulos sobre fondo claro' },
+    { name: 'Blanco', hex: '#FFFFFF', tw: 'bg-white', use: 'Fondo de cards, texto sobre covers oscuros' },
+    { name: 'Negro puro', hex: '#000000', tw: 'bg-black', use: 'Cover SalonTattoo, selección de texto' },
+  ],
+  grays: [
+    { name: 'Gray 300', hex: '#D1D5DB', tw: 'bg-gray-300', use: 'Bordes de tags, separadores' },
+    { name: 'Gray 400', hex: '#9CA3AF', tw: 'bg-gray-400', use: 'Labels muted, captions' },
+    { name: 'Gray 500', hex: '#6B7280', tw: 'bg-gray-500', use: 'Texto labels, placeholders' },
+    { name: 'Gray 600', hex: '#4B5563', tw: 'bg-gray-600', use: 'Body principal' },
+    { name: 'Gray 800', hex: '#1F2937', tw: 'bg-gray-800', use: 'Texto oscuro secundario' },
+    { name: 'Gray 900', hex: '#111827', tw: 'bg-gray-900', use: 'Títulos, énfasis' },
+  ],
+  states: [
+    { name: 'Status verde', hex: '#22C55E', tw: 'bg-green-500', use: 'Punto "disponible" con animate-ping' },
+    { name: 'Emerald (contacto)', hex: '#10B981', tw: 'bg-emerald-500', use: 'Pill "disponible para freelance"' },
+    { name: 'Borde sutil', hex: '#000000 @ 5%', tw: 'border-black/5', use: 'Header bottom, divisores de sección' },
+    { name: 'Borde medio', hex: '#000000 @ 10%', tw: 'border-black/10', use: 'Separador del language toggle' },
+  ],
+};
+
+const typeWeights = [
+  { weight: 300, name: 'Light' },
+  { weight: 400, name: 'Regular' },
+  { weight: 500, name: 'Medium' },
+  { weight: 600, name: 'Semibold' },
+  { weight: 700, name: 'Bold' },
+];
+
+const trackingScale = [
+  { value: '0.15em', use: 'Servicios (badges), nav items' },
+  { value: '0.2em', use: 'CTA principales, navegación' },
+  { value: '0.25em', use: 'Featured project tags' },
+  { value: '0.3em', use: 'Captions pequeñas (10–11px)' },
+  { value: '0.4em', use: 'Subtítulos en covers' },
+];
+
+const spacingScale = [
+  { token: 'p-1', px: 4 },
+  { token: 'p-2', px: 8 },
+  { token: 'p-3', px: 12 },
+  { token: 'p-4', px: 16 },
+  { token: 'p-6', px: 24 },
+  { token: 'p-8', px: 32 },
+  { token: 'p-12', px: 48 },
+  { token: 'p-16', px: 64 },
+  { token: 'p-20', px: 80 },
+  { token: 'p-24', px: 96 },
+  { token: 'p-32', px: 128 },
+];
+
+const radii = [
+  { token: 'rounded-sm', value: '2px', use: 'Imágenes de proyecto, snippets de código' },
+  { token: 'rounded-[8px]', value: '8px', use: 'Imagen interna del ProjectCard' },
+  { token: 'rounded-[12px]', value: '12px', use: 'ProjectCard contenedor' },
+  { token: 'rounded-full', value: '9999px', use: 'Botones CTA, badges, status dots' },
+];
+
+const containers = [
+  { token: 'max-w-sm', px: 384, use: 'Texto del footer' },
+  { token: 'max-w-md', px: 448, use: 'Descripción about' },
+  { token: 'max-w-xl', px: 576, use: 'Descripción featured project' },
+  { token: 'max-w-6xl', px: 1152, use: 'Artículo de proyecto' },
+  { token: 'max-w-7xl', px: 1280, use: 'Contenedor principal del sitio' },
+];
+
+const tocLinks = [
+  { href: '#color', label: '01 — Color' },
+  { href: '#tipografia', label: '02 — Tipografía' },
+  { href: '#componentes', label: '03 — Componentes' },
+  { href: '#espaciado', label: '04 — Espaciado y layout' },
+  { href: '#iconografia', label: '05 — Iconografía' },
+  { href: '#animacion', label: '06 — Animación' },
+  { href: '#brand', label: '07 — Brand assets' },
+];
+
+const sparklePath = 'M16 1.5 C16.6 11.2 20.8 15.4 30.5 16 C20.8 16.6 16.6 20.8 16 30.5 C15.4 20.8 11.2 16.6 1.5 16 C11.2 15.4 15.4 11.2 16 1.5 Z';
+---
+
+<BaseLayout title="Design System">
+  <article class="max-w-7xl mx-auto px-6 py-24 md:py-32">
+
+    <!-- ═══════════════════════════════════════════════
+         CABECERA + ÍNDICE
+         ═══════════════════════════════════════════════ -->
+    <header class="mb-24 md:mb-32">
+      <span class="text-xs uppercase tracking-[0.25em] text-gray-400 font-bold block mb-6">
+        Documento vivo · v1.0
+      </span>
+      <h1 class="font-serif text-6xl md:text-8xl leading-[0.95] tracking-tight text-gray-900">
+        <span class="italic">Design</span><br />
+        System<svg class="inline-block w-7 h-7 md:w-10 md:h-10 ml-2 align-top mt-2 md:mt-4 text-[#E0A4B0]" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d={sparklePath} /></svg>
+      </h1>
+      <p class="text-xl italic font-serif font-light text-gray-600 leading-relaxed max-w-2xl mt-10">
+        Una guía visual de los tokens, componentes y patrones que definen el portfolio. Esta página renderiza los tokens reales del sitio: cualquier cambio en el código se refleja aquí automáticamente.
+      </p>
+      <p class="text-base text-gray-500 leading-relaxed max-w-2xl mt-4">
+        Úsalo como referencia al añadir secciones nuevas, modificar componentes o validar la coherencia visual. Si necesitas un nuevo token, edítalo en su origen (Tailwind, <code class="font-mono text-[12px] bg-gray-100 px-1.5 py-0.5 rounded-sm">global.css</code> o el componente correspondiente) y revisa cómo se ve aquí antes de publicar.
+      </p>
+
+      <div class="mt-16 pt-10 border-t border-black/5">
+        <span class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold block mb-6">Índice</span>
+        <nav class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-3">
+          {tocLinks.map(link => (
+            <a href={link.href} class="text-sm font-medium text-gray-700 hover:text-[#E0A4B0] transition-colors flex items-center justify-between border-b border-gray-100 pb-3">
+              <span>{link.label}</span>
+              <span class="text-gray-300">→</span>
+            </a>
+          ))}
+        </nav>
+        <p class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold mt-10">
+          Última actualización · {lastUpdated}
+        </p>
+      </div>
+    </header>
+
+    <!-- ═══════════════════════════════════════════════
+         01 · COLOR
+         ═══════════════════════════════════════════════ -->
+    <section id="color" class="py-16 md:py-24 border-t border-black/5 scroll-mt-24">
+      <div class="mb-12">
+        <span class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold block mb-4">01</span>
+        <h2 class="font-serif italic text-4xl md:text-6xl font-medium text-gray-900 leading-tight">Color</h2>
+        <p class="text-base text-gray-600 leading-relaxed max-w-xl mt-4">
+          Paleta minimalista construida sobre un fondo crema con un único acento rosa que actúa como firma visual. Los grises se usan en escala progresiva para crear jerarquía sin recurrir a más colores.
+        </p>
+      </div>
+
+      <h3 class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold mb-6">Base</h3>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-16">
+        {colorTokens.base.map(c => (
+          <div class="group">
+            <div class="aspect-square rounded-[8px] border border-black/5 mb-3 transition-transform duration-300 group-hover:scale-[1.03]" style={`background-color: ${c.hex};`}></div>
+            <p class="text-sm font-medium text-gray-900">{c.name}</p>
+            <p class="font-mono text-[11px] text-gray-500 mt-0.5">{c.hex}</p>
+            <code class="font-mono text-[11px] bg-gray-100 px-1.5 py-0.5 rounded-sm inline-block mt-1">{c.tw}</code>
+            <p class="text-[11px] text-gray-500 leading-snug mt-2">{c.use}</p>
+          </div>
+        ))}
+      </div>
+
+      <h3 class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold mb-6">Escala de grises</h3>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-16">
+        {colorTokens.grays.map(c => (
+          <div class="group">
+            <div class="aspect-square rounded-[8px] border border-black/5 mb-3 transition-transform duration-300 group-hover:scale-[1.03]" style={`background-color: ${c.hex};`}></div>
+            <p class="text-sm font-medium text-gray-900">{c.name}</p>
+            <p class="font-mono text-[11px] text-gray-500 mt-0.5">{c.hex}</p>
+            <code class="font-mono text-[11px] bg-gray-100 px-1.5 py-0.5 rounded-sm inline-block mt-1">{c.tw}</code>
+            <p class="text-[11px] text-gray-500 leading-snug mt-2">{c.use}</p>
+          </div>
+        ))}
+      </div>
+
+      <h3 class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold mb-6">Estados y bordes</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+        {colorTokens.states.map(c => (
+          <div>
+            <div class="aspect-square rounded-[8px] border border-gray-200 mb-3" style={c.tw.startsWith('border-') ? `border: 1px solid ${c.hex.includes('@') ? 'rgba(0,0,0,0.1)' : c.hex}; background: #FAFAFA;` : `background-color: ${c.hex};`}></div>
+            <p class="text-sm font-medium text-gray-900">{c.name}</p>
+            <p class="font-mono text-[11px] text-gray-500 mt-0.5">{c.hex}</p>
+            <code class="font-mono text-[11px] bg-gray-100 px-1.5 py-0.5 rounded-sm inline-block mt-1">{c.tw}</code>
+            <p class="text-[11px] text-gray-500 leading-snug mt-2">{c.use}</p>
+          </div>
+        ))}
+      </div>
+
+      <h3 class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold mb-6">Gradientes de portada</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div>
+          <div class="aspect-[4/3] rounded-[8px] overflow-hidden mb-3">
+            <SalonomiCover title="Salonomi" />
+          </div>
+          <p class="text-sm font-medium">Salonomi</p>
+          <p class="text-[11px] text-gray-500 leading-snug mt-1">
+            <code class="font-mono text-[10px] bg-gray-100 px-1 rounded-sm break-all">radial-gradient(ellipse at 30% 20%, #9D6FFF 0%, #6B2DE6 60%, #4A1FA8 100%)</code>
+          </p>
+        </div>
+        <div>
+          <div class="aspect-[4/3] rounded-[8px] overflow-hidden mb-3">
+            <ElNoiCover title="El Noi del Pa" />
+          </div>
+          <p class="text-sm font-medium">El Noi del Pa</p>
+          <p class="text-[11px] text-gray-500 leading-snug mt-1">
+            <code class="font-mono text-[10px] bg-gray-100 px-1 rounded-sm break-all">linear-gradient(160deg, #9C6F4F 0%, #7A4F35 60%, #5A3823 100%)</code>
+          </p>
+        </div>
+        <div>
+          <div class="aspect-[4/3] rounded-[8px] overflow-hidden mb-3">
+            <SalonTattooCover title="By Jeka" />
+          </div>
+          <p class="text-sm font-medium">By Jeka (Tattoo)</p>
+          <p class="text-[11px] text-gray-500 leading-snug mt-1">
+            Negro puro <code class="font-mono text-[10px] bg-gray-100 px-1 rounded-sm">#000</code> + patrón de puntos blancos al 6% de opacidad.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         02 · TIPOGRAFÍA
+         ═══════════════════════════════════════════════ -->
+    <section id="tipografia" class="py-16 md:py-24 border-t border-black/5 scroll-mt-24">
+      <div class="mb-12">
+        <span class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold block mb-4">02</span>
+        <h2 class="font-serif italic text-4xl md:text-6xl font-medium text-gray-900 leading-tight">Tipografía</h2>
+        <p class="text-base text-gray-600 leading-relaxed max-w-xl mt-4">
+          Dos familias en contraste claro: <strong class="font-medium">Cormorant Garamond</strong> (serif editorial, italic predominante) para el lenguaje cálido y narrativo, e <strong class="font-medium">Inter</strong> (sans neutra) para todo lo funcional — UI, labels, captions y body técnico.
+        </p>
+      </div>
+
+      <!-- Familias -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
+        <div class="bg-white rounded-[12px] p-8 border border-black/5">
+          <span class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold block mb-4">Serif · Editorial</span>
+          <p class="font-serif italic text-7xl text-gray-900 leading-none mb-3">Aa</p>
+          <p class="font-serif text-2xl text-gray-700 mb-1">Cormorant Garamond</p>
+          <p class="font-mono text-[11px] text-gray-500 mb-4">--font-serif</p>
+          <p class="font-serif text-base text-gray-600 leading-relaxed">
+            ABCDEFGHIJKLMNÑOPQRSTUVWXYZ<br />
+            abcdefghijklmnñopqrstuvwxyz<br />
+            0123456789 &amp;.,!?¿—
+          </p>
+          <p class="text-[11px] text-gray-500 mt-4">Pesos: 300, 400, 500, 600, 700 · regular e italic</p>
+          <p class="text-[11px] text-gray-500 mt-1"><strong class="font-medium text-gray-700">Uso:</strong> H1, H2, citas, body editorial. Casi siempre <em>italic</em>.</p>
+        </div>
+
+        <div class="bg-white rounded-[12px] p-8 border border-black/5">
+          <span class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold block mb-4">Sans · UI</span>
+          <p class="font-sans text-7xl text-gray-900 leading-none mb-3 font-medium">Aa</p>
+          <p class="font-sans text-2xl text-gray-700 mb-1 font-medium">Inter</p>
+          <p class="font-mono text-[11px] text-gray-500 mb-4">--font-inter</p>
+          <p class="font-sans text-base text-gray-600 leading-relaxed">
+            ABCDEFGHIJKLMNÑOPQRSTUVWXYZ<br />
+            abcdefghijklmnñopqrstuvwxyz<br />
+            0123456789 &amp;.,!?¿—
+          </p>
+          <p class="text-[11px] text-gray-500 mt-4">Pesos: 300, 400, 500, 600, 700</p>
+          <p class="text-[11px] text-gray-500 mt-1"><strong class="font-medium text-gray-700">Uso:</strong> body, nav, botones, labels, captions, project meta.</p>
+        </div>
+      </div>
+
+      <!-- Jerarquía -->
+      <h3 class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold mb-8">Jerarquía</h3>
+      <div class="space-y-10 mb-20">
+
+        <div class="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-6 md:gap-12 items-end border-b border-gray-100 pb-10">
+          <div>
+            <h1 class="font-serif italic font-medium text-6xl md:text-8xl leading-[0.95] tracking-tight text-gray-900">Trabajemos</h1>
+          </div>
+          <div class="md:text-right space-y-1">
+            <p class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold">H1 Hero</p>
+            <code class="font-mono text-[11px] bg-gray-100 px-1.5 py-0.5 rounded-sm block">font-serif italic font-medium</code>
+            <code class="font-mono text-[11px] bg-gray-100 px-1.5 py-0.5 rounded-sm block">text-6xl md:text-8xl</code>
+            <code class="font-mono text-[11px] bg-gray-100 px-1.5 py-0.5 rounded-sm block">leading-[0.95]</code>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-6 md:gap-12 items-end border-b border-gray-100 pb-10">
+          <div>
+            <h2 class="font-serif italic font-medium text-4xl md:text-5xl leading-tight text-gray-900">¡Qué bueno verte por aquí!</h2>
+          </div>
+          <div class="md:text-right space-y-1">
+            <p class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold">H1 About</p>
+            <code class="font-mono text-[11px] bg-gray-100 px-1.5 py-0.5 rounded-sm block">font-serif italic</code>
+            <code class="font-mono text-[11px] bg-gray-100 px-1.5 py-0.5 rounded-sm block">text-4xl md:text-5xl</code>
+            <code class="font-mono text-[11px] bg-gray-100 px-1.5 py-0.5 rounded-sm block">leading-tight</code>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-6 md:gap-12 items-end border-b border-gray-100 pb-10">
+          <div>
+            <h3 class="font-serif italic font-medium text-3xl md:text-5xl leading-[1.1] text-gray-900">Featured project</h3>
+          </div>
+          <div class="md:text-right space-y-1">
+            <p class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold">H2 Destacado</p>
+            <code class="font-mono text-[11px] bg-gray-100 px-1.5 py-0.5 rounded-sm block">text-3xl md:text-5xl</code>
+            <code class="font-mono text-[11px] bg-gray-100 px-1.5 py-0.5 rounded-sm block">italic font-serif</code>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-6 md:gap-12 items-end border-b border-gray-100 pb-10">
+          <div>
+            <p class="text-[11px] font-bold uppercase tracking-[0.25em] text-[#E0A4B0]">Proyecto destacado</p>
+          </div>
+          <div class="md:text-right space-y-1">
+            <p class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold">Eyebrow / Tag</p>
+            <code class="font-mono text-[11px] bg-gray-100 px-1.5 py-0.5 rounded-sm block">text-[11px] font-bold</code>
+            <code class="font-mono text-[11px] bg-gray-100 px-1.5 py-0.5 rounded-sm block">uppercase tracking-[0.25em]</code>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-6 md:gap-12 items-end border-b border-gray-100 pb-10">
+          <div class="max-w-xl">
+            <p class="text-xl italic font-serif font-light text-gray-600 leading-relaxed">
+              ¡Hola! Soy Jessica — pero todos me llaman Jeka. Diseño experiencias que conecten con las personas.
+            </p>
+          </div>
+          <div class="md:text-right space-y-1">
+            <p class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold">Body editorial</p>
+            <code class="font-mono text-[11px] bg-gray-100 px-1.5 py-0.5 rounded-sm block">text-xl italic font-serif</code>
+            <code class="font-mono text-[11px] bg-gray-100 px-1.5 py-0.5 rounded-sm block">font-light leading-relaxed</code>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-6 md:gap-12 items-end border-b border-gray-100 pb-10">
+          <div class="max-w-xl">
+            <p class="text-base text-gray-600 leading-relaxed">
+              Body técnico para descripciones de proyecto, copys cortos en footer y bloques que requieren legibilidad neutra.
+            </p>
+          </div>
+          <div class="md:text-right space-y-1">
+            <p class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold">Body principal</p>
+            <code class="font-mono text-[11px] bg-gray-100 px-1.5 py-0.5 rounded-sm block">text-base text-gray-600</code>
+            <code class="font-mono text-[11px] bg-gray-100 px-1.5 py-0.5 rounded-sm block">leading-relaxed</code>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-6 md:gap-12 items-end">
+          <div>
+            <p class="text-[10px] uppercase tracking-widest text-gray-400 font-bold">© 2026 Jessica Duran</p>
+          </div>
+          <div class="md:text-right space-y-1">
+            <p class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold">Caption / micro</p>
+            <code class="font-mono text-[11px] bg-gray-100 px-1.5 py-0.5 rounded-sm block">text-[10px] uppercase</code>
+            <code class="font-mono text-[11px] bg-gray-100 px-1.5 py-0.5 rounded-sm block">tracking-widest text-gray-400</code>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pesos -->
+      <h3 class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold mb-6">Pesos disponibles</h3>
+      <div class="bg-white rounded-[12px] border border-black/5 divide-y divide-gray-100 mb-20">
+        {typeWeights.map(w => (
+          <div class="grid grid-cols-3 items-center px-6 py-5">
+            <p class="font-sans text-2xl text-gray-900" style={`font-weight: ${w.weight};`}>The quick brown fox</p>
+            <p class="font-mono text-[11px] text-gray-500">font-weight: {w.weight}</p>
+            <p class="text-[11px] uppercase tracking-[0.2em] text-gray-500 font-medium md:text-right">{w.name}</p>
+          </div>
+        ))}
+      </div>
+
+      <!-- Tracking -->
+      <h3 class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold mb-6">Letter spacing personalizado</h3>
+      <div class="bg-white rounded-[12px] border border-black/5 divide-y divide-gray-100 mb-20">
+        {trackingScale.map(t => (
+          <div class="grid grid-cols-1 md:grid-cols-3 items-center px-6 py-5 gap-4">
+            <p class="text-xs font-bold uppercase text-gray-900" style={`letter-spacing: ${t.value};`}>JESSICA DURAN</p>
+            <code class="font-mono text-[11px] bg-gray-100 px-2 py-1 rounded-sm w-fit">tracking-[{t.value}]</code>
+            <p class="text-[11px] text-gray-500 md:text-right">{t.use}</p>
+          </div>
+        ))}
+      </div>
+
+      <!-- Reglas -->
+      <h3 class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold mb-6">Reglas de uso</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-[12px] p-6 border border-black/5">
+          <p class="text-[11px] uppercase tracking-[0.2em] text-[#E0A4B0] font-bold mb-3">Usa serif italic cuando…</p>
+          <ul class="space-y-2 text-sm text-gray-600 leading-relaxed">
+            <li>• Es un H1 o H2 (siempre <code class="font-mono text-[11px] bg-gray-100 px-1 rounded-sm">italic</code>).</li>
+            <li>• El tono es cálido, narrativo o personal.</li>
+            <li>• Es body editorial largo (about, contact intro).</li>
+            <li>• Acompañas con la estrella de 4 puntas.</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-[12px] p-6 border border-black/5">
+          <p class="text-[11px] uppercase tracking-[0.2em] text-[#E0A4B0] font-bold mb-3">Usa sans uppercase cuando…</p>
+          <ul class="space-y-2 text-sm text-gray-600 leading-relaxed">
+            <li>• Es un eyebrow, tag, label o caption.</li>
+            <li>• Necesitas tracking amplio (≥0.15em).</li>
+            <li>• Es navegación, filtros o CTAs.</li>
+            <li>• El tono es funcional / técnico.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         03 · COMPONENTES
+         ═══════════════════════════════════════════════ -->
+    <section id="componentes" class="py-16 md:py-24 border-t border-black/5 scroll-mt-24">
+      <div class="mb-12">
+        <span class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold block mb-4">03</span>
+        <h2 class="font-serif italic text-4xl md:text-6xl font-medium text-gray-900 leading-tight">Componentes</h2>
+        <p class="text-base text-gray-600 leading-relaxed max-w-xl mt-4">
+          Cada bloque está renderizado en vivo con el mismo markup que se usa en producción. Pasa el cursor por encima para ver los estados hover.
+        </p>
+      </div>
+
+      <!-- Botón CTA pill (oscuro) -->
+      <div class="mb-16">
+        <h3 class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold mb-6">Botón CTA · Pill</h3>
+        <div class="bg-gray-900 rounded-[12px] p-12 flex flex-wrap items-center gap-6 mb-4">
+          <a href="#color" class="inline-block border-2 border-white text-white px-10 py-5 text-sm font-bold uppercase tracking-[0.2em] rounded-full hover:bg-[#E0A4B0] hover:border-[#E0A4B0] transition-all duration-500">
+            Ver proyectos
+          </a>
+        </div>
+        <code class="font-mono text-[11px] bg-gray-100 px-2 py-1 rounded-sm inline-block">border-2 border-white px-10 py-5 rounded-full hover:bg-[#E0A4B0] hover:border-[#E0A4B0]</code>
+        <p class="text-[11px] text-gray-500 mt-2">Hero principal. Sobre fondo oscuro. Hover transiciona a rosa en 500ms.</p>
+      </div>
+
+      <!-- Filter chips -->
+      <div class="mb-16">
+        <h3 class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold mb-6">Filter chips · Categorías</h3>
+        <div class="bg-white rounded-[12px] p-8 border border-black/5 mb-4">
+          <div class="flex flex-wrap gap-8 text-[11px] font-bold uppercase tracking-[0.2em] border-b border-black/5 pb-8">
+            <button type="button" class="text-[#E0A4B0] border-b-2 border-[#E0A4B0] pb-8 -mb-[34px] transition-all duration-300">Todos</button>
+            <button type="button" class="text-gray-400 hover:text-black transition-all duration-300 pb-8 -mb-[34px] border-b-2 border-transparent">UX/UI</button>
+            <button type="button" class="text-gray-400 hover:text-black transition-all duration-300 pb-8 -mb-[34px] border-b-2 border-transparent">Tatuaje</button>
+            <button type="button" class="text-gray-400 hover:text-black transition-all duration-300 pb-8 -mb-[34px] border-b-2 border-transparent">Branding</button>
+          </div>
+        </div>
+        <code class="font-mono text-[11px] bg-gray-100 px-2 py-1 rounded-sm inline-block">text-[11px] font-bold uppercase tracking-[0.2em] border-b-2</code>
+        <p class="text-[11px] text-gray-500 mt-2">Estado activo: <code class="font-mono bg-gray-100 px-1 rounded-sm">text-[#E0A4B0] border-[#E0A4B0]</code>. Inactivo: <code class="font-mono bg-gray-100 px-1 rounded-sm">text-gray-400 border-transparent</code>.</p>
+      </div>
+
+      <!-- Service badges -->
+      <div class="mb-16">
+        <h3 class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold mb-6">Service badge · Pill bordeado</h3>
+        <div class="bg-white rounded-[12px] p-8 border border-black/5 mb-4">
+          <div class="flex flex-wrap gap-2">
+            {['UX/UI Design', 'Product Design', 'UX Research', 'Branding', 'Illustration', 'Prototyping'].map(s => (
+              <span class="px-3 py-1 rounded-full text-[11px] uppercase tracking-[0.15em] text-gray-600 border border-gray-300/70 hover:bg-[#E0A4B0] hover:border-[#E0A4B0] hover:text-white transition-all duration-300 cursor-default">
+                {s}
+              </span>
+            ))}
+          </div>
+        </div>
+        <code class="font-mono text-[11px] bg-gray-100 px-2 py-1 rounded-sm inline-block">px-3 py-1 rounded-full text-[11px] border border-gray-300/70 hover:bg-[#E0A4B0]</code>
+        <p class="text-[11px] text-gray-500 mt-2">Para listas de servicios o tags estáticos. No clicables.</p>
+      </div>
+
+      <!-- Status indicator -->
+      <div class="mb-16">
+        <h3 class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold mb-6">Status indicator · Disponibilidad</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+          <div class="bg-white rounded-[12px] p-6 border border-black/5 flex items-center gap-3">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+            </span>
+            <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400">Disponible para proyectos</span>
+          </div>
+          <div class="bg-white rounded-[12px] p-6 border border-black/5">
+            <div class="inline-flex items-center gap-3 px-4 py-2 border border-gray-300 rounded-full text-[11px] uppercase tracking-[0.2em] font-medium">
+              <span class="relative flex h-2 w-2">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-60"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+              </span>
+              Disponible para freelance
+            </div>
+          </div>
+        </div>
+        <p class="text-[11px] text-gray-500">Variante <strong>header</strong> (izquierda) sin contenedor. Variante <strong>contacto</strong> (derecha) en pill bordeado.</p>
+      </div>
+
+      <!-- Language toggle -->
+      <div class="mb-16">
+        <h3 class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold mb-6">Language toggle</h3>
+        <div class="bg-white rounded-[12px] p-8 border border-black/5 mb-4">
+          <div class="flex gap-2 text-xs font-bold uppercase tracking-widest">
+            <a href="#" class="text-black">ES</a>
+            <span class="text-gray-300">/</span>
+            <a href="#" class="text-gray-400 hover:text-black transition-colors">EN</a>
+          </div>
+        </div>
+        <code class="font-mono text-[11px] bg-gray-100 px-2 py-1 rounded-sm inline-block">text-xs font-bold uppercase tracking-widest</code>
+      </div>
+
+      <!-- Project Card -->
+      <div class="mb-16">
+        <h3 class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold mb-6">Project card</h3>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-10 mb-4">
+          <a href="#" class="group block">
+            <div class="aspect-[4/5] overflow-hidden rounded-sm transition-transform duration-700 ease-out group-hover:scale-[1.03]">
+              <SalonomiCover />
+            </div>
+            <div class="pt-4 space-y-1.5">
+              <h4 class="text-base md:text-lg italic font-serif font-medium text-gray-900 leading-tight transition-colors duration-300 group-hover:text-[#E0A4B0]">Salonomi</h4>
+              <p class="text-[10px] uppercase tracking-[0.25em] text-gray-500 font-medium">Web App</p>
+            </div>
+          </a>
+          <a href="#" class="group block">
+            <div class="aspect-[4/5] overflow-hidden rounded-sm transition-transform duration-700 ease-out group-hover:scale-[1.03]">
+              <ElNoiCover />
+            </div>
+            <div class="pt-4 space-y-1.5">
+              <h4 class="text-base md:text-lg italic font-serif font-medium text-gray-900 leading-tight transition-colors duration-300 group-hover:text-[#E0A4B0]">El Noi del Pa</h4>
+              <p class="text-[10px] uppercase tracking-[0.25em] text-gray-500 font-medium">Branding</p>
+            </div>
+          </a>
+          <a href="#" class="group block">
+            <div class="aspect-[4/5] overflow-hidden rounded-sm transition-transform duration-700 ease-out group-hover:scale-[1.03]">
+              <SalonTattooCover />
+            </div>
+            <div class="pt-4 space-y-1.5">
+              <h4 class="text-base md:text-lg italic font-serif font-medium text-gray-900 leading-tight transition-colors duration-300 group-hover:text-[#E0A4B0]">By Jeka</h4>
+              <p class="text-[10px] uppercase tracking-[0.25em] text-gray-500 font-medium">Fine Line Tattoo</p>
+            </div>
+          </a>
+        </div>
+        <p class="text-[11px] text-gray-500">Card de proyecto: imagen <code class="font-mono bg-gray-100 px-1 rounded-sm">aspect-[4/5]</code> con scale 1.03 al hover, título serif italic con cambio de color a rosa, type en sans uppercase.</p>
+      </div>
+
+      <!-- Featured project block -->
+      <div class="mb-16">
+        <h3 class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold mb-6">Featured project · Bloque hero</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center bg-white rounded-[12px] p-6 md:p-10 border border-black/5 mb-4">
+          <div class="aspect-[4/3] overflow-hidden rounded-sm">
+            <SalonomiCover size="lg" />
+          </div>
+          <div class="space-y-5">
+            <div class="flex items-center gap-3 text-[11px] font-mono uppercase tracking-[0.25em] text-[#E0A4B0]">
+              <span>Proyecto destacado</span>
+              <span class="h-px flex-1 bg-gray-300 max-w-[3rem]"></span>
+              <span class="text-gray-400">2024</span>
+            </div>
+            <h3 class="text-3xl md:text-5xl italic font-serif font-medium text-gray-900 leading-[1.1]">Salonomi</h3>
+            <p class="text-[11px] uppercase tracking-[0.25em] text-gray-500 font-medium">Web App</p>
+            <p class="text-base text-gray-600 leading-relaxed pt-2">Plataforma SaaS para salones de belleza con gestión de citas, inventario y comunicación con clientes.</p>
+            <span class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] font-bold text-gray-900 pt-3">
+              <span class="border-b border-current pb-1">Ver caso completo</span>
+              <span class="inline-block">→</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copy button -->
+      <div class="mb-16">
+        <h3 class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold mb-6">Copy button</h3>
+        <div class="bg-white rounded-[12px] p-8 border border-black/5 mb-4">
+          <button type="button" class="group inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-gray-500 hover:text-black transition-colors">
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            <span>Copiar</span>
+          </button>
+        </div>
+        <code class="font-mono text-[11px] bg-gray-100 px-2 py-1 rounded-sm inline-block">inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em]</code>
+        <p class="text-[11px] text-gray-500 mt-2">Cambia label a "¡Copiado!" durante 2s tras el click.</p>
+      </div>
+
+      <!-- Header anatomy -->
+      <div class="mb-16">
+        <h3 class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold mb-6">Header · Anatomía</h3>
+        <div class="bg-white rounded-[12px] border border-black/5 overflow-hidden mb-4">
+          <div class="bg-[#F9F8F3]/80 backdrop-blur-md border-b border-black/5">
+            <div class="px-6 h-20 flex items-center">
+              <div class="flex-1">
+                <div class="h-10 w-28 bg-gray-200 rounded-sm flex items-center justify-center text-[10px] text-gray-500 uppercase tracking-widest font-bold">Logo</div>
+              </div>
+              <ul class="hidden md:flex items-center gap-10 text-xs font-bold tracking-[0.15em] uppercase">
+                <li><span class="text-gray-700">Proyectos</span></li>
+                <li><span class="text-gray-700">Sobre mí</span></li>
+                <li><span class="text-gray-700">Contacto</span></li>
+              </ul>
+              <div class="flex-1 flex items-center justify-end gap-10">
+                <div class="hidden lg:flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400">
+                  <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                  </span>
+                  Disponible
+                </div>
+                <div class="flex gap-2 text-xs font-bold uppercase tracking-widest border-l border-black/10 pl-10">
+                  <span class="text-black">ES</span>
+                  <span class="text-gray-300">/</span>
+                  <span class="text-gray-400">EN</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="px-6 py-4 text-[11px] text-gray-500 leading-relaxed bg-gray-50/50 border-t border-black/5">
+            <strong class="font-medium text-gray-700">Specs:</strong> altura <code class="font-mono bg-white px-1 rounded-sm">h-20</code> · contenedor <code class="font-mono bg-white px-1 rounded-sm">max-w-7xl</code> · fondo <code class="font-mono bg-white px-1 rounded-sm">bg-[#F9F8F3]/80 backdrop-blur-md</code> · fixed top con <code class="font-mono bg-white px-1 rounded-sm">z-50</code>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cover components -->
+      <div class="mb-8">
+        <h3 class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold mb-6">Cover components · Tamaño <code class="font-mono bg-gray-100 px-1 rounded-sm">size="sm"</code></h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-4">
+          <div>
+            <div class="aspect-[4/5] rounded-sm overflow-hidden mb-3">
+              <SalonomiCover />
+            </div>
+            <p class="text-sm font-medium">SalonomiCover</p>
+            <code class="font-mono text-[11px] text-gray-500">covers/SalonomiCover.astro</code>
+            <p class="text-[11px] text-gray-500 mt-1">Props: <code class="font-mono bg-gray-100 px-1 rounded-sm">title</code>, <code class="font-mono bg-gray-100 px-1 rounded-sm">size</code></p>
+          </div>
+          <div>
+            <div class="aspect-[4/5] rounded-sm overflow-hidden mb-3">
+              <ElNoiCover />
+            </div>
+            <p class="text-sm font-medium">ElNoiCover</p>
+            <code class="font-mono text-[11px] text-gray-500">covers/ElNoiCover.astro</code>
+            <p class="text-[11px] text-gray-500 mt-1">Props: <code class="font-mono bg-gray-100 px-1 rounded-sm">title</code>, <code class="font-mono bg-gray-100 px-1 rounded-sm">subtitle</code>, <code class="font-mono bg-gray-100 px-1 rounded-sm">size</code></p>
+          </div>
+          <div>
+            <div class="aspect-[4/5] rounded-sm overflow-hidden mb-3">
+              <SalonTattooCover />
+            </div>
+            <p class="text-sm font-medium">SalonTattooCover</p>
+            <code class="font-mono text-[11px] text-gray-500">covers/SalonTattooCover.astro</code>
+            <p class="text-[11px] text-gray-500 mt-1">Props: <code class="font-mono bg-gray-100 px-1 rounded-sm">title</code>, <code class="font-mono bg-gray-100 px-1 rounded-sm">subtitle</code>, <code class="font-mono bg-gray-100 px-1 rounded-sm">size</code></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         04 · ESPACIADO Y LAYOUT
+         ═══════════════════════════════════════════════ -->
+    <section id="espaciado" class="py-16 md:py-24 border-t border-black/5 scroll-mt-24">
+      <div class="mb-12">
+        <span class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold block mb-4">04</span>
+        <h2 class="font-serif italic text-4xl md:text-6xl font-medium text-gray-900 leading-tight">Espaciado y layout</h2>
+        <p class="text-base text-gray-600 leading-relaxed max-w-xl mt-4">
+          La unidad base de Tailwind es <code class="font-mono text-[12px] bg-gray-100 px-1 py-0.5 rounded-sm">0.25rem (4px)</code>. El portfolio usa una escala consistente y respira con generosidad — secciones grandes con <code class="font-mono text-[12px] bg-gray-100 px-1 py-0.5 rounded-sm">py-24 md:py-32</code>.
+        </p>
+      </div>
+
+      <h3 class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold mb-6">Escala de espacio</h3>
+      <div class="bg-white rounded-[12px] border border-black/5 p-8 mb-16 overflow-x-auto">
+        <div class="space-y-3 min-w-fit">
+          {spacingScale.map(s => (
+            <div class="flex items-center gap-6">
+              <code class="font-mono text-[11px] bg-gray-100 px-2 py-1 rounded-sm w-20 shrink-0">{s.token}</code>
+              <span class="text-[11px] text-gray-500 w-12 shrink-0">{s.px}px</span>
+              <div class="bg-[#E0A4B0] h-3 rounded-sm" style={`width: ${s.px}px;`}></div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <h3 class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold mb-6">Container widths</h3>
+      <div class="bg-white rounded-[12px] border border-black/5 p-8 mb-16 space-y-4 overflow-x-auto">
+        {containers.map(c => (
+          <div class="flex items-center gap-6 min-w-fit">
+            <code class="font-mono text-[11px] bg-gray-100 px-2 py-1 rounded-sm w-28 shrink-0">{c.token}</code>
+            <span class="text-[11px] text-gray-500 w-16 shrink-0">{c.px}px</span>
+            <div class="bg-gray-200 h-6 rounded-sm" style={`width: ${Math.min(c.px / 2, 640)}px;`}></div>
+            <span class="text-[11px] text-gray-500">{c.use}</span>
+          </div>
+        ))}
+        <p class="text-[11px] text-gray-500 italic pt-2 border-t border-gray-100">Anchos representados a 50% para caber en pantalla.</p>
+      </div>
+
+      <h3 class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold mb-6">Border radius</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+        {radii.map(r => (
+          <div>
+            <div class="aspect-square bg-[#E0A4B0]/30 border border-[#E0A4B0]/40 mb-3" style={`border-radius: ${r.value};`}></div>
+            <code class="font-mono text-[11px] bg-gray-100 px-1.5 py-0.5 rounded-sm inline-block mb-1">{r.token}</code>
+            <p class="text-[11px] text-gray-500 leading-snug">{r.use}</p>
+          </div>
+        ))}
+      </div>
+
+      <h3 class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold mb-6">Grid de proyectos</h3>
+      <div class="bg-white rounded-[12px] border border-black/5 p-8 mb-16">
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-10">
+          {[...Array(6)].map(() => (
+            <div class="aspect-[4/5] bg-gray-100 rounded-sm border border-gray-200"></div>
+          ))}
+        </div>
+        <div class="mt-6 pt-6 border-t border-gray-100 flex flex-wrap gap-3">
+          <code class="font-mono text-[11px] bg-gray-100 px-2 py-1 rounded-sm">grid-cols-2 md:grid-cols-3</code>
+          <code class="font-mono text-[11px] bg-gray-100 px-2 py-1 rounded-sm">gap-6 md:gap-10</code>
+          <code class="font-mono text-[11px] bg-gray-100 px-2 py-1 rounded-sm">aspect-[4/5]</code>
+        </div>
+      </div>
+
+      <h3 class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold mb-6">Breakpoints</h3>
+      <div class="bg-white rounded-[12px] border border-black/5 divide-y divide-gray-100 mb-16">
+        <div class="grid grid-cols-3 px-6 py-5 items-center">
+          <code class="font-mono text-sm font-medium">base</code>
+          <span class="text-[11px] text-gray-500">&lt; 768px</span>
+          <span class="text-[11px] text-gray-500 md:text-right">Mobile (default mobile-first)</span>
+        </div>
+        <div class="grid grid-cols-3 px-6 py-5 items-center">
+          <code class="font-mono text-sm font-medium">md:</code>
+          <span class="text-[11px] text-gray-500">≥ 768px</span>
+          <span class="text-[11px] text-gray-500 md:text-right">Tablet y desktop pequeño</span>
+        </div>
+        <div class="grid grid-cols-3 px-6 py-5 items-center">
+          <code class="font-mono text-sm font-medium">lg:</code>
+          <span class="text-[11px] text-gray-500">≥ 1024px</span>
+          <span class="text-[11px] text-gray-500 md:text-right">Desktop grande (status indicator del header solo aparece aquí)</span>
+        </div>
+      </div>
+
+      <h3 class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold mb-6">Esqueleto de página</h3>
+      <div class="bg-white rounded-[12px] border border-black/5 p-8">
+        <pre class="font-mono text-[12px] text-gray-700 leading-relaxed overflow-x-auto"><code>&lt;BaseLayout title="..."&gt;
+  &lt;section class="max-w-7xl mx-auto px-6 py-24 md:py-32"&gt;
+    &lt;div class="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24"&gt;
+      ...
+    &lt;/div&gt;
+  &lt;/section&gt;
+&lt;/BaseLayout&gt;</code></pre>
+        <p class="text-[11px] text-gray-500 mt-4">Patrón estándar para páginas de contenido (about, contact). Home y proyectos amplían con secciones full-width.</p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         05 · ICONOGRAFÍA
+         ═══════════════════════════════════════════════ -->
+    <section id="iconografia" class="py-16 md:py-24 border-t border-black/5 scroll-mt-24">
+      <div class="mb-12">
+        <span class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold block mb-4">05</span>
+        <h2 class="font-serif italic text-4xl md:text-6xl font-medium text-gray-900 leading-tight">Iconografía</h2>
+        <p class="text-base text-gray-600 leading-relaxed max-w-xl mt-4">
+          El sitio <strong>no usa librería de iconos</strong>. Todos los SVGs son inline y minimalistas. La estrella de 4 puntas es el icono signature.
+        </p>
+      </div>
+
+      <!-- Sparkle / Star -->
+      <div class="mb-16">
+        <h3 class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold mb-6">Sparkle · El icono signature</h3>
+        <div class="bg-white rounded-[12px] border border-black/5 p-12 mb-4">
+          <div class="flex flex-wrap items-end gap-12 justify-center">
+            <div class="text-center">
+              <svg class="w-4 h-4 text-[#E0A4B0] mx-auto mb-2" viewBox="0 0 32 32" fill="currentColor"><path d={sparklePath} /></svg>
+              <code class="font-mono text-[10px] text-gray-500">w-4 h-4</code>
+            </div>
+            <div class="text-center">
+              <svg class="w-7 h-7 text-[#E0A4B0] mx-auto mb-2" viewBox="0 0 32 32" fill="currentColor"><path d={sparklePath} /></svg>
+              <code class="font-mono text-[10px] text-gray-500">w-7 h-7</code>
+            </div>
+            <div class="text-center">
+              <svg class="w-12 h-12 text-[#E0A4B0] mx-auto mb-2" viewBox="0 0 32 32" fill="currentColor"><path d={sparklePath} /></svg>
+              <code class="font-mono text-[10px] text-gray-500">w-12 h-12</code>
+            </div>
+            <div class="text-center">
+              <svg class="w-20 h-20 text-[#E0A4B0] mx-auto mb-2" viewBox="0 0 32 32" fill="currentColor"><path d={sparklePath} /></svg>
+              <code class="font-mono text-[10px] text-gray-500">w-20 h-20</code>
+            </div>
+            <div class="text-center">
+              <svg class="w-32 h-32 text-[#E0A4B0] mx-auto mb-2" viewBox="0 0 32 32" fill="currentColor"><path d={sparklePath} /></svg>
+              <code class="font-mono text-[10px] text-gray-500">w-32 h-32</code>
+            </div>
+          </div>
+        </div>
+        <p class="text-[11px] text-gray-500 mb-2"><strong class="font-medium text-gray-700">ViewBox:</strong> <code class="font-mono bg-gray-100 px-1 rounded-sm">0 0 32 32</code> · fill <code class="font-mono bg-gray-100 px-1 rounded-sm">currentColor</code></p>
+        <p class="text-[11px] text-gray-500 mb-2"><strong class="font-medium text-gray-700">Aparece en:</strong> hero marquee, H1 about, H1 contact, featured project tag, los 3 covers (Salonomi, ElNoi, SalonTattoo) y el cursor personalizado.</p>
+        <details class="mt-4">
+          <summary class="text-[11px] uppercase tracking-[0.2em] font-bold text-gray-700 cursor-pointer hover:text-[#E0A4B0]">Ver path SVG</summary>
+          <pre class="font-mono text-[11px] bg-gray-100 px-3 py-2 rounded-sm mt-3 overflow-x-auto"><code>&lt;svg viewBox="0 0 32 32" fill="currentColor"&gt;
+  &lt;path d="{sparklePath}"/&gt;
+&lt;/svg&gt;</code></pre>
+        </details>
+      </div>
+
+      <!-- Otros iconos -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-[12px] p-8 border border-black/5">
+          <div class="flex items-center justify-center h-20 mb-4">
+            <svg class="w-8 h-8 text-gray-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+          </div>
+          <p class="text-sm font-medium mb-1">Clipboard</p>
+          <p class="text-[11px] text-gray-500">Botón "Copiar email" en página de contacto. Stroke de 2.</p>
+        </div>
+
+        <div class="bg-white rounded-[12px] p-8 border border-black/5">
+          <div class="flex items-center justify-center h-20 mb-4">
+            <span class="text-4xl text-gray-700">→</span>
+          </div>
+          <p class="text-sm font-medium mb-1">Flecha unicode</p>
+          <p class="text-[11px] text-gray-500">Carácter <code class="font-mono bg-gray-100 px-1 rounded-sm">→</code> con animación <code class="font-mono bg-gray-100 px-1 rounded-sm">group-hover:translate-x-1</code></p>
+        </div>
+
+        <div class="bg-white rounded-[12px] p-8 border border-black/5">
+          <div class="flex items-center justify-center h-20 mb-4">
+            <span class="relative flex h-4 w-4">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-4 w-4 bg-green-500"></span>
+            </span>
+          </div>
+          <p class="text-sm font-medium mb-1">Punto pulsante</p>
+          <p class="text-[11px] text-gray-500">Status indicator. <code class="font-mono bg-gray-100 px-1 rounded-sm">animate-ping</code> + dot estático superpuesto.</p>
+        </div>
+      </div>
+
+      <p class="text-sm text-gray-600 mt-10 max-w-2xl leading-relaxed"><strong class="font-medium">Regla:</strong> al añadir un icono nuevo, mantén el criterio: SVG inline (no librería), stroke fino o fill plano, y siempre <code class="font-mono text-[12px] bg-gray-100 px-1 rounded-sm">currentColor</code> para que herede el color del contexto.</p>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         06 · ANIMACIÓN
+         ═══════════════════════════════════════════════ -->
+    <section id="animacion" class="py-16 md:py-24 border-t border-black/5 scroll-mt-24">
+      <div class="mb-12">
+        <span class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold block mb-4">06</span>
+        <h2 class="font-serif italic text-4xl md:text-6xl font-medium text-gray-900 leading-tight">Animación</h2>
+        <p class="text-base text-gray-600 leading-relaxed max-w-xl mt-4">
+          Transiciones discretas y largas (500–700ms ease-out) que refuerzan la calma editorial. Sin bouncing, sin overshoot.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+        <div class="bg-white rounded-[12px] p-8 border border-black/5">
+          <h3 class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold mb-6">Hover scale en card</h3>
+          <div class="aspect-[4/3] overflow-hidden rounded-sm group cursor-pointer">
+            <div class="w-full h-full transition-transform duration-700 ease-out group-hover:scale-[1.03] flex items-center justify-center" style="background: radial-gradient(ellipse at 30% 20%, #9D6FFF 0%, #6B2DE6 60%, #4A1FA8 100%);">
+              <span class="text-white text-2xl italic font-serif">Pasa el cursor</span>
+            </div>
+          </div>
+          <code class="font-mono text-[11px] bg-gray-100 px-2 py-1 rounded-sm inline-block mt-4">duration-700 ease-out group-hover:scale-[1.03]</code>
+        </div>
+
+        <div class="bg-white rounded-[12px] p-8 border border-black/5">
+          <h3 class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold mb-6">Color transition</h3>
+          <div class="aspect-[4/3] flex items-center justify-center">
+            <a href="#" class="group inline-flex items-center gap-2 text-2xl italic font-serif text-gray-900 hover:text-[#E0A4B0] transition-colors duration-500">
+              Pasa el cursor
+              <span class="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
+            </a>
+          </div>
+          <code class="font-mono text-[11px] bg-gray-100 px-2 py-1 rounded-sm inline-block mt-4">transition-colors duration-500</code>
+        </div>
+
+        <div class="bg-white rounded-[12px] p-8 border border-black/5">
+          <h3 class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold mb-6">Slide right (entrada)</h3>
+          <div class="aspect-[4/3] flex items-center justify-center group cursor-pointer">
+            <p class="text-2xl italic font-serif text-gray-900 group-hover:animate-slide-right">Hover para repetir</p>
+          </div>
+          <code class="font-mono text-[11px] bg-gray-100 px-2 py-1 rounded-sm inline-block mt-4">animate-slide-right · 0.8s ease-out</code>
+          <p class="text-[11px] text-gray-500 mt-2">Definido en <code class="font-mono bg-gray-100 px-1 rounded-sm">global.css</code>. Variante <code class="font-mono bg-gray-100 px-1 rounded-sm">-delayed</code> con 0.2s delay.</p>
+        </div>
+
+        <div class="bg-white rounded-[12px] p-8 border border-black/5">
+          <h3 class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold mb-6">CTA hover (rosa)</h3>
+          <div class="aspect-[4/3] bg-gray-900 rounded-sm flex items-center justify-center">
+            <a href="#" class="inline-block border-2 border-white text-white px-10 py-5 text-sm font-bold uppercase tracking-[0.2em] rounded-full hover:bg-[#E0A4B0] hover:border-[#E0A4B0] transition-all duration-500">
+              Pasa el cursor
+            </a>
+          </div>
+          <code class="font-mono text-[11px] bg-gray-100 px-2 py-1 rounded-sm inline-block mt-4">transition-all duration-500</code>
+        </div>
+      </div>
+
+      <h3 class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold mb-6">Tabla de duraciones</h3>
+      <div class="bg-white rounded-[12px] border border-black/5 divide-y divide-gray-100">
+        <div class="grid grid-cols-3 px-6 py-5 items-center">
+          <code class="font-mono text-sm font-medium">duration-300</code>
+          <span class="text-[11px] text-gray-500">300ms</span>
+          <span class="text-[11px] text-gray-500 md:text-right">Estados rápidos: filtros, color, opacidad</span>
+        </div>
+        <div class="grid grid-cols-3 px-6 py-5 items-center">
+          <code class="font-mono text-sm font-medium">duration-500</code>
+          <span class="text-[11px] text-gray-500">500ms</span>
+          <span class="text-[11px] text-gray-500 md:text-right">Hovers de CTA, transiciones de color en H</span>
+        </div>
+        <div class="grid grid-cols-3 px-6 py-5 items-center">
+          <code class="font-mono text-sm font-medium">duration-700</code>
+          <span class="text-[11px] text-gray-500">700ms</span>
+          <span class="text-[11px] text-gray-500 md:text-right">Scale de imágenes en project cards</span>
+        </div>
+        <div class="grid grid-cols-3 px-6 py-5 items-center">
+          <code class="font-mono text-sm font-medium">marquee</code>
+          <span class="text-[11px] text-gray-500">80s linear infinite</span>
+          <span class="text-[11px] text-gray-500 md:text-right">Hero marquee horizontal del nombre</span>
+        </div>
+      </div>
+
+      <p class="text-sm text-gray-600 mt-8 max-w-2xl leading-relaxed"><strong class="font-medium">Easing:</strong> casi todo es <code class="font-mono text-[12px] bg-gray-100 px-1 rounded-sm">ease-out</code>. Linear se reserva para animaciones infinitas (marquee, ping). No usar bezier custom.</p>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         07 · BRAND ASSETS
+         ═══════════════════════════════════════════════ -->
+    <section id="brand" class="py-16 md:py-24 border-t border-black/5 scroll-mt-24">
+      <div class="mb-12">
+        <span class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold block mb-4">07</span>
+        <h2 class="font-serif italic text-4xl md:text-6xl font-medium text-gray-900 leading-tight">Brand assets</h2>
+        <p class="text-base text-gray-600 leading-relaxed max-w-xl mt-4">
+          Activos identitarios y reglas de tono visual.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+        <div class="bg-white rounded-[12px] p-10 border border-black/5">
+          <h3 class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold mb-8">Logo · Header size</h3>
+          <div class="flex items-center justify-center h-32 mb-6 bg-[#F9F8F3] rounded-sm">
+            <img src={`${import.meta.env.BASE_URL}/logo-byjeka.png`} alt="By Jeka logo" class="h-10 w-auto object-contain" />
+          </div>
+          <p class="text-[11px] text-gray-500 mb-2"><strong class="font-medium text-gray-700">Archivo:</strong> <code class="font-mono bg-gray-100 px-1 rounded-sm">/public/logo-byjeka.png</code></p>
+          <p class="text-[11px] text-gray-500 mb-2"><strong class="font-medium text-gray-700">Tamaño en header:</strong> <code class="font-mono bg-gray-100 px-1 rounded-sm">h-10 w-auto</code> (40px alto)</p>
+          <p class="text-[11px] text-gray-500"><strong class="font-medium text-gray-700">Clear-space sugerido:</strong> mínimo el alto del logo a cada lado.</p>
+        </div>
+
+        <div class="bg-white rounded-[12px] p-10 border border-black/5">
+          <h3 class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold mb-8">Selección de texto</h3>
+          <div class="bg-[#F9F8F3] rounded-sm p-6 mb-6 min-h-32">
+            <p class="text-base text-gray-700 leading-relaxed select-all">
+              <strong class="font-medium">Selecciona este párrafo</strong> para ver el estilo de selección global. El fondo se vuelve negro y el texto blanco — coherente con el tono editorial minimalista.
+            </p>
+          </div>
+          <code class="font-mono text-[11px] bg-gray-100 px-2 py-1 rounded-sm inline-block">selection:bg-black selection:text-white</code>
+          <p class="text-[11px] text-gray-500 mt-2">Aplicado globalmente en <code class="font-mono bg-gray-100 px-1 rounded-sm">&lt;body&gt;</code> de BaseLayout.</p>
+        </div>
+      </div>
+
+      <h3 class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold mb-6">Tono visual</h3>
+      <div class="bg-white rounded-[12px] border border-black/5 divide-y divide-gray-100">
+        <div class="grid grid-cols-1 md:grid-cols-3 px-6 py-5 gap-4 items-center">
+          <p class="font-serif italic text-2xl text-gray-900">Cálido / narrativo</p>
+          <p class="text-[11px] text-gray-500">Cormorant italic + body editorial</p>
+          <p class="text-[11px] text-gray-500 md:text-right">"¡Qué bueno verte por aquí!"</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 px-6 py-5 gap-4 items-center">
+          <p class="text-[11px] uppercase tracking-[0.25em] font-bold text-gray-900">FUNCIONAL / TÉCNICO</p>
+          <p class="text-[11px] text-gray-500">Inter uppercase tracked</p>
+          <p class="text-[11px] text-gray-500 md:text-right">"PORTFOLIO SELECCIONADO"</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 px-6 py-5 gap-4 items-center">
+          <p class="text-2xl text-[#E0A4B0]" style="font-family: var(--font-serif);"><em>— Jeka</em></p>
+          <p class="text-[11px] text-gray-500">Firma personal · acento rosa</p>
+          <p class="text-[11px] text-gray-500 md:text-right">Cierre de copy en contacto</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         FOOTER DOC
+         ═══════════════════════════════════════════════ -->
+    <footer class="mt-24 pt-12 border-t border-black/5">
+      <p class="font-serif italic text-2xl text-gray-700 leading-relaxed max-w-xl">
+        Mantén este documento actualizado.<svg class="inline-block w-5 h-5 ml-1.5 align-middle text-[#E0A4B0]" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d={sparklePath} /></svg>
+      </p>
+      <p class="text-[11px] text-gray-500 leading-relaxed max-w-xl mt-3">
+        Si añades un componente, color o patrón nuevo en el sitio, dedica 5 minutos a documentarlo aquí. Esta página se renderiza con tokens reales — un diseño no documentado es un diseño que se olvidará.
+      </p>
+      <p class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold mt-10">
+        Archivo · <code class="font-mono normal-case tracking-normal">src/pages/design-system.astro</code>
+      </p>
+    </footer>
+
+  </article>
+</BaseLayout>
