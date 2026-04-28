@@ -52,7 +52,7 @@ Basándome en los hallazgos, definimos tres ejes de acción para guiar el redise
 Propuse una reestructuración total del Sitemap invirtiendo el orden tradicional para priorizar la conversión y el expertise. Aquí se muestra el ecosistema global organizado por nodos funcionales:
 
 <div class="not-prose my-16 overflow-hidden rounded-2xl">
-    <img 
+    <img loading="lazy" decoding="async" 
         src="/portfolio-v2/pj-findasense-sitemap.svg" 
         alt="Sitemap Findasense" 
         class="w-full h-auto object-contain"
@@ -71,14 +71,14 @@ El diseño se construyó en Figma utilizando un Sistema de Diseño (UI Kit) pens
 
 <div class="not-prose grid grid-cols-1 md:grid-cols-3 gap-8 my-16">
     <div class="md:col-span-2 overflow-hidden rounded-2xl border border-black/5 shadow-md animate-slide-right">
-        <img 
+        <img loading="lazy" decoding="async" 
             src="/portfolio-v2/pj-lowfi-prototype-desktop-findasense.png" 
             alt="Wireframe Low-Fi Desktop" 
             class="w-full h-auto object-contain hover:scale-[1.02] transition-transform duration-500"
         />
     </div>
     <div class="overflow-hidden rounded-2xl border border-black/5 shadow-md animate-slide-right-delayed">
-        <img 
+        <img loading="lazy" decoding="async" 
             src="/portfolio-v2/pj-lowfi-prototype-mobile-findasense.png" 
             alt="Wireframe Low-Fi Mobile" 
             class="w-full h-auto object-contain hover:scale-[1.02] transition-transform duration-500"
@@ -170,7 +170,7 @@ Explora la experiencia diseñada para el ecosistema global de Findasense.
             </div>
         </div>
         <div class="aspect-video w-full bg-gray-100 border-x border-b border-black/5 rounded-b-xl overflow-hidden shadow-xl group-hover:shadow-2xl transition-all duration-500 relative">
-            <img 
+            <img loading="lazy" decoding="async" 
                 src="/portfolio-v2/pj-findasense-prototype.png" 
                 alt="Findasense Website Preview" 
                 class="w-full h-full object-cover object-top group-hover:scale-[1.02] transition-transform duration-700"
