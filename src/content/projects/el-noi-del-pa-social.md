@@ -14,22 +14,22 @@ heroVideo: "/noi-social/reel-02-tienda.mp4"
 heroAspect: "aspect-[4/5]"
 ---
 
-## 🍞 EL NOI DEL PA · CONTENIDO EN REDES
+## EL NOI DEL PA · CONTENIDO EN REDES
 
 Después del rediseño del ecosistema digital, asumí la dirección creativa y la producción de contenido para las redes sociales de la panadería. El reto: comunicar la autenticidad del obrador y convertir el "sin gluten" en un valor aspiracional, no una limitación. El resultado es un feed coherente donde producto, proceso y comunidad conviven con un mismo lenguaje visual.
 
-### 👤 ROL
+### ROL
 Content Creator & Social Media Designer
 
-### 📍 CLIENTE
+### CLIENTE
 El Noi del Pa Sense Gluten · Barcelona
 
-### 🎯 OBJETIVO
+### OBJETIVO
 Aumentar la visibilidad local, humanizar la marca, mostrar el proceso artesanal y conectar con la comunidad celiaca y foodie de Barcelona a través de Instagram.
 
 ---
 
-## 🎨 DIRECCIÓN CREATIVA
+## DIRECCIÓN CREATIVA
 Luz natural, tonos tostados y ocres, composiciones cercanas y detalle de textura. Tipografías cálidas que refuerzan el carácter artesanal sin caer en lo rústico. Todo el contenido —foto, video, copy— nace de una misma pauta visual construida para ser reconocible desde el primer scroll.
 
 **Pilares de contenido**
@@ -40,7 +40,7 @@ Luz natural, tonos tostados y ocres, composiciones cercanas y detalle de textura
 
 ---
 
-## 📱 PERFIL DE INSTAGRAM
+## PERFIL DE INSTAGRAM
 
 <div class="not-prose max-w-5xl mx-auto bg-white border border-black/5 p-8 md:p-14 my-12">
     <div class="flex flex-col md:flex-row items-center justify-center gap-5 mb-14">
@@ -146,7 +146,7 @@ Luz natural, tonos tostados y ocres, composiciones cercanas y detalle de textura
 
 ---
 
-## 🎬 REELS
+## REELS
 Contenido en movimiento: proceso, producto en acción y microhistorias del obrador.
 
 <div class="not-prose grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6 my-16 max-w-5xl mx-auto items-start">
@@ -172,7 +172,7 @@ Contenido en movimiento: proceso, producto en acción y microhistorias del obrad
 
 ---
 
-## 📈 RESULTADOS
+## RESULTADOS
 - **Feed reconocible:** lenguaje visual consistente que comunica la esencia artesanal en cada post.
 - **Comunidad activa:** interacción orgánica con clientes locales y comunidad celiaca de Barcelona.
 - **Contenido de temporada:** campañas vinculadas a festividades locales (Sant Jordi, Pascua, Croissandfest) que posicionan la marca dentro del calendario cultural catalán.
@@ -180,7 +180,7 @@ Contenido en movimiento: proceso, producto en acción y microhistorias del obrad
 
 ---
 
-## 🎓 APRENDIZAJES
+## APRENDIZAJES
 - **Coherencia visual ante todo:** un feed con lenguaje propio genera reconocimiento instantáneo.
 - **El proceso vende más que el producto:** mostrar manos, harina y horno conecta más que un bodegón perfecto.
 - **Lo artesanal necesita ritmo:** alternar producto, persona y proceso para no saturar.

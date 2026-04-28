@@ -5,6 +5,7 @@ import { getLangFromUrl, useTranslations, useTranslatedPath } from '../../i18n/u
 import SalonomiCover from '../../components/covers/SalonomiCover.astro';
 import SalonTattooCover from '../../components/covers/SalonTattooCover.astro';
 import ElNoiCover from '../../components/covers/ElNoiCover.astro';
+import PortfolioByJekaCover from '../../components/covers/PortfolioByJekaCover.astro';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -17,6 +18,7 @@ const sortedProjects = projects.sort((a, b) => b.data.pubDate.valueOf() - a.data
 
 const customCovers: Record<string, any> = {
   'salonomi': SalonomiCover,
+  'portfolio-by-jeka': PortfolioByJekaCover,
 };
 ---
 
@@ -115,7 +117,7 @@ const customCovers: Record<string, any> = {
 								<span class="h-px flex-1 bg-gray-300 max-w-[3rem]"></span>
 								<span class="text-gray-400">{featuredYear}</span>
 							</div>
-							<h3 class="text-3xl md:text-5xl italic font-serif font-medium text-gray-900 leading-[1.1] transition-colors duration-500 group-hover:text-[#E0A4B0]">{featured.data.title}</h3>
+							<h3 class="text-3xl md:text-5xl italic font-serif font-medium text-gray-900 lowercase first-letter:uppercase leading-[1.1] transition-colors duration-500 group-hover:text-[#E0A4B0]">{featured.data.title}</h3>
 							<p class="text-[11px] uppercase tracking-[0.25em] text-gray-500 font-medium">{featured.data.type}</p>
 							<p class="text-base text-gray-600 leading-relaxed pt-2">{featured.data.description}</p>
 							<span class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] font-bold text-gray-900 group-hover:text-[#E0A4B0] transition-colors duration-300 pt-3">
@@ -151,9 +153,9 @@ const customCovers: Record<string, any> = {
 								return <div class="w-full h-full flex items-center justify-center text-gray-400 font-serif italic">{project.data.title}</div>;
 							})()}
 						</div>
-						<div class="pt-4 space-y-1.5">
-							<h4 class="text-base md:text-lg italic font-serif font-medium text-gray-900 leading-tight transition-colors duration-300 group-hover:text-[#E0A4B0]">{project.data.title}</h4>
-							<p class="text-[10px] uppercase tracking-[0.25em] text-gray-500 font-medium">{project.data.type}</p>
+						<div class="pt-5 space-y-2">
+							<p class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold">{project.data.type}</p>
+							<h4 class="text-xl md:text-2xl italic font-serif font-medium text-gray-900 lowercase first-letter:uppercase leading-[1.1] transition-colors duration-300 group-hover:text-[#E0A4B0]">{project.data.title}</h4>
 						</div>
 					</a>
 				);

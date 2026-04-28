@@ -11,7 +11,7 @@ lang: "en"
 aspectRatio: "aspect-square"
 ---
 
-## ⭐ Findasense: Global Digital Ecosystem Redesign
+## Findasense: Global Digital Ecosystem Redesign
 **UX/UI Design · Design Thinking · WordPress 6.4 · Multilingual (ES/EN/PT)**
 
 ### The Context: From Corporate News to Lead Engine
@@ -150,7 +150,7 @@ The result is a minimalist, powerful, and results-oriented website that redefine
 
 ---
 
-### 🌐 Final Result: Digital Ecosystem
+### Final Result: Digital Ecosystem
 Explore the experience designed for Findasense's global ecosystem.
 
 <div class="not-prose my-12 group">

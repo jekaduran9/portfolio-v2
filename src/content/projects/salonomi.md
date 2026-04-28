@@ -13,17 +13,17 @@ aspectRatio: "aspect-video"
 
 Contexto: Salonomi es una plataforma de gestión y reservas en la nube diseñada para pequeños negocios de salud y belleza en Latinoamérica.
 
-## 🟢 Resumen del Proyecto
+## Resumen del Proyecto
 Lideré la evolución visual y funcional de Salonomi, transformando una herramienta técnica en una experiencia centrada en el usuario. Mi trabajo abarcó desde el rebranding y la estrategia de contenido hasta el rediseño crítico de la Web App y el POS, asegurando que la plataforma fuera accesible y eficiente para dueños de salones que operan principalmente desde dispositivos móviles.
 
-## 🛠️ Responsabilidades Clave
+## Responsabilidades Clave
 *   **Diseño UI/UX:** Creación de wireframes y prototipos de alta fidelidad para la Web App y el sitio principal.
 *   **Estrategia Mobile-First:** Rediseño total de la interfaz tras identificar que el 80% de los usuarios accedían desde smartphones.
 *   **Sistemas de Diseño:** Creación y extensión de una librería de componentes (cards, navbars, footers) para asegurar consistencia.
 *   **Branding & Growth:** Responsable de la identidad visual en redes sociales (Instagram/Facebook), anuncios digitales e ilustraciones personalizadas.
 *   **Colaboración Técnica:** Trabajo directo con los equipos de Growth y Desarrollo para garantizar una implementación fiel al diseño usando Bootstrap 3 y Wix.
 
-## 📱 Proyecto 1: Web App & Rediseño de POS
+## Proyecto 1: Web App & Rediseño de POS
 
 ### El Problema
 Originalmente, Salonomi no estaba optimizado para móviles. Los datos de Google Analytics revelaron que la gran mayoría de los clientes gestionaba su negocio desde su celular, enfrentando serios problemas de usabilidad en tareas críticas como la facturación y el registro de ventas.
@@ -45,7 +45,7 @@ El sistema de Punto de Venta (POS) era denso y difícil de operar en pantallas p
 *   Optimización del flujo de facturación, reduciendo el tiempo de carga de datos para el administrador.
 *   Consistencia visual total entre la plataforma de gestión y el branding de la marca.
 
-## 🌐 Proyecto 2: Landing Page & Estrategia Digital
+## Proyecto 2: Landing Page & Estrategia Digital
 
 ### Objetivo
 Transformar el sitio corporativo en una herramienta de conversión eficiente donde los usuarios pudieran entender el valor de Salonomi de un vistazo.
@@ -57,7 +57,7 @@ Transformar el sitio corporativo en una herramienta de conversión eficiente don
 ### Resultados
 Logramos una estética profesional que generó confianza en los pequeños negocios de Latam, alineando la comunicación de redes sociales con la experiencia del sitio web.
 
-## 📊 Métricas de Éxito e Impacto
+## Métricas de Éxito e Impacto
 Para medir el éxito del rediseño y las estrategias de branding, me enfoqué en indicadores clave de rendimiento (KPIs) que reflejaran la adopción de la herramienta:
 
 *   **Adopción Mobile:** Tras el rediseño mobile-first, el tiempo de sesión en dispositivos móviles aumentó en un [X]%, confirmando que los dueños de salones ahora podían gestionar su negocio cómodamente desde su celular.
@@ -65,7 +65,7 @@ Para medir el éxito del rediseño y las estrategias de branding, me enfoqué en
 *   **Consistencia de Marca:** Logramos un lenguaje visual unificado en 3 plataformas (Web App, Landing Page y Redes Sociales), lo que incrementó el reconocimiento de marca y la confianza de los nuevos leads.
 *   **Reducción de Errores:** Gracias a la agrupación visual de datos en las facturas, las consultas de soporte relacionadas con "errores de lectura de datos" disminuyeron notablemente.
 
-## 💡 Lecciones Aprendidas
+## Lecciones Aprendidas
 Como diseñador en un entorno de crecimiento ágil (Growth), este proyecto me dejó aprendizajes fundamentales:
 
 1.  **Los datos mandan (Data-Driven Design):** Antes de la analítica, asumíamos que el escritorio era el foco. Google Analytics nos reveló que el 80% de los usuarios eran móviles, lo que cambió drásticamente nuestra prioridad de diseño y salvó el producto de la irrelevancia.

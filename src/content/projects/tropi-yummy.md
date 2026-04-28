@@ -31,7 +31,7 @@ El cliente tenía claro el producto —mango biche, ensaladas de frutas, obleas 
 
 ---
 
-## 🥭 Mango
+## Mango
 
 Antes de diseñar, me sumergí en el universo tropical para entender desde dónde construir la marca:
 
@@ -49,7 +49,7 @@ Antes de diseñar, me sumergí en el universo tropical para entender desde dónd
 
 ---
 
-## 🎨 Diseño de logo
+## Diseño de logo
 
 El logo de Tropi Yummy debía transmitir frescura y diversidad desde el primer vistazo, priorizando la legibilidad y un carácter inconfundiblemente tropical.
 
@@ -83,7 +83,7 @@ El logo de Tropi Yummy debía transmitir frescura y diversidad desde el primer v
 
 ---
 
-## 🍽️ Carta y producción visual
+## Carta y producción visual
 
 Para la creación del menú de Tropi Yummy desarrollé una dirección de arte fresca, donde el producto es el protagonista absoluto. Ante la ausencia inicial de material fotográfico, utilicé **Inteligencia Artificial** para generar visuales de alta fidelidad —manteniendo paleta y texturas realistas— y así lanzar una carta completa antes incluso de la apertura del local.
 
@@ -114,7 +114,7 @@ Tras la apertura, integré fotografía real del local con un proceso exhaustivo 
 
 ---
 
-## 📱 Identidad visual aplicada a Redes Sociales
+## Identidad visual aplicada a Redes Sociales
 
 La identidad se trasladó al ecosistema digital con un feed coherente, donde cada publicación refuerza el universo tropical y mantiene la consistencia visual entre el local y la pantalla.
 
@@ -147,6 +147,6 @@ La identidad se trasladó al ecosistema digital con un feed coherente, donde cad
 
 ---
 
-## ✨ Resultado
+## Resultado
 
 Una estética híbrida, coherente y profesional que permite a Tropi Yummy competir visualmente desde el primer día, logrando una comunicación impactante tanto en el punto de venta como en plataformas digitales.

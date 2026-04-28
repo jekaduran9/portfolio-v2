@@ -11,7 +11,7 @@ lang: "en"
 aspectRatio: "aspect-[4/3]"
 ---
 
-## ⭐ Grip: Health Tech E-commerce
+## Grip: Health Tech E-commerce
 **UX/UI Design · User Research · Mobile First · Health Tech**
 
 ### The Context: Democratizing Hormonal Health
@@ -76,7 +76,7 @@ The redesign didn't just improve aesthetics; it had a direct impact on the start
 
 ---
 
-### 💡 Lessons Learned & Reflections
+### Lessons Learned & Reflections
 Reflecting on this project, these are the three main lessons I will integrate into my future workflows:
 
 1. **Simplicity beats traditional navigation:** Sometimes, following the standard E-commerce pattern (Home > Shop > Product Page > Checkout) creates too much friction. By merging the shop and product pages, we proved that reducing steps from 5 to 2 was exactly what the user needed to feel secure when purchasing a complex medical product.

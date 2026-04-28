@@ -12,21 +12,21 @@ category: "Tatuaje"
 aspectRatio: "aspect-square"
 ---
 
-## ✒️ TATTOO ARTIST
+## TATTOO ARTIST
 By Jeka es un proyecto de tatuaje de línea fina (fine-line) enfocado en crear diseños personalizados que cuentan historias únicas. Cada tatuaje se elabora con intención, cuidado y atención al detalle, priorizando siempre una experiencia segura, cómoda y personal. El proceso se centra en la escucha, la orientación y la conexión, para que la pieza final no sea solo estética sino también significativa.
 
-### 🛠 TIPO DE PROYECTO
+### TIPO DE PROYECTO
 Ilustración, Fine line, Diseño personalizado, Tatuaje.
 
-### 📍 UBICACIÓN
+### UBICACIÓN
 Barcelona, en cualquier lugar.
 
-### 👤 ROL
+### ROL
 Tattoo Artist
 
 ---
 
-### 🎨 GALERÍA DE TRABAJOS
+### GALERÍA DE TRABAJOS
 Una selección de tatuajes y diseños realizados, enfocados en la delicadeza del trazo y la profundidad del significado.
 
 <div class="not-prose columns-2 md:columns-3 gap-4 space-y-4 my-12">

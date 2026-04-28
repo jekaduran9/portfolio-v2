@@ -1,0 +1,13 @@
+---
+interface Props {
+  size?: 'sm' | 'lg';
+}
+const { size = 'sm' } = Astro.props;
+
+const iconPad = size === 'lg' ? 'p-16 md:p-24' : 'p-8 md:p-12';
+const iconSrc = `${import.meta.env.BASE_URL}/claude-ai-icon.png`;
+---
+
+<div class="relative w-full h-full overflow-hidden flex items-center justify-center bg-[#D97757]">
+	<img src={iconSrc} alt="Claude" class={`w-full h-full object-contain ${iconPad}`} />
+</div>
