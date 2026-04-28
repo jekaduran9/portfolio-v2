@@ -25,3 +25,9 @@ pnpm-debug.log*
 
 # image compression backups
 public_backup/
+
+# test artifacts
+coverage/
+playwright-report/
+test-results/
+.playwright/
