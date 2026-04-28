@@ -3,10 +3,19 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { getLangFromUrl, useTranslations, useTranslatedPath } from '../../../i18n/utils';
 import PortfolioByJekaCover from '../../../components/covers/PortfolioByJekaCover.astro';
+import SalonomiCover from '../../../components/covers/SalonomiCover.astro';
+import SalonTattooCover from '../../../components/covers/SalonTattooCover.astro';
+import ElNoiCover from '../../../components/covers/ElNoiCover.astro';
 
 const customCovers: Record<string, any> = {
   'portfolio-by-jeka': PortfolioByJekaCover,
   'portfolio-by-jeka-en': PortfolioByJekaCover,
+  'salonomi': SalonomiCover,
+  'salonomi-en': SalonomiCover,
+  'salon-tattoo': SalonTattooCover,
+  'salon-tattoo-en': SalonTattooCover,
+  'el-noi-del-pa': ElNoiCover,
+  'el-noi-del-pa-en': ElNoiCover,
 };
 
 export async function getStaticPaths() {
@@ -31,9 +40,10 @@ export async function getStaticPaths() {
 
 const { project, prev, next } = Astro.props;
 const { Content } = await project.render();
-const { title, description, role, tools, type, heroVideo, heroImage, heroAspect } = project.data;
+const { title, description, role, tools, type, heroVideo, heroImage, heroAspect, image } = project.data;
 const heroVideoPath = heroVideo?.startsWith('/') ? `${import.meta.env.BASE_URL}${heroVideo}` : heroVideo;
 const heroImagePath = heroImage?.startsWith('/') ? `${import.meta.env.BASE_URL}${heroImage}` : heroImage;
+const fallbackImagePath = image?.startsWith('/') ? `${import.meta.env.BASE_URL}${image}` : image;
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -77,6 +87,7 @@ const sparklePath = 'M16 1.5 C16.6 11.2 20.8 15.4 30.5 16 C20.8 16.6 16.6 20.8 1
 						if (HeroCover) return <HeroCover size="lg" />;
 						if (heroVideoPath) return <video src={heroVideoPath} class="w-full h-full object-cover" autoplay loop muted playsinline></video>;
 						if (heroImagePath) return <img src={heroImagePath} alt={title} class="w-full h-full object-cover" />;
+						if (fallbackImagePath) return <img src={fallbackImagePath} alt={title} class="w-full h-full object-cover" />;
 						return <span>Hero Image Mockup</span>;
 					})()}
 				</div>
