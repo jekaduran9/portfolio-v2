@@ -61,7 +61,7 @@ const translatePath = useTranslatedPath(lang);
 					{heroVideoPath ? (
 						<video src={heroVideoPath} class="w-full h-full object-cover" autoplay loop muted playsinline></video>
 					) : heroImagePath ? (
-						<img src={heroImagePath} alt={title} class="w-full h-full object-cover" />
+						<img src={heroImagePath} alt={title} fetchpriority="high" decoding="async" class="w-full h-full object-cover" />
 					) : (
 						<span>Hero Image Mockup</span>
 					)}

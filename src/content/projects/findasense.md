@@ -4,7 +4,7 @@ description: "Rediseño estratégico para transformar una web corporativa en un 
 role: "UX/UI Designer"
 tools: ["Figma", "Design Thinking", "WordPress 6.4"]
 type: "Ecosistema Digital"
-image: "/pj-findasense-cover.png"
+image: "/pj-findasense-cover.jpg"
 pubDate: 2024-03-07
 featured: true
 lang: "es"
@@ -52,9 +52,11 @@ Basándome en los hallazgos, definimos tres ejes de acción para guiar el redise
 Propuse una reestructuración total del Sitemap invirtiendo el orden tradicional para priorizar la conversión y el expertise. Aquí se muestra el ecosistema global organizado por nodos funcionales:
 
 <div class="not-prose my-16 overflow-hidden rounded-2xl">
-    <img 
-        src="/portfolio-v2/pj-findasense-sitemap.svg" 
-        alt="Sitemap Findasense" 
+    <img
+        src="/portfolio-v2/pj-findasense-sitemap.svg"
+        alt="Sitemap Findasense"
+        loading="lazy"
+        decoding="async"
         class="w-full h-auto object-contain"
     />
 </div>
@@ -71,16 +73,20 @@ El diseño se construyó en Figma utilizando un Sistema de Diseño (UI Kit) pens
 
 <div class="not-prose grid grid-cols-1 md:grid-cols-3 gap-8 my-16">
     <div class="md:col-span-2 overflow-hidden rounded-2xl border border-black/5 shadow-md animate-slide-right">
-        <img 
-            src="/portfolio-v2/pj-lowfi-prototype-desktop-findasense.png" 
-            alt="Wireframe Low-Fi Desktop" 
+        <img
+            src="/portfolio-v2/pj-lowfi-prototype-desktop-findasense.png"
+            alt="Wireframe Low-Fi Desktop"
+            loading="lazy"
+            decoding="async"
             class="w-full h-auto object-contain hover:scale-[1.02] transition-transform duration-500"
         />
     </div>
     <div class="overflow-hidden rounded-2xl border border-black/5 shadow-md animate-slide-right-delayed">
-        <img 
-            src="/portfolio-v2/pj-lowfi-prototype-mobile-findasense.png" 
-            alt="Wireframe Low-Fi Mobile" 
+        <img
+            src="/portfolio-v2/pj-lowfi-prototype-mobile-findasense.png"
+            alt="Wireframe Low-Fi Mobile"
+            loading="lazy"
+            decoding="async"
             class="w-full h-auto object-contain hover:scale-[1.02] transition-transform duration-500"
         />
     </div>
@@ -170,9 +176,11 @@ Explora la experiencia diseñada para el ecosistema global de Findasense.
             </div>
         </div>
         <div class="aspect-video w-full bg-gray-100 border-x border-b border-black/5 rounded-b-xl overflow-hidden shadow-xl group-hover:shadow-2xl transition-all duration-500 relative">
-            <img 
-                src="/portfolio-v2/pj-findasense-prototype.png" 
-                alt="Findasense Website Preview" 
+            <img
+                src="/portfolio-v2/pj-findasense-prototype.png"
+                alt="Findasense Website Preview"
+                loading="lazy"
+                decoding="async"
                 class="w-full h-full object-cover object-top group-hover:scale-[1.02] transition-transform duration-700"
             />
             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors flex items-center justify-center">

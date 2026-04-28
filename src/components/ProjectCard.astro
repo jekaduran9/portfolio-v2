@@ -19,9 +19,11 @@ const imagePath = image?.startsWith('/') ? `${import.meta.env.BASE_URL}${image}`
 <a href={translatePath(`/projects/${project.slug}`)} data-category={category} class="group block break-inside-avoid mb-12 bg-white rounded-[12px] p-4 transition-all duration-300 project-card">
 	<div class={`${aspectRatio} bg-gray-100 overflow-hidden relative mb-4 rounded-[8px]`}>
 		{imagePath ? (
-			<img 
-				src={imagePath} 
+			<img
+				src={imagePath}
 				alt={title}
+				loading="lazy"
+				decoding="async"
 				class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
 			/>
 		) : (

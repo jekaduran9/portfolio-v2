@@ -24,9 +24,11 @@ const customCovers: Record<string, any> = {
 	<!-- Hero Section -->
 	<section class="relative w-full h-screen flex flex-col justify-end overflow-hidden">
 		<div class="absolute inset-0 z-0">
-			<img 
-				src={`${import.meta.env.BASE_URL}/hero-background.jpeg`} 
-				alt="Jessica Duran - Product Designer" 
+			<img
+				src={`${import.meta.env.BASE_URL}/hero-background.jpeg`}
+				alt="Jessica Duran - Product Designer"
+				fetchpriority="high"
+				decoding="async"
 				class="w-full h-full object-cover grayscale brightness-90"
 			/>
 			<div class="absolute inset-0 bg-black/10"></div>
@@ -105,7 +107,7 @@ const customCovers: Record<string, any> = {
 							{(() => {
 								const FeaturedCover = customCovers[featured.slug];
 								if (FeaturedCover) return <FeaturedCover size="lg" />;
-								if (featuredImagePath) return <img src={featuredImagePath} alt={featured.data.title} class="w-full h-full object-cover" />;
+								if (featuredImagePath) return <img src={featuredImagePath} alt={featured.data.title} loading="lazy" decoding="async" class="w-full h-full object-cover" />;
 								return <div class="w-full h-full flex items-center justify-center text-gray-400 font-serif italic">{featured.data.title}</div>;
 							})()}
 						</div>
@@ -147,7 +149,7 @@ const customCovers: Record<string, any> = {
 							{(() => {
 								const Cover = customCovers[project.slug];
 								if (Cover) return <Cover />;
-								if (imagePath) return <img src={imagePath} alt={project.data.title} class="w-full h-full object-cover" />;
+								if (imagePath) return <img src={imagePath} alt={project.data.title} loading="lazy" decoding="async" class="w-full h-full object-cover" />;
 								return <div class="w-full h-full flex items-center justify-center text-gray-400 font-serif italic">{project.data.title}</div>;
 							})()}
 						</div>
