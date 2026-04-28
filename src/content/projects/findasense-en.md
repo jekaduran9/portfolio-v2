@@ -52,7 +52,7 @@ Based on the findings, we defined three pillars of action to guide the redesign:
 I proposed a total restructuring of the Sitemap, inverting the traditional order to prioritize conversion and expertise. Here is the new global ecosystem organized by functional nodes:
 
 <div class="not-prose my-16 overflow-hidden rounded-2xl">
-    <img 
+    <img loading="lazy" decoding="async" 
         src="/portfolio-v2/pj-findasense-sitemap.svg" 
         alt="Findasense Sitemap" 
         class="w-full h-auto object-contain"
@@ -71,14 +71,14 @@ The design was built in Figma using a Design System (UI Kit) designed for techni
 
 <div class="not-prose grid grid-cols-1 md:grid-cols-3 gap-8 my-16">
     <div class="md:col-span-2 overflow-hidden rounded-2xl border border-black/5 shadow-md animate-slide-right">
-        <img 
+        <img loading="lazy" decoding="async" 
             src="/portfolio-v2/pj-lowfi-prototype-desktop-findasense.png" 
             alt="Low-Fi Wireframe Desktop" 
             class="w-full h-auto object-contain hover:scale-[1.02] transition-transform duration-500"
         />
     </div>
     <div class="overflow-hidden rounded-2xl border border-black/5 shadow-md animate-slide-right-delayed">
-        <img 
+        <img loading="lazy" decoding="async" 
             src="/portfolio-v2/pj-lowfi-prototype-mobile-findasense.png" 
             alt="Low-Fi Wireframe Mobile" 
             class="w-full h-auto object-contain hover:scale-[1.02] transition-transform duration-500"
@@ -170,7 +170,7 @@ Explore the experience designed for Findasense's global ecosystem.
             </div>
         </div>
         <div class="aspect-video w-full bg-gray-100 border-x border-b border-black/5 rounded-b-xl overflow-hidden shadow-xl group-hover:shadow-2xl transition-all duration-500 relative">
-            <img 
+            <img loading="lazy" decoding="async" 
                 src="/portfolio-v2/pj-findasense-prototype.png" 
                 alt="Findasense Website Preview" 
                 class="w-full h-full object-cover object-top group-hover:scale-[1.02] transition-transform duration-700"
