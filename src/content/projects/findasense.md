@@ -4,7 +4,7 @@ description: "Rediseño estratégico para transformar una web corporativa en un 
 role: "UX/UI Designer"
 tools: ["Figma", "Design Thinking", "WordPress 6.4"]
 type: "Ecosistema Digital"
-image: "/pj-findasense-cover.png"
+image: "/pj-findasense-cover.avif"
 pubDate: 2024-03-07
 featured: true
 lang: "es"
@@ -79,7 +79,7 @@ El diseño se construyó en Figma utilizando un Sistema de Diseño (UI Kit) pens
     </div>
     <div class="overflow-hidden rounded-2xl border border-black/5 shadow-md animate-slide-right-delayed">
         <img 
-            src="/portfolio-v2/pj-lowfi-prototype-mobile-findasense.png" 
+            src="/portfolio-v2/pj-lowfi-prototype-mobile-findasense.avif" 
             alt="Wireframe Low-Fi Mobile" 
             class="w-full h-auto object-contain hover:scale-[1.02] transition-transform duration-500"
         />
