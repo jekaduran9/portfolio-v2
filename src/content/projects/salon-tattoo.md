@@ -4,7 +4,7 @@ description: "Proyecto de tatuaje fine-line enfocado en diseños personalizados 
 role: "Tattoo Artist"
 tools: ["Fine line", "Procreate", "Illustration", "Custom Design"]
 type: "Illustration, Fine line, Tattoo"
-image: "/Tattoo/flor-poblenou.JPG"
+image: "/Tattoo/flor-poblenou.avif"
 pubDate: 2024-03-08
 featured: true
 lang: "es"
@@ -40,22 +40,22 @@ Una selección de tatuajes y diseños realizados, enfocados en la delicadeza del
         <img src="/portfolio-v2/pj-mariposas-tattoo.jpg" alt="Tattoo Mariposas" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-500" />
     </div>
     <div class="break-inside-avoid border border-black/5 overflow-hidden transition-shadow duration-300">
-        <img src="/portfolio-v2/pj-ny-tattoo.png" alt="Tattoo NY Stamp" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-500" />
+        <img src="/portfolio-v2/pj-ny-tattoo.avif" alt="Tattoo NY Stamp" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-500" />
     </div>
     <div class="break-inside-avoid border border-black/5 overflow-hidden transition-shadow duration-300">
-        <img src="/portfolio-v2/pj-frailejon-tattoo.png" alt="Tattoo Frailejón" class="w-full h-auto object-cover scale-110 hover:scale-115 transition-transform duration-500" />
+        <img src="/portfolio-v2/pj-frailejon-tattoo.avif" alt="Tattoo Frailejón" class="w-full h-auto object-cover scale-110 hover:scale-115 transition-transform duration-500" />
     </div>
     <div class="break-inside-avoid border border-black/5 overflow-hidden transition-shadow duration-300">
-        <img src="/portfolio-v2/pj-hand-tattoo.jpg" alt="Tattoo Hand" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-500" />
+        <img src="/portfolio-v2/pj-hand-tattoo.avif" alt="Tattoo Hand" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-500" />
     </div>
     <div class="break-inside-avoid border border-black/5 overflow-hidden transition-shadow duration-300">
-        <img src="/portfolio-v2/pj-geminis-tattoo.png" alt="Tattoo Géminis" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-500" />
+        <img src="/portfolio-v2/pj-geminis-tattoo.avif" alt="Tattoo Géminis" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-500" />
     </div>
     <div class="break-inside-avoid border border-black/5 overflow-hidden transition-shadow duration-300">
-        <img src="/portfolio-v2/pj-mariposa-migue-tattoo.png" alt="Tattoo Mariposa" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-500" />
+        <img src="/portfolio-v2/pj-mariposa-migue-tattoo.avif" alt="Tattoo Mariposa" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-500" />
     </div>
     <div class="break-inside-avoid border border-black/5 overflow-hidden transition-shadow duration-300">
-        <img src="/portfolio-v2/pj-rosa-bw-tattoo.JPEG" alt="Tattoo Rosa B&W" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-500" />
+        <img src="/portfolio-v2/pj-rosa-bw-tattoo.avif" alt="Tattoo Rosa B&W" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-500" />
     </div>
     <div class="break-inside-avoid border border-black/5 overflow-hidden transition-shadow duration-300">
         <img src="/portfolio-v2/pj-diseños-disponibles-tattoo.png" alt="Diseños Disponibles" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-500" />

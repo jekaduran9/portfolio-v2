@@ -4,7 +4,7 @@ description: "Strategic redesign to transform a corporate website into a global 
 role: "UX/UI Designer"
 tools: ["Figma", "Design Thinking", "WordPress 6.4"]
 type: "Digital Ecosystem"
-image: "/pj-findasense-cover.png"
+image: "/pj-findasense-cover.avif"
 pubDate: 2024-03-07
 featured: true
 lang: "en"
@@ -79,7 +79,7 @@ The design was built in Figma using a Design System (UI Kit) designed for techni
     </div>
     <div class="overflow-hidden rounded-2xl border border-black/5 shadow-md animate-slide-right-delayed">
         <img 
-            src="/portfolio-v2/pj-lowfi-prototype-mobile-findasense.png" 
+            src="/portfolio-v2/pj-lowfi-prototype-mobile-findasense.avif" 
             alt="Low-Fi Wireframe Mobile" 
             class="w-full h-auto object-contain hover:scale-[1.02] transition-transform duration-500"
         />
