@@ -11,45 +11,41 @@ lang: "es"
 aspectRatio: "aspect-square"
 ---
 
-## Findasense: Rediseño del Ecosistema Digital Global
-**UX/UI Design · Design Thinking · WordPress 6.4 · Multilingual (ES/EN/PT)**
+## El contexto
 
-### El Contexto: De la Noticia Corporativa al Motor de Leads
-Findasense, como consultora global de transformación digital, necesitaba una web que no solo informara, sino que demostrara su expertise. El sitio anterior sufría de una "deuda de diseño" y una arquitectura confusa: el Hero principal era una noticia interna sobre su adquisición por TP Infinity, desperdiciando el espacio más valioso para comunicar su propuesta de valor.
+Findasense es una consultora global de transformación digital. Cuando llegué al proyecto, su web tenía un problema raro de detectar: el Hero principal — el espacio más valioso del sitio — era una nota interna sobre su adquisición por TP Infinity. La marca estaba hablando de sí misma antes de que el usuario entendiera para qué servía.
 
-Mi reto fue reconstruir esta identidad digital bajo una premisa: *El usuario no quiere saber quién eres hasta que entiende cómo puedes ayudarle.*
+A eso se sumaba "deuda de diseño": secciones duplicadas, jerarquías rotas, formularios largos. El sitio informaba, pero no convencía.
 
-### Proceso de diseño
-Mi metodología se centraba en transformar la complejidad técnica en una experiencia de usuario fluida y coherente a nivel global.
+Mi reto fue darle la vuelta bajo una premisa simple: *el usuario no quiere saber quién eres hasta que entiende cómo puedes ayudarle.* No empecé por el diseño — empecé por entender por qué la web no estaba funcionando.
 
 
----
+## Auditoría y referencias
 
-### 01 — Descubrimiento: Auditoría de UX y Benchmark
-No empezamos diseñando, empezamos analizando. Realicé una auditoría que reveló que el 60% de los puntos de fricción eran estructurales.
+La auditoría reveló que el 60% de los problemas no eran de pixel, eran estructurales. Cuatro patrones se repetían:
 
-**Puntos Críticos detectados:**
-*   **Sobrecarga Cognitiva:** Secciones duplicadas como "¿Qué hacemos?" vs "¿Qué problemas resolvemos?".
-*   **Falta de Jerarquía:** Todo el contenido tenía el mismo peso visual, dificultando el escaneo.
-*   **Navegación Ciega:** Secciones como "Insights" no permitían volver al Home, rompiendo el flujo del usuario.
-*   **Formulario de Alta Fricción:** Demasiados campos y pasos, lo que desplomaba la tasa de conversión.
+*   **Secciones que decían lo mismo dos veces.** "¿Qué hacemos?" y "¿Qué problemas resolvemos?" vivían separadas pero contaban la misma historia.
+*   **Sin jerarquía visual.** Todo competía por la mirada al mismo nivel — H1, párrafos y links se leían igual.
+*   **Callejones sin salida.** Desde "Insights" no había forma de volver al Home. El flujo se cortaba.
+*   **Formularios largos.** Cada campo extra era un punto de abandono.
 
-**Análisis Competitivo (Benchmarking):**
-Analicé a líderes como R/GA, MRM, GUT y Globant. Extraje patrones de éxito que aplicamos al proyecto:
-*   **Tipografía Bold + Mayúsculas:** Para transmitir autoridad y un tono editorial moderno.
-*   **Layouts Modulares:** Inspirados en Huge, permitiendo que la web sea escalable y fácil de leer.
-*   **Micro-interacciones:** Hovers sutiles en color rojo (branding) para guiar el ojo hacia la acción.
+Después miré qué estaban haciendo bien las agencias de referencia — R/GA, MRM, GUT, Globant, Huge — y me llevé tres ideas:
 
----
+*   **Bold + mayúsculas** en hero para sonar con autoridad sin perder cercanía.
+*   **Layouts modulares** que escalen sin reescribir CSS cada vez que entra un bloque nuevo.
+*   **Hovers en rojo** como acento único, no decoración: la mano que guía al click.
 
-### 02 — Definición Estratégica: Los 3 Pilares
-Basándome en los hallazgos, definimos tres ejes de acción para guiar el rediseño:
-1.  **Claridad:** Una propuesta de valor directa en el Hero y textos optimizados para el escaneo rápido.
-2.  **Confianza:** Priorización visual de Casos de Éxito y Clientes (Coca-Cola, Lenovo, Bimbo) desde el primer scroll.
-3.  **Conversión:** Rediseño del formulario de contacto a un modelo de campo único simplificado de 5 pasos, reduciendo el abandono.
+## Tres pilares, tres decisiones
 
-### 03 — Arquitectura y Estrategia de Contenidos
-Propuse una reestructuración total del Sitemap invirtiendo el orden tradicional para priorizar la conversión y el expertise. Aquí se muestra el ecosistema global organizado por nodos funcionales:
+Con la auditoría sobre la mesa, reduje el rediseño a tres ejes. Cada uno con una decisión concreta detrás:
+
+1.  **Claridad.** El Hero pasó de "noticia corporativa" a propuesta de valor directa. Si en cinco segundos no entiendes qué hace Findasense, fallé.
+2.  **Confianza.** Subí Casos de Éxito y logos de clientes (Coca-Cola, Lenovo, Bimbo) al primer scroll. Lo que antes vivía debajo del fold pasó a ser lo primero que el usuario ve.
+3.  **Conversión.** El formulario largo se rompió en cinco pasos de un solo campo cada uno. Menos fricción por pantalla, mismo dato recolectado.
+
+## Reorganizar la casa
+
+Reescribí el sitemap invirtiendo el orden tradicional: primero qué hacemos, después quiénes somos. La conversión y el expertise pasan delante; la historia de la empresa, detrás.
 
 <div class="not-prose my-16 overflow-hidden rounded-2xl">
     <img 
@@ -59,52 +55,170 @@ Propuse una reestructuración total del Sitemap invirtiendo el orden tradicional
     />
 </div>
 
-*   **Decisiones de UX Writer:** Eliminamos el lenguaje redundante y unificamos secciones de metodología y cultura bajo "Quiénes somos".
-*   **Navegación Persistente:** Rediseñamos el Header para incluir un CTA de contacto siempre visible y un selector de idioma (ES/EN/PT) accesible desde cualquier nivel.
+Dos decisiones que vinieron con esta reestructuración:
 
----
+*   **UX Writing.** Las secciones de metodología y cultura se unificaron en "Quiénes somos". Menos puertas, mismo contenido.
+*   **Navegación persistente.** El Header siempre lleva un CTA de contacto y un selector ES/EN/PT visible desde cualquier nivel. Nadie se pierde.
 
-### 04 — Diseño UX/UI: Sistema Visual y Prototipado
-El diseño se construyó en Figma utilizando un Sistema de Diseño (UI Kit) pensado para la implementación técnica en WordPress 6.4.
+## Del wireframe al sistema
 
-**Wireframing Low-Fi:** Definimos el flujo de usuario asegurando que nunca hubiera un "callejón sin salida" (especialmente en las páginas de noticias y prensa).
+Diseñé en Figma con un UI Kit pensado para WordPress 6.4 desde el día uno. La regla: nada que el equipo de desarrollo no pudiera replicar con Gutenberg.
 
-<div class="not-prose grid grid-cols-1 md:grid-cols-3 gap-8 my-16">
-    <div class="md:col-span-2 overflow-hidden rounded-2xl border border-black/5 shadow-md animate-slide-right">
+**Wireframing low-fi.** Mapeé el flujo asegurándome de que ninguna página fuera un callejón sin salida — especialmente noticias y prensa, donde antes el usuario quedaba atrapado.
+
+<div class="not-prose my-16 space-y-10">
+    <div class="animate-slide-right">
         <img 
             src="/portfolio-v2/pj-lowfi-prototype-desktop-findasense.png" 
             alt="Wireframe Low-Fi Desktop" 
-            class="w-full h-auto object-contain hover:scale-[1.02] transition-transform duration-500"
+            class="zoomable cursor-zoom-in w-full h-auto object-contain transition-opacity hover:opacity-90"
         />
     </div>
-    <div class="overflow-hidden rounded-2xl border border-black/5 shadow-md animate-slide-right-delayed">
+    <div class="flex justify-center animate-slide-right-delayed">
         <img 
             src="/portfolio-v2/pj-lowfi-prototype-mobile-findasense.png" 
             alt="Wireframe Low-Fi Mobile" 
-            class="w-full h-auto object-contain hover:scale-[1.02] transition-transform duration-500"
+            class="zoomable cursor-zoom-in w-full max-w-sm h-auto object-contain transition-opacity hover:opacity-90"
         />
     </div>
 </div>
 
-**Diseño High-Fidelity:**
-*   **Modulación:** Secciones divididas por bloques de color para separar visualmente los servicios de los casos de éxito.
-*   **Identidad Visual:** Implementación del "Rojo Findasense" como color de acento en palabras clave y botones consistentes.
-*   **Mobile First:** Cada componente fue testeado para garantizar que la legibilidad en dispositivos móviles fuera tan potente como en desktop.
-*   **Prototipo Interactivo:** Entregué un prototipo navegable que permitía al equipo interno de Findasense experimentar las transiciones y el flujo del formulario antes de pasar a desarrollo.
+**High-fidelity.** Cuatro decisiones que dieron forma al sistema:
 
----
+*   **Bloques de color** para separar visualmente servicios y casos de éxito sin necesidad de leer.
+*   **Rojo Findasense** como acento único — palabras clave, hovers, botones. Nada más.
+*   **Mobile first** real: cada componente probado en móvil antes que en desktop.
+*   **Prototipo navegable** entregado al equipo interno para testear transiciones y el flujo del formulario antes del handoff.
 
-### 05 — Viabilidad Técnica y Testing
-Como el sitio se implementaría en WordPress 6.4, cada bloque diseñado fue validado con el equipo de desarrollo para asegurar que fuera factible mediante Gutenberg o constructores visuales, evitando código innecesario que afectara la velocidad de carga (WPO).
+## Design System (UI Kit)
 
-**Realizamos revisiones semanales ajustando:**
-*   La claridad del mensaje en el Hero.
-*   La respuesta táctil de los botones en mobile.
-*   La coherencia del multidioma en layouts complejos.
+El sistema visual se construyó como una base sólida y escalable: tokens de color, jerarquía tipográfica y componentes consistentes que aseguran coherencia en todo el ecosistema digital y facilitan el mantenimiento en WordPress.
 
----
+### Color
 
-### Solución Final e Impacto
+Paleta construida sobre el rojo característico de Findasense como acento único, equilibrada con negro, crema, un azul celeste para bloques tecnológicos y blanco como base limpia.
+
+<div class="not-prose grid grid-cols-2 md:grid-cols-5 gap-4 mt-6">
+  <div class="group">
+    <div class="aspect-square rounded-[8px] border border-black/5 mb-3 transition-transform duration-300 group-hover:scale-[1.03]" style="background-color: #F04130;"></div>
+    <p class="text-sm font-medium text-gray-900">Naranja</p>
+    <p class="font-mono text-[11px] text-gray-500 mt-0.5">#F04130</p>
+    <code class="font-mono text-[11px] bg-gray-100 px-1.5 py-0.5 rounded-sm inline-block mt-1">brand-red</code>
+    <p class="text-[11px] text-gray-500 leading-snug mt-2">CTAs, hovers, acento de marca.</p>
+  </div>
+  <div class="group">
+    <div class="aspect-square rounded-[8px] border border-black/5 mb-3 transition-transform duration-300 group-hover:scale-[1.03]" style="background-color: #121212;"></div>
+    <p class="text-sm font-medium text-gray-900">Negro</p>
+    <p class="font-mono text-[11px] text-gray-500 mt-0.5">#121212</p>
+    <code class="font-mono text-[11px] bg-gray-100 px-1.5 py-0.5 rounded-sm inline-block mt-1">brand-black</code>
+    <p class="text-[11px] text-gray-500 leading-snug mt-2">Headings y texto principal.</p>
+  </div>
+  <div class="group">
+    <div class="aspect-square rounded-[8px] border border-black/5 mb-3 transition-transform duration-300 group-hover:scale-[1.03]" style="background-color: #EFE2CF;"></div>
+    <p class="text-sm font-medium text-gray-900">Crema</p>
+    <p class="font-mono text-[11px] text-gray-500 mt-0.5">#EFE2CF</p>
+    <code class="font-mono text-[11px] bg-gray-100 px-1.5 py-0.5 rounded-sm inline-block mt-1">brand-cream</code>
+    <p class="text-[11px] text-gray-500 leading-snug mt-2">Bloques cálidos, servicios.</p>
+  </div>
+  <div class="group">
+    <div class="aspect-square rounded-[8px] border border-black/5 mb-3 transition-transform duration-300 group-hover:scale-[1.03]" style="background-color: #54A4DB;"></div>
+    <p class="text-sm font-medium text-gray-900">Azul Celeste</p>
+    <p class="font-mono text-[11px] text-gray-500 mt-0.5">#54A4DB</p>
+    <code class="font-mono text-[11px] bg-gray-100 px-1.5 py-0.5 rounded-sm inline-block mt-1">brand-blue</code>
+    <p class="text-[11px] text-gray-500 leading-snug mt-2">Bloques tecnológicos y data.</p>
+  </div>
+  <div class="group">
+    <div class="aspect-square rounded-[8px] border border-black/5 mb-3 transition-transform duration-300 group-hover:scale-[1.03]" style="background-color: #FFFFFF;"></div>
+    <p class="text-sm font-medium text-gray-900">Blanco</p>
+    <p class="font-mono text-[11px] text-gray-500 mt-0.5">#FFFFFF</p>
+    <code class="font-mono text-[11px] bg-gray-100 px-1.5 py-0.5 rounded-sm inline-block mt-1">brand-white</code>
+    <p class="text-[11px] text-gray-500 leading-snug mt-2">Base limpia, espacios y cards.</p>
+  </div>
+</div>
+
+### Tipografía
+
+Una sola familia tipográfica — **Montserrat** — utilizada en todos los pesos para mantener una voz visual coherente entre headings, body y UI. Mayúsculas en hero y secciones clave para reforzar el tono editorial y la autoridad de la marca.
+
+<div class="not-prose grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mt-6">
+  <div class="bg-white rounded-[12px] p-8 border border-black/5">
+    <span class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold block mb-4">Display · Headings</span>
+    <p class="text-7xl text-gray-900 leading-none mb-3 font-bold" style="font-family: Montserrat, sans-serif;">Aa</p>
+    <p class="text-2xl text-gray-700 mb-1 font-bold" style="font-family: Montserrat, sans-serif;">Montserrat Bold</p>
+    <p class="font-mono text-[11px] text-gray-500 mb-4">font-bold · 700</p>
+    <p class="text-[11px] text-gray-500"><strong class="font-medium text-gray-700">Uso:</strong> H1 a H6, taglines, CTAs. Mayúsculas en hero y secciones de impacto.</p>
+  </div>
+  <div class="bg-white rounded-[12px] p-8 border border-black/5">
+    <span class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold block mb-4">Body · UI</span>
+    <p class="text-7xl text-gray-900 leading-none mb-3" style="font-family: Montserrat, sans-serif;">Aa</p>
+    <p class="text-2xl text-gray-700 mb-1" style="font-family: Montserrat, sans-serif;">Montserrat Regular</p>
+    <p class="font-mono text-[11px] text-gray-500 mb-4">font-normal · 400</p>
+    <p class="text-[11px] text-gray-500"><strong class="font-medium text-gray-700">Uso:</strong> párrafos, navegación, formularios, captions. Pesos Light, Medium y Semibold para jerarquía secundaria.</p>
+  </div>
+</div>
+
+<div class="not-prose mt-6 bg-white rounded-[12px] p-8 border border-black/5">
+  <span class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold block mb-6">Escala tipográfica · Desktop</span>
+  <div class="space-y-4" style="font-family: Montserrat, sans-serif;">
+    <div class="flex items-baseline gap-4 pb-3 border-b border-black/5">
+      <span class="font-mono text-[10px] text-gray-400 w-20 flex-shrink-0">56 / 3.5rem</span>
+      <span class="font-bold text-[2rem] md:text-[3rem] leading-tight text-gray-900">HEADING 1</span>
+    </div>
+    <div class="flex items-baseline gap-4 pb-3 border-b border-black/5">
+      <span class="font-mono text-[10px] text-gray-400 w-20 flex-shrink-0">48 / 3rem</span>
+      <span class="font-bold text-[1.75rem] md:text-[2.5rem] leading-tight text-gray-900">Heading 2</span>
+    </div>
+    <div class="flex items-baseline gap-4 pb-3 border-b border-black/5">
+      <span class="font-mono text-[10px] text-gray-400 w-20 flex-shrink-0">40 / 2.5rem</span>
+      <span class="font-bold text-[1.5rem] md:text-[2rem] leading-tight text-gray-900">Heading 3</span>
+    </div>
+    <div class="flex items-baseline gap-4 pb-3 border-b border-black/5">
+      <span class="font-mono text-[10px] text-gray-400 w-20 flex-shrink-0">32 / 2rem</span>
+      <span class="font-bold text-[1.25rem] md:text-[1.625rem] leading-tight text-gray-900">Heading 4</span>
+    </div>
+    <div class="flex items-baseline gap-4">
+      <span class="font-mono text-[10px] text-gray-400 w-20 flex-shrink-0">20 / 1.25rem</span>
+      <span class="text-[1rem] md:text-[1.125rem] leading-relaxed text-gray-700">Body text — párrafos editoriales y contenido principal del sitio.</span>
+    </div>
+  </div>
+</div>
+
+### Recurso de marca: la coma
+
+La coma del logo dejó de ser un detalle tipográfico para convertirse en el recurso visual que articula todo el sistema. La usé como contenedor de retratos, marco para hero illustrations, fondo en testimonios y elemento decorativo. Una sola pieza, muchos roles — siempre con la misma forma, distintos pesos.
+
+<div class="not-prose mt-8">
+  <img 
+    src="/portfolio-v2/Findasense/pj-findasense-coma2.png" 
+    alt="Aplicaciones de la coma del logo: marcos de retrato, hero illustrations, testimonios y elementos decorativos"
+    class="zoomable cursor-zoom-in w-full h-auto object-contain mix-blend-multiply transition-opacity hover:opacity-90"
+  />
+</div>
+
+## Prototipo final
+
+El resultado: una web que cuenta lo que hace antes que quién es. Hero directo, casos de éxito en el primer scroll, formulario sin fricción y una identidad visual coherente de principio a fin.
+
+<div class="not-prose mt-8">
+  <img 
+    src="/portfolio-v2/Findasense/pf-findasense-prototype-desktop.jpg" 
+    alt="Prototipo final desktop: recorrido completo de la web rediseñada"
+    class="zoomable cursor-zoom-in w-full h-auto object-contain mix-blend-multiply transition-opacity hover:opacity-90"
+  />
+  <p class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold mt-4">Recorrido completo · Desktop</p>
+</div>
+
+## Diseñar para que se construya
+
+Como el sitio se implementaría en WordPress 6.4, cada bloque pasó por un check con el equipo de desarrollo: si no se podía hacer con Gutenberg o un constructor visual, no entraba al diseño. Eso protegió la velocidad de carga (WPO) y eliminó el código a medida que iba a costar mantener.
+
+Las revisiones semanales con el equipo afilaron tres cosas:
+
+*   El mensaje del Hero — versión tras versión hasta que cualquiera lo entendiera de un vistazo.
+*   La respuesta táctil de los botones en móvil — más área de toque, feedback más claro.
+*   La coherencia del multilenguaje — algunos layouts se rompían en portugués por longitud de texto, los reajusté.
+
+## Solución y impacto
 El resultado es una web minimalista, potente y orientada a resultados que redefine la presencia digital de Findasense.
 
 <div class="not-prose grid grid-cols-1 md:grid-cols-2 gap-6 my-12">
@@ -138,9 +252,7 @@ El resultado es una web minimalista, potente y orientada a resultados que redefi
 </div>
 </div>
 
----
-
-### Entregables del Proyecto
+## Entregables
 *   Audit de UX y Benchmark competitivo.
 *   Nuevo Sitemap y Arquitectura de Información.
 *   Wireframes Low y High Fidelity.
@@ -148,9 +260,7 @@ El resultado es una web minimalista, potente y orientada a resultados que redefi
 *   Prototipo interactivo en Figma.
 *   Guía de estilo para implementación en WordPress.
 
----
-
-### Resultado Final: Ecosistema Digital
+## Ecosistema digital en vivo
 Explora la experiencia diseñada para el ecosistema global de Findasense.
 
 <div class="not-prose my-12 group">
