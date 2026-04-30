@@ -40,6 +40,14 @@ Para la segunda iteración, trabajé estrechamente con el equipo de operaciones 
 
 **El gran hallazgo:** Una vez resuelta la funcionalidad técnica, el desafío era la diferenciación. Los restaurantes no querían una herramienta genérica; querían que la WebApp fuera una extensión de su propia marca. Transformamos la interfaz en una experiencia personalizada que respira la identidad de cada local, logrando que el pago no sea un trámite, sino el cierre perfecto de la cena.
 
+<div class="not-prose my-16">
+    <img
+        src="/portfolio-v2/pj-yumminn-designsystem.png"
+        alt="Design system de Yumminn"
+        class="w-full h-auto object-contain"
+    />
+</div>
+
 ## Resultados e Impacto
 El rediseño no solo mejoró la estética, sino que transformó el modelo de negocio:
 
